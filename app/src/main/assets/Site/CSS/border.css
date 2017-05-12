@@ -1,0 +1,21 @@
+.c-border{
+	border: 4px solid yellow;
+	width: 5;
+}
+
+
+.b-border {
+  border: 5px solid gray;
+  animation: animBlinkBorder 1s linear infinite;
+}
+@keyframes animBlinkBorder {
+  0% {
+    border-color: gray;
+  }
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: red;
+  }
+}

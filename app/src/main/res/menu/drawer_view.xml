@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Структура меню
+  -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+       
+        <item
+            android:id="@+id/nav_reset_lessons"
+            android:icon="@drawable/ic_reset"
+            android:title="@string/reset_lessons" />
+    </group>
+
+    <item android:title="Прочее">
+        <menu>
+            
+            <item
+                android:id="@+id/nav_send_feedback"
+                android:icon="@drawable/ic_send_feedback"
+                android:title="@string/send_feedback" />
+            
+            <item
+                android:id="@+id/nav_send_error"
+                android:icon="@drawable/ic_send_error"
+                android:title="@string/send_error" />
+           
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_about"
+                android:title="@string/about" />
+            
+        </menu>
+    </item>
+
+</menu>

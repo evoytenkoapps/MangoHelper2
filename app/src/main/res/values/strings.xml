@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!--Прочее-->
+    <string name="version">1.0.5</string>
+    <string name="mail">evoytenkoapps@gmail.com</string>
+
+
+    <string name="app_name"> Mango Helper</string>
+    <string name="checkin">Checkin</string>
+    <string name="menu_night_mode">Night mode</string>
+    <string name="menu_night_mode_system">Follow system</string>
+    <string name="menu_night_mode_day">Day (always)</string>
+    <string name="menu_night_mode_night">Night (always)</string>
+    <string name="menu_night_mode_auto">Auto</string>
+
+    <!--Диалоги-->
+    <string name="exit">Поздравляю! Вы успешно прошли урок</string>
+    <!--<string name="save_data">Сохранить данные?</string>-->
+    <string name="listoflessons"> Меню </string>
+    <string name="nextlesson">Следующий урок</string>
+    <string name="about_message">Mango Helper программа по изучению лучшей виртуальной АТС Mango Office. С помощью Mango Helper вы научитесь настраивать переадресацию, создавать сотрудников, группы и многое другое.</string>
+    <!--<string name="cancel">Отмена</string>
+    <string name="saved">Сохранено</string>-->
+
+    <!--Меню-->
+    <string name="reset_lessons">Сбросить уроки</string>
+    <string name="about">О программе</string>
+    <string name="send_feedback"> Предложить улучшение</string>
+    <string name="send_error"> Сообщить об ошибке</string>
+    
+
+    
+</resources>

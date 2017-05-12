@@ -1,0 +1,364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0039)http://192.168.33.119/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Конфигурация IP | C610A IP</title>
+  
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type="text/css" media="screen" href="../../Devices/C610/main.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="../../Devices/C610/siemens.css">
+  <link rel="shortcut icon" href="">
+</head>
+
+<script language="JavaScript" type="text/javascript">
+var flash;
+function flashBorder(elmId, stopFlash)
+{
+var elm = document.getElementById("lsn5_10");
+if (stopFlash == "true")
+{
+elm.style.border = "";
+clearInterval(flash);
+}
+else
+{
+var borderPattern = false;
+flash = setInterval(setBorder, 700);
+
+function setBorder()
+{
+if (borderPattern)
+{
+borderPattern = false;
+elm.style.border = "solid transparent";
+elm.style.borderWidth = "4px";
+}
+else
+{
+borderPattern = true;
+elm.style.border = " solid Red";
+elm.style.borderWidth = "4px";
+}
+}
+}
+}
+</script>
+
+  <body onload="flashBorder();">
+
+  <!--  CONTAINER -->
+  <div id="container">
+
+   <!--  <script language="JavaScript" type="text/javascript">
+      writeBlockStaticAreaTop();
+      writeBlockSubmenu();
+    </script> -->
+	
+	
+	
+	<div id="Gigalogo"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td id="logotd" width="1"><img src="../../Devices/C610/gigaset.png" alt="Gigaset" border="0" align="left"></td><td id="productnametxt" align="left">C610A IP</td></tr></tbody></table></div><div id="div_tabs"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="padding:0;"><a href="">Главная</a></td><td style="padding:0;"><a class="active3" href="">Настройки</a></td><td style="padding:0;"><a href="">Состояние</a></td></tr></tbody></table></div><div id="div_home_logout"><a id="logouttoptext" href="" title="Завершить сеанс конфигурации">Выйти из системы</a></div><div id="greyTop"><img src="../../Devices/C610/spacer.gif" alt="" width="1" height="5" border="0"></div><div id="greyMiddle"><div id="div_menue"><ul><li><div><div><a href="">Сеть</a></div></div></li><li><div><div><a href="">Телефония</a></div></div><ul><li><div class="activeSub" style="width: 196px;"><div><a href="">Соединения</a></div></div></li><li><div><div><a href="">Аудио</a></div></div></li><li><div><div><a href="">Назначение номера</a></div></div></li><li><div><div><a href="">Переадресация</a></div></div></li><li><div><div><a href="">Планы набора номера</a></div></div></li><li><div><div><a href="">Почтовые ящики сети</a></div></div></li><li><div><div><a href="">Дополн. настройки VoIP</a></div></div></li></ul></li><li><div><div><a href="">Обмен сообщениями</a></div></div></li><li><div><div><a href="">Справочные службы</a></div></div></li><li><div><div><a href="">Телефонные справочники</a></div></div></li><li><div><div><a href="">Управление</a></div></div></li></ul></div>
+
+      <!-- content -->
+      <div id="content">
+      <div id="minheight340"></div>
+      <form name="gigaset" id="form" action="" method="post">
+        <input type="hidden" value="0" name="go_profile">
+        <input type="hidden" value="2" name="account_id">
+        <input type="hidden" value="0" name="account_delete_disabled" id="account_delete_disabled">
+        <input type="hidden" value="0" name="voip_wizard_disabled" id="voip_wizard_disabled">
+        <input type="hidden" value="********" name="sip_password" id="sip_password">
+
+        <input type="hidden" value="0" name="do_delete">
+
+        <div class="contentColumn">
+          <table border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+            <tbody><tr>
+              <td class="label">
+                <h2 class="first">3. IP-соединение</h2>
+              </td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="label">&nbsp;</td>
+              <td class="rightSide">Назначить название соединения или настоящий номер телефона для идентификации.</td>
+            </tr>
+            <tr>
+              <td class="label">Имя или номер соединения:</td>
+              <td class="rightSide">
+               <input type="text" maxlength="16" size="16" class="textfield edit_250" value="IP1" name="account_name" onkeypress="return (isValidG0G1Char(event) &amp;&amp; checkG0G1Bytes(this, event, 16));">
+            </td>
+            </tr>
+            <tr>
+              <td class="label"><h2 class="first">Конфигурация VoIP / загрузка профиля</h2></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="label">&nbsp;</td>
+              <td class="rightSide">
+                <a href="" onclick="" class="buttonLink215" id="wizardButton">Запустить мастер конфигурации</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="label" style="vertical-align:middle">Провайдер:</td>
+              <td class="rightSide">
+                <table border="0" cellspacing="0" cellpadding="0">
+                  <tbody><tr>
+                    <td class="tableCell">Другой провайдер</td>
+             
+                    <td>
+                      <img src="../../Devices/C610/spacer.gif" alt="" width="15" height="1" border="0">
+                    </td>
+                    <td class="tableCell">
+                    </td>
+
+                  </tr>
+                </tbody></table>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="label">Версия профиля</td>
+              <td class="rightSide">&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+
+            <tr>
+              <td class="label"><h2 class="first">Личные данные провайдера</h2></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="label">Имя для входа в систему:</td>
+              <td class="rightSide">
+                <input type="text" maxlength="32" size="32" class="textfield edit_250" value="" name="sip_login_id" id="sip_login_id" onkeypress="return (isValidG0G1Char(event) &amp;&amp; checkUTF8Bytes(this, event, 32));">
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Пароль для входа в систему:</td>
+              <td class="rightSide">
+                <input type="password" maxlength="32" size="32" class="textfield edit_250" value="" name="sip_password_2" id="sip_password_2" onkeydown="PasswordEditedState(event);" onkeypress="return (isValidG0G1Char(event) &amp;&amp; checkG0G1Bytes(this, event, 32));" onchange="setPasswordEditedState(); copyPassword();">
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Имя пользоват.:</td>
+              <td class="rightSide">
+                <input type="text" maxlength="32" size="32" class="textfield edit_250" value="" name="sip_user_id" id="sip_user_id" onkeypress="return (isValidG0G1Char(event) &amp;&amp; checkG0G1Bytes(this, event, 32));">
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Отображ. имя:</td>
+              <td class="rightSide">
+                <input type="text" maxlength="32" size="32" class="textfield edit_250" value="" name="sip_display_name" id="sip_display_name" onkeypress="return (isValidG0G1Char(event) &amp;&amp; checkG0G1Bytes(this, event, 32));">
+              </td>
+            </tr>
+            <!-- fixes the width of the first column -->
+            <tr>
+              <td style="padding:0;"><img src="../../Devices/C610/spacer.gif" alt="" width="200" height="1" border="0"></td>
+              <td style="padding:0;"><img src="../../Devices/C610/spacer.gif" alt="" width="360" height="1" border="0"></td>
+            </tr>
+          </tbody></table>
+
+          <div id="advbuttonshow" style="display:block;">
+          <table border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+            <tbody><tr>
+              <td>&nbsp;</td>
+              <td id="lsn5_10" style="padding-left:1em;"><a href="./lsn5_11.html" class="buttonLink215">Показать доп. настройки</a></td>
+            </tr>
+            <!-- fixes the width of the first column -->
+            <tr>
+              <td style="padding:0;"><img src="../../Devices/C610/spacer.gif" alt="" width="200" height="1" border="0"></td>
+              <td style="padding:0;"><img src="../../Devices/C610/spacer.gif" alt="" width="360" height="1" border="0"></td>
+            </tr>
+          </tbody></table>
+          </div>
+          <div id="advbuttonhide" style="display:none;">
+          <table border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+            <tbody><tr>
+              <td>&nbsp;</td>
+              <td style="padding-left:1em;"><a href="" onclick="javascript:hideAdvanced(); return false;" class="buttonLink215">Скрыть дополнительные настройки</a></td>
+            </tr>
+            <!-- fixes the width of the first column -->
+            <tr>
+              <td style="padding:0;"><img src="../../Devices/C610/spacer.gif" alt="" width="200" height="1" border="0"></td>
+              <td style="padding:0;"><img src="../../Devices/C610/spacer.gif" alt="" width="360" height="1" border="0"></td>
+            </tr>
+          </tbody></table>
+          </div>
+
+
+          <div id="advanced" style="display:none;">
+
+
+          <table border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+            <tbody><tr>
+              <td class="label"><h2 class="first">Общие данные вашего провайдера</h2></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="label">Домен:</td>
+              <td class="rightSide">
+					      <div class="edit_250">
+						      <input type="text" maxlength="74" size="32" class="textfield edit_250" value="" name="sip_domain" id="sip_domain" onkeypress="return isValidSipDomainChar(event);">
+					      </div>
+				      </td>
+            </tr>
+            <tr>
+              <td class="label">Адрес прокси-сервера:</td>
+              <td class="rightSide">
+					      <div class="edit_250">
+						      <input type="text" maxlength="74" size="32" class="textfield edit_250" value="" name="sip_server" id="sip_server" onkeypress="return isValidSipDomainChar(event);">
+					      </div>
+				      </td>
+            </tr>
+            <tr>
+              <td class="label">Порт прокси-сервера:</td>
+              <td class="rightSide"><input type="text" maxlength="5" size="5" class="textfield edit_68" value="5060" name="sip_server_port" id="sip_server_port" onkeypress="return isNumber(event);" style="width:68px; text-align:center"></td>
+            </tr>
+            <tr>
+              <td class="label">Сервер регистрации:</td>
+              <td class="rightSide">
+					      <div class="edit_250">
+						      <input type="text" maxlength="74" size="32" class="textfield edit_250" value="" name="sip_registrar" id="sip_registrar" onkeypress="return isValidSipDomainChar(event);">
+					      </div>
+				      </td>
+            </tr>
+            <tr>
+              <td class="label">Порт сервера регистрации:</td>
+              <td class="rightSide"><input type="text" maxlength="5" size="5" class="textfield edit_68" value="5060" name="sip_registrar_port" id="sip_registrar_port" onkeypress="return isNumber(event);" style="width:68px; text-align:center"></td>
+            </tr>
+            <tr>
+              <td class="label">Время обновленя регистрации:</td>
+              <td class="rightSide"><input type="text" maxlength="4" size="4" class="textfield edit_68" value="180" name="reg_refresh_time" onkeypress="return isNumber(event);" style="width:68px; text-align:center">&nbsp;сек.</td>
+            </tr>
+            <tr>
+            	<td class="label"><h2 class="first">Сетевые данные вашего провайдера</h2></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="label">Вкл. STUN:</td>
+              <td class="rightSide">
+                <input type="radio" name="stun_mode" id="stun_mode" value="1" class="radioButton">Да
+                &nbsp;&nbsp;&nbsp;<input type="radio" name="stun_mode" value="0" class="radioButton" checked="checked">Нет
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Адрес сервера STUN:</td>
+              <td class="rightSide">
+					      <div class="edit_250">
+						      <input type="text" maxlength="74" size="32" class="textfield edit_250" value="" name="stun_server" id="stun_server" onkeypress="return isValidDomainChar(event);">
+					      </div>
+				      </td>
+            </tr>
+            <tr>
+              <td class="label">Порт сервера STUN:</td>
+              <td class="rightSide">
+                <input type="text" maxlength="5" size="5" class="textfield edit_68" value="3478" name="stun_port" id="stun_port" onkeypress="return isNumber(event);" style="width:68px; text-align:center">
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Время обновления STUN:</td>
+              <td class="rightSide"><input type="text" maxlength="3" size="3" class="textfield edit_68" value="240" name="stun_refresh_time" onkeypress="return isNumber(event);" style="width:68px; text-align:center">&nbsp;сек.</td>
+            </tr>
+            <tr>
+              <td class="label">Время обновления NAT:</td>
+              <td class="rightSide"><input type="text" maxlength="3" size="3" class="textfield edit_68" value="20" name="nat_refresh_time" id="nat_refresh_time" onkeypress="return isNumber(event);" style="width:68px; text-align:center">&nbsp;сек.</td>
+            </tr>
+            <tr>
+              <td class="label">Режим исходящего прокси-сервера:</td>
+              <td class="rightSide">
+                <input type="radio" name="outbound_mode" id="outbound_mode" value="0" class="radioButton">Всегда
+                &nbsp;&nbsp;&nbsp;<input type="radio" name="outbound_mode" value="1" class="radioButton" checked="checked">Автоматический
+                &nbsp;&nbsp;&nbsp;<input type="radio" name="outbound_mode" value="2" class="radioButton">Никогда
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Адрес сервера исходящих сообщений:</td>
+              <td class="rightSide">
+					      <div class="edit_250">
+						      <input type="text" maxlength="74" size="32" class="textfield edit_250" value="" name="outbound_proxy" id="outbound_proxy" onkeypress="return isValidDomainChar(event);">
+					      </div>
+				      </td>
+            </tr>
+            <tr>
+              <td class="label">Порт исходящего прокси-сервера:</td>
+              <td class="rightSide">
+                <input type="text" maxlength="5" size="5" class="textfield edit_68" value="5060" name="outbound_port" id="outbound_port" onkeypress="return isNumber(event);" style="width:68px; text-align:center">
+              </td>
+            </tr>
+            <tr>
+              <td class="label" align="left">Выбор протокола сети</td>
+              <td class="rightSide">
+                <select name="network_protocol" id="network_protocol">
+                  <option value="0" selected="selected">Автоматический</option>
+                  <option value="17">Только UDP</option>
+                  <option value="6">Только TCP</option>
+                </select>
+              </td>
+            </tr>
+            <!-- fixes the width of the first column -->
+            <tr>
+              <td style="padding:0;"><img src="../../Devices/C610/spacer.gif" alt="" width="200" height="1" border="0"></td>
+              <td style="padding:0;"><img src="../../Devices/C610/spacer.gif" alt="" width="360" height="1" border="0"></td>
+            </tr>
+          </tbody></table>
+          </div>
+        </div>
+        <div id="bottombuttons">
+          <table border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+            <!-- buttons -->
+            <tbody><tr>
+              <td>&nbsp;</td>
+              <td class="separatorButton">
+                <table border="0" cellspacing="0" cellpadding="0">
+                  <tbody><tr>
+                    <td><a href="" onclick="javascript:submit_gigaset_form(); return false;" class="buttonLink100">Настроить</a></td>
+                    <td><a href="" onclick="javascript:cancel_gigaset_form(); return false;" class="buttonLink100">Отмена</a></td>
+
+                    <td><a href="" onclick="javascript:delete_account(); return false;" class="buttonLink215" id="deleteButton">Удалить соединенеи</a></td>
+
+                  </tr>
+                </tbody></table>
+              </td>
+            </tr>
+            <!-- fixes the width of the first column -->
+            <tr>
+              <td style="padding:0;"><img src="../../Devices/C610/spacer.gif" alt="" width="200" height="1" border="0"></td>
+              <td style="padding:0;"><img src="../../Devices/C610/spacer.gif" alt="" width="360" height="1" border="0"></td>
+            </tr>
+          </tbody></table>
+        </div>         
+      </form>
+      <div id="endminheight"></div>
+      </div>
+      <!-- END of content -->
+      
+  <!--   <script language="JavaScript" type="text/javascript">
+      writeBlockHelp();
+      writeBlockStaticAreaBottom();
+    </script> -->
+	
+	
+	<div id="div_help"><a href="" onclick="javascript:open_gigaset_help_window(); return false;" title=""><img src="../../Devices/C610/help.gif" alt="" width="20" height="30" border="0"></a></div></div><div id="greyBottom"><img src="../../Devices/C610/spacer.gif" alt="" width="1" height="7" border="0"></div>
+
+  </div>
+  <!-- END CONTAINER -->
+
+
+
+
+</body>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+</html>

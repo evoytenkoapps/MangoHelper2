@@ -1,0 +1,64 @@
+.activeSub {
+  background: url(./bg_menu.png) no-repeat;
+  width: 181px;
+}
+
+#content_home h1 a:hover {
+  background: url(./arrow_orange.gif) no-repeat 0 0.3em;
+}
+
+#div_tabs a:hover {
+  color:#E97D0C;
+}
+
+/*
+a:hover {color:#e97d0c; text-decoration:none;}
+*/
+
+/*
+.buttonLink100:hover {
+  background-image: url(./bg_button_100_hover.png);
+  text-decoration:none;
+  color: #FFFFFF;
+}
+*/
+
+.buttonLink100:active {
+  background-image: url(./bg_button_100_pressed.png);
+  text-decoration:none;
+  color: #FFFFFF;
+/*  padding-top: 4px;*/
+}
+
+/*
+.buttonLink215:hover {
+  background-image: url(./bg_button_215_hover.png);
+  text-decoration:none;
+  color: #FFFFFF;
+}
+*/
+
+.buttonLink215:active {
+  background-image: url(./bg_button_215_pressed.png);
+  text-decoration:none;
+  color: #FFFFFF;
+  padding-top: 3px;
+}
+
+/*
+.buttonTableEdit:hover, .buttonTableDel:hover {
+  background-image: url(./bg_button_100_hover.png);
+  text-decoration:none;
+  color: #FFFFFF;
+}
+*/
+
+.buttonTableEdit:active, .buttonTableDel:active {
+  background-image: url(./bg_button_100_pressed.png);
+  text-decoration:none;
+  color: #FFFFFF;
+  padding-top: 4px;
+}
+
+
+

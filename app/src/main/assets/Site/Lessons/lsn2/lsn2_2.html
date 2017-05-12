@@ -1,0 +1,2008 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0051) -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" class=" js csstransforms csstransforms3d csstransitions">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=10">
+  <meta http-equiv="Content-Language" content="ru">
+  <meta http-equiv="imagetoolbar" content="no">
+  <link rel="stylesheet" href="../../CSS/mango-styles.css" type="text/css" charset="utf-8">
+<link rel="stylesheet" href="../../CSS/mango-styles1.css" type="text/css" charset="utf-8">
+<link rel="stylesheet" href="../../CSS/mango-styles2.css" type="text/css" charset="utf-8">
+<link rel="stylesheet" href="../../CSS/mango-styles4.css" type="text/css" charset="utf-8">
+<link rel="stylesheet" href="../../CSS/mango-styles-ru.css" type="text/css" charset="utf-8">
+<link rel="stylesheet" media="screen,projection" href="../../CSS/ui.totop.css">
+  <!-- <script async="" src="//connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src=></script><script type="text/javascript" async="" src=></script><script type="text/javascript" async="" src=></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript">
+    Ics = {};
+    Ics.locale = 'ru_RU';
+    Ics.Language = 'ru';
+    Ics.Platform = 'ru';
+  </script>
+  <script type="text/javascript" src="/lib/raphael/raphael-min.js"></script>
+<script type="text/javascript" src="/lib/requirejs/require.js"></script>
+<script type="text/javascript" src="/lib/jquery/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="/lib/highcharts/highcharts.js"></script><script type="text/javascript" src="/js/mango-scripts.js?1487084704"></script><script type="text/javascript">
+    require.config({
+      // The path where your JavaScripts are located
+      baseUrl  : '/js/'
+      // Specify the paths of vendor libraries
+      // For easier development, disable browser caching
+      // Of course, this should be removed in a production environment
+      , urlArgs: 'ver=7.17.07',
+      paths : {
+        "platform" : "platform/ru",
+        "jquery-ui-tooltip-default" : "../lib/jquery/ui-1.9/jquery.ui.tooltip",
+        "jquery-ui-tooltip" : "../lib/jquery/jquery.ext-tooltip",
+        "jquery-ui-datepicker" : "../lib/jquery/ui-1.9/jquery.ui.datepicker",
+        "fancybox" : "../lib/jquery/jquery.fancybox-1.3.4",
+        "jquery-address" : "../lib/jquery/jquery.address-1.5",
+        "jquery-counter" : "../lib/jquery/counter/jquery.counter-2.2",
+        "jquery-maskedinput" : "../lib/jquery/maskedinput/jquery.maskedinput-1.4.1",
+        "jquery-keyfilter" : "../lib/jquery/keyfilter/jquery.keyfilter-1.8",
+        "jquery-scrollto" : "../lib/jquery/scrollto/jquery.scrollTo-1.4.2",
+        "jquery-jplayer" : "../lib/jquery/jquery.jplayer.min",
+        "jquery-cookie" : "../lib/jquery/jquery.cookie",
+        "jquery-nimble-loader" : "../lib/jquery/nimble.loader/jquery.nimble.loader",
+        "backbone" : "../lib/backbone",
+        "underscore" : "../lib/underscore",
+        "jquery-ui-core" : "../lib/jquery/ui-1.9/jquery.ui.core",
+        "jquery-ui-dialog" : "../lib/jquery/ui-1.9/jquery.ui.dialog",
+        "jquery-ui-tabs" : "../lib/jquery/ui-1.9/jquery.ui.tabs",
+        "jquery-ui-spinner" : "../lib/jquery/ui-1.9/jquery.ui.spinner",
+        "jquery-ui-autocomplete" : "../lib/jquery/ui-1.9/jquery.ui.autocomplete",
+        "jquery-ui-editable" : "../lib/jquery/jqueryui-editable",
+        "jquery-ui-slider": "../lib/jquery/ui-1.9/jquery.ui.slider",
+        "jquery-ui-dialog" : "../lib/jquery/ui-1.9/jquery.ui.dialog",
+        "jquery-ui-resizable" : "../lib/jquery/ui-1.9/jquery.ui.resizable",
+        /* use updated jquery.ui.position 1.10 version for getting feedback object in using function */
+        "jquery-ui-position" : "../lib/jquery/ui-1.10/jquery.ui.position",
+        "jquery-ui-sortable" : "../lib/jquery/ui-1.9/jquery.ui.sortable",
+        "jquery-ui-draggable" : "../lib/jquery/ui-1.9/jquery.ui.draggable",
+        "jquery-ui-mouse" : "../lib/jquery/ui-1.9/jquery.ui.mouse",
+        "jquery-ui-menu" : "../lib/jquery/ui-1.9/jquery.ui.menu",
+        "jquery-ui-selectmenu" : "../lib/jquery/ui-1.9/jquery.ui.selectmenu",
+        "jquery-livequery" : "../lib/jquery/jquery.livequery",
+        "jquery-toggle-attr" : "../lib/jquery/toggle-attr",
+        "jquery-form" : "../lib/jquery/jquery.form",
+        "jquery-placeholder" : "../lib/jquery/jquery.placeholder",
+        "ajaxupload" : "../lib/jquery/ajaxupload/ajaxupload",
+        "Backbone.ModelBinder" : "../lib/Backbone.ModelBinder",
+        "Backbone.CollectionBinder" : "../lib/Backbone.CollectionBinder",
+        "jquery-scroll-to" : "../lib/jquery/scrollto/jquery.scrollTo-1.4.2",
+        "zero-clipboard" : "../lib/ZeroClipboard",
+        "namespace" : "../lib/jquery/namespace",
+        "jquery-jeditable" : "../lib/jquery/jeditable/jquery.jeditable",
+        "jquery-tablednd" : "/lib/jquery/tablednd/jquery.tablednd_0_5",
+        "jquery-dropkick" : "../lib/jquery/dropkick/jquery.dropkick-1.0.0",
+        "jquery-ba-bbq" : "../lib/jquery/ba-bbq/jquery.ba-bbq",
+        "form-focus" : "../lib/jquery/form.focus",
+        "jquery-tablednd" : "../lib/jquery/tablednd/jquery.tablednd_0_5",
+        "jquery-ui-datepicker-ru" : "../lib/jquery/ui-1.9/i18n/jquery.ui.datepicker-ru",
+        "jquery-ui-datepicker-de" : "../lib/jquery/ui-1.9/i18n/jquery.ui.datepicker-de",
+        "datepicker-defaults" : "../lib/jquery/datepicker/datepicker.defaults",
+        "datepicker-patch" : "/lib/jquery/datepicker/datepicker.patch",
+        "jquery-maskedinput-definitions" : "../lib/jquery/maskedinput/jquery.maskedinput.definitions",
+        "bootstrap-tabs" : "require/tabs",
+        "ajaxupload" : "../lib/jquery/ajaxupload/ajaxupload",
+        "ajaxupload-patch" : "../lib/jquery/ajaxupload/patch",
+        "jquery-iframe-transport" : "../lib/jquery/jquery.iframe-transport",
+        "jquery-request" : "../lib/jquery/request/request",
+        "swfobject" : "../lib/swfobject",
+        "jquery-payment": "../lib/jquery/payment/jquery.payment",
+        "bootstrap-collapse" : "../lib/jquery/bootstrap/bootstrap.collapse",
+        "jquery.mousewheel" : "../lib/jquery/jquery.mousewheel-3.0.6.min",
+        "jquery.mScrollbar" : "../lib/jquery/jquery.mCustomScrollbar.min",
+        "jquery-data-tables" : "../lib/jquery/jquery.dataTables",
+        "jquery-highlight" : "../lib/jquery/jquery.highlight",
+        "bootstrap.dropdown" : "../lib/bootstrap/dropdown",
+        "bootstrap.collapse" : "../lib/bootstrap/collapse",
+        "jquery.custom-scrollbar" : "../lib/jquery/jquery.custom-scrollbar",
+        "bootstrap.switch" : "../lib/bootstrap/bootstrap-switch",
+        "zeroClipboard2.2.0" : "../lib/ZeroClipboard.min2.2.0",
+        "jquery.printThis" : "../lib/jquery/jquery.printThis",
+      },
+      waitSeconds: 0,
+      shim: {
+        "jquery-ui-tooltip-default" : ["jquery-ui-position"],
+        "jquery-ui-tooltip" : ["jquery-ui-tooltip-default"],
+        "jquery-ui-dialog" : ["jquery-ui-draggable", "jquery-ui-mouse", "jquery-ui-position", "jquery-ui-resizable"],
+        "jquery-ui-draggable" : ["jquery-ui-mouse"],
+        "jquery-ui-resizable" : ["jquery-ui-mouse"],
+        "jquery-ui-slider" : ["jquery-ui-mouse"],
+        "jquery-ui-selectmenu" : ["jquery-ui-core"],
+        "jquery-ui-autocomplete" : ["jquery-ui-position", "jquery-ui-menu"],
+        "jquery-ui-editable" : ["jquery-ui-tooltip"],
+        "jquery-ui-sortable" : ["jquery-ui-mouse"],
+        "jquery-ui-datepicker-ru" : ["jquery-ui-datepicker"],
+        "jquery-ui-datepicker-de" : ["jquery-ui-datepicker"],
+        "jquery-maskedinput-definitions" : ["jquery-maskedinput"],
+        "ajaxupload-patch" : ["ajaxupload"],
+        "jquery.mScrollbar" : ["jquery.mousewheel"],
+        underscore : {
+          exports : '_'
+        },
+        backbone : {
+          deps : ["underscore"],
+          exports : "Backbone"
+        }
+      }
+    });
+  </script>
+  <script type="text/javascript">
+    //<![CDATA[
+    if (navigator.appVersion.indexOf("Mac") != -1 || navigator.userAgent.match(/(iPad|iPhone|iPod)/i)) {
+      document.write('<style type="text/css"> body { font-family: "Helvetica Neue", Helvetica, Arial, Jamrul ,sans-serif; }</style>');
+    }
+    //]]>
+  </script> -->
+
+  <title>Личный кабинет</title>
+
+  
+  
+  <!-- <script type="text/javascript" src="/lib/google-analytics.js"></script>
+      <script type="text/javascript">
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-18948707-1', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+  ga('require', 'ecommerce', 'ecommerce.js');
+
+  setTimeout("ga('send', 'event', 'No Bounce', 'Over 15 seconds', '/')",15000);
+
+  
+</script>
+  
+  <script type="text/javascript">
+    Ics.accountId = '300000230';
+    Ics.productId = '400070052';
+    Ics.url = function($url) {
+      var $prefix = '';
+      if (Ics.accountId != '') {
+        $prefix += '/' + Ics.accountId;
+        if (Ics.productId != '') {
+          $prefix += '/' + Ics.productId;
+        }
+      }
+      return $prefix + $url;
+    }
+  </script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/livequery" src="/js/require/ui/livequery.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/common" src="/js/require/common.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/products" src="/js/require/products.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/action-log-event" src="/js/require/action-log-event.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/ajax-tools" src="/js/require/ui/ajax-tools.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ajax-upload" src="/js/require/ajax-upload.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/manage-service" src="/js/require/manage-service.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/remove" src="/js/require/ui/remove.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog" src="/js/require/ui/dialog.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="fancybox" src="/js/../lib/jquery/jquery.fancybox-1.3.4.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/datepicker/datepicker.defaults" src="/js/require/datepicker/datepicker.defaults.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/message" src="/js/require/ui/message.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/validate-input-message" src="/js/require/validate-input-message.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/constraint" src="/js/require/constraint.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/abonent-field" src="/js/require/abonent-field.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-ui-spinner" src="/js/../lib/jquery/ui-1.9/jquery.ui.spinner.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/product" src="/js/require/product.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-address" src="/js/../lib/jquery/jquery.address-1.5.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-iframe-transport" src="/js/../lib/jquery/jquery.iframe-transport.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/submit" src="/js/require/submit.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="namespace" src="/js/../lib/jquery/namespace.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/action" src="/js/require/ui/dialog/action.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/activate-demo-vpbx" src="/js/require/ui/dialog/activate-demo-vpbx.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/analytics-demo" src="/js/require/ui/dialog/analytics-demo.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/call-centre-switch-tariff" src="/js/require/ui/dialog/call-centre-switch-tariff.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/condition" src="/js/require/ui/dialog/condition.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog-super" src="/js/require/ui/dialog-super.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/greeting" src="/js/require/ui/dialog/greeting.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/video-frame" src="/js/require/ui/dialog/video-frame.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/confirm" src="/js/require/ui/dialog/confirm.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/widget-settings" src="/js/require/ui/dialog/widget-settings.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/widget-old-version" src="/js/require/ui/dialog/widget-old-version.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/sms-name-unique" src="/js/require/ui/dialog/sms-name-unique.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/switch-tariff" src="/js/require/ui/dialog/switch-tariff.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/switch-plan-version" src="/js/require/ui/dialog/switch-plan-version.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/switch-plan-tariff" src="/js/require/ui/dialog/switch-plan-tariff.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/coshka" src="/js/require/ui/dialog/coshka.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/crm-switch-tariff" src="/js/require/ui/dialog/crm-switch-tariff.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/main-uri" src="/js/require/ui/dialog/main-uri.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/sip-domain" src="/js/require/ui/dialog/sip-domain.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/prolong-blocking" src="/js/require/ui/dialog/prolong-blocking.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/sip-account-control" src="/js/require/ui/dialog/sip-account-control.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/sip-domain-create" src="/js/require/ui/dialog/sip-domain-create.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/sip-domain-rename" src="/js/require/ui/dialog/sip-domain-rename.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/sip-domain-delete" src="/js/require/ui/dialog/sip-domain-delete.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/target" src="/js/require/ui/dialog/target.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/point-member-cart" src="/js/require/ui/dialog/point-member-cart.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/protection" src="/js/require/ui/dialog/protection.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/add-multi-object" src="/js/require/ui/dialog/add-multi-object.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/white-continents-point-members" src="/js/require/ui/dialog/white-continents-point-members.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/white-continents-vats" src="/js/require/ui/dialog/white-continents-vats.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/point-group-cart" src="/js/require/ui/dialog/point-group-cart.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/input-field" src="/js/require/ui/dialog/input-field.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/schedule" src="/js/require/ui/dialog/schedule.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/widget-type" src="/js/require/ui/dialog/widget-type.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/voice-recorder" src="/js/require/ui/dialog/voice-recorder.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/create-point-member" src="/js/require/ui/dialog/create-point-member.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/commit-voice-mail-extended" src="/js/require/ui/dialog/commit-voice-mail-extended.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/rename-product" src="/js/require/ui/dialog/rename-product.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/success-create-point-member" src="/js/require/ui/dialog/success-create-point-member.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/prompt" src="/js/require/ui/dialog/prompt.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/sip-id" src="/js/require/ui/dialog/sip-id.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/widget-preview-service" src="/js/require/ui/dialog/widget-preview-service.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/widget-agree" src="/js/require/ui/dialog/widget-agree.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/widget-com-brand" src="/js/require/ui/dialog/widget-com-brand.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/confirm-reset-password" src="/js/require/ui/dialog/confirm-reset-password.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/datepicker/datepicker.patch" src="/js/require/datepicker/datepicker.patch.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="lang" src="/js/lang.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-maskedinput" src="/js/../lib/jquery/maskedinput/jquery.maskedinput-1.4.1.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-ui-position" src="/js/../lib/jquery/ui-1.10/jquery.ui.position.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="ajaxupload" src="/js/../lib/jquery/ajaxupload/ajaxupload.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-ui-mouse" src="/js/../lib/jquery/ui-1.9/jquery.ui.mouse.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-ui-datepicker" src="/js/../lib/jquery/ui-1.9/jquery.ui.datepicker.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/autocomplete" src="/js/require/autocomplete.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/form/datetime" src="/js/require/ui/form/datetime.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-request" src="/js/../lib/jquery/request/request.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/change-tariff" src="/js/require/ui/dialog/change-tariff.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/selectable" src="/js/require/selectable.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/prototype/string" src="/js/require/prototype/string.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="dependencies" src="/js/dependencies.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-nimble-loader" src="/js/../lib/jquery/nimble.loader/jquery.nimble.loader.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-keyfilter" src="/js/../lib/jquery/keyfilter/jquery.keyfilter-1.8.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="mvc/point-members-groups/models/group" src="/js/mvc/point-members-groups/models/group.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/filterable" src="/js/require/filterable.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/dialog/target/external-number" src="/js/require/ui/dialog/target/external-number.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/filter" src="/js/require/filter.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-ui-core" src="/js/../lib/jquery/ui-1.9/jquery.ui.core.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="underscore" src="/js/../lib/underscore.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/dropdown" src="/js/require/dropdown.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-form" src="/js/../lib/jquery/jquery.form.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-ba-bbq" src="/js/../lib/jquery/ba-bbq/jquery.ba-bbq.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/ui/greeting/select" src="/js/require/ui/greeting/select.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/widgets" src="/js/require/widgets.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="swfobject" src="/js/../lib/swfobject.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery.printThis" src="/js/../lib/jquery/jquery.printThis.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-dropkick" src="/js/../lib/jquery/dropkick/jquery.dropkick-1.0.0.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-cookie" src="/js/../lib/jquery/jquery.cookie.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-maskedinput-definitions" src="/js/../lib/jquery/maskedinput/jquery.maskedinput.definitions.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-ui-tooltip-default" src="/js/../lib/jquery/ui-1.9/jquery.ui.tooltip.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="ajaxupload-patch" src="/js/../lib/jquery/ajaxupload/patch.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-ui-draggable" src="/js/../lib/jquery/ui-1.9/jquery.ui.draggable.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-ui-resizable" src="/js/../lib/jquery/ui-1.9/jquery.ui.resizable.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-toggle-attr" src="/js/../lib/jquery/toggle-attr.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/check-balance" src="/js/require/check-balance.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/equal-heights" src="/js/require/equal-heights.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/account-panel" src="/js/require/account-panel.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/product-panel" src="/js/require/product-panel.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/check-limit" src="/js/require/check-limit.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/product-lines" src="/js/require/product-lines.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-ui-datepicker-ru" src="/js/../lib/jquery/ui-1.9/i18n/jquery.ui.datepicker-ru.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-ui-datepicker-de" src="/js/../lib/jquery/ui-1.9/i18n/jquery.ui.datepicker-de.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/navigation" src="/js/require/navigation.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-ui-menu" src="/js/../lib/jquery/ui-1.9/jquery.ui.menu.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-ui-selectmenu" src="/js/../lib/jquery/ui-1.9/jquery.ui.selectmenu.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="backbone" src="/js/../lib/backbone.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-ui-tooltip" src="/js/../lib/jquery/jquery.ext-tooltip.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-ui-autocomplete" src="/js/../lib/jquery/ui-1.9/jquery.ui.autocomplete.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-ui-dialog" src="/js/../lib/jquery/ui-1.9/jquery.ui.dialog.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-ui-editable" src="/js/../lib/jquery/jqueryui-editable.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/jquery-ui/datepicker-3.1" src="/js/require/jquery-ui/datepicker-3.1.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/point-members" src="/js/require/point-members.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="require/check-session" src="/js/require/check-session.js?ver=7.17.07"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-tablednd" src="/js/../lib/jquery/tablednd/jquery.tablednd_0_5.js?ver=7.17.07"></script></head>
+-->
+<body class="hide-easy-start" address="true" onload="flashBorder();">
+<script type="text/javascript">
+                                                        var flash;
+                                                        function flashBorder(elmId, stopFlash)
+                                                        {
+                                                            var elm = document.getElementById("lsn2_2");
+                                                            if (stopFlash == "true")
+                                                            {
+                                                                elm.style.border = "";
+                                                                clearInterval(flash);
+                                                            }
+                                                            else
+                                                            {
+                                                                var borderPattern = false;
+                                                                flash = setInterval(setBorder, 700);
+
+                                                                function setBorder()
+                                                                {
+                                                                    if (borderPattern)
+                                                                    {
+                                                                        borderPattern = false;
+                                                                        elm.style.border = "solid transparent";
+                                                                        elm.style.borderWidth = "4px";
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        borderPattern = true;
+                                                                        elm.style.border = "solid Red";
+                                                                        elm.style.borderWidth = "4px";
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    </script>
+<!-- <script>
+  $('body').removeClass('body-no-script');
+</script>  -->
+
+    
+ <!--  <script type="text/javascript">
+    (function (d, w, c) {
+      (w[c] = w[c] || []).push(function() {
+        try {
+          w.yaCounter21606391 = new Ya.Metrika({
+            id:21606391,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true,
+            trackHash:true
+          });
+          w.yaCounter21628492 = new Ya.Metrika({
+            id:21628492,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true,
+            trackHash:true
+          });
+        } catch(e) { }
+      });
+
+      var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = ;
+
+      if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+      } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+  </script> -->
+  <noscript>&lt;div&gt;&lt;img src= style="position:absolute; left:-9999px;" alt="" /&gt;&lt;/div&gt;</noscript>
+  <!-- /Yandex.Metrika counter -->
+<!--[if lt IE 7]>
+<div class="b-notification-bar">У вас установлена устаревшая версия браузера. Некоторые функции сайта не будут работать или будут работать неправильно. Рекомендуем <a href="$s">установить</a> более новую версию.</div>
+<![endif]-->
+
+<div class="header-background">
+  <div class="left-background"></div>
+  <div class="right-background"></div>
+</div>
+
+  <div class="account-info-background"></div>
+
+  <div class="product-panel-background "></div>
+
+  <div class="product-panel-background-no-script "></div>
+
+  <div class="easy-start-background">
+    <div class="help-panel"></div>
+  </div>
+
+<div class="b-wrapper">
+  <a name="top"></a>
+  <div class="b-header">
+    <div style="color: #000000; position: absolute; top: 0; left: 0;">P</div>
+      
+    <a class="logo"  alt="MANGO OFFICE"><!-- --></a>
+
+    <div class="navigation">
+      <ul>
+      <li class="products active">
+      <a id="menu-products" class="products" >Продукты <span class="expand"></span><span class="collapse"></span></a>
+              <div class="bridge">
+          <div><!-- --></div>
+        </div>
+        <div class="product-selector">
+            <div class="b-product-selector">
+    <div class="b-buy-more-product"><a href="">Купить еще</a></div>
+    <div class="b-product-selector-close" title="Закрыть"></div>
+    <div class="product-selector-block product-status product-status-active">
+            <div class="b-products b-brand-vpbx">
+      <div class="product-header">
+        <h2>Виртуальная АТС<span class="b-tooltip b-info-tooltip" title="Облачная офисная IP АТС высочайшего класса, имеющая неограниченные возможности по масштабированию и адаптации к любым потребностям Вашего бизнеса"></span></h2>
+      </div>
+      <ul class="b-product">
+                        <li class="b-product-select-300225072         ">
+                    <div class="product-element vats-element ">
+            <div class="selector-product-logo">
+              <img src="../../Images/vpbx.png" alt="ВАТС №3 для Тестирование работ сервера Опенсисп " title="ВАТС №3 для Тестирование работ сервера Опенсисп ">
+            </div>
+            <div class="selector-product-data">
+              <h3 class="product-name">
+                                <a  class="go-product product-title-300225072" title="Перейти на страницу продукта">ВАТС №3 для Тестирование работ сервера Опенсисп </a>
+                              </h3>
+              <div class="product-status" title="">
+                <div class="status-table"><div class="status-cell"></div></div>
+              </div>
+              <ul class="product-short-info">
+                <li class="plan"><div>Тариф: <span title="Для внутреннего использования">Для внутреннего использования</span></div></li>
+              </ul>
+             </div>
+            <div class="clear"></div>
+            <div class="product-arrow"></div>
+          </div>
+                  </li>
+                        <li class="b-product-select-300291335         ">
+                    <div class="product-element vats-element ">
+            <div class="selector-product-logo">
+              <img src="../../Images/vpbx.png" alt="ВАТС №9 для тестирование Емкостей  " title="ВАТС №9 для тестирование Емкостей  ">
+            </div>
+            <div class="selector-product-data">
+              <h3 class="product-name">
+                                <a  class="go-product product-title-300291335" title="Перейти на страницу продукта">ВАТС №9 для тестирование Емкостей  </a>
+                              </h3>
+              <div class="product-status" title="">
+                <div class="status-table"><div class="status-cell"></div></div>
+              </div>
+              <ul class="product-short-info">
+                <li class="plan"><div>Тариф: <span title="Для внутреннего использования">Для внутреннего использования</span></div></li>
+              </ul>
+             </div>
+            <div class="clear"></div>
+            <div class="product-arrow"></div>
+          </div>
+                  </li>
+                        <li class="b-product-select-300304055         ">
+                    <div class="product-element vats-element ">
+            <div class="selector-product-logo">
+              <img src="../../Images/vpbx.png" alt="ВАТС №14 проброс ANI" title="ВАТС №14 проброс ANI">
+            </div>
+            <div class="selector-product-data">
+              <h3 class="product-name">
+                                <a  class="go-product product-title-300304055" title="Перейти на страницу продукта">ВАТС №14 проброс ANI</a>
+                              </h3>
+              <div class="product-status" title="">
+                <div class="status-table"><div class="status-cell"></div></div>
+              </div>
+              <ul class="product-short-info">
+                <li class="plan"><div>Тариф: <span title="СВОБОДНЫЙ">СВОБОДНЫЙ</span></div></li>
+              </ul>
+             </div>
+            <div class="clear"></div>
+            <div class="product-arrow"></div>
+          </div>
+                  </li>
+                        <li class="b-product-select-300305397         ">
+                    <div class="product-element vats-element ">
+            <div class="selector-product-logo">
+              <img src="../../Images/vpbx.png" alt="Виртуальная АТС №16" title="Виртуальная АТС №16">
+            </div>
+            <div class="selector-product-data">
+              <h3 class="product-name">
+                                <a  class="go-product product-title-300305397" title="Перейти на страницу продукта">Виртуальная АТС №16</a>
+                              </h3>
+              <div class="product-status" title="">
+                <div class="status-table"><div class="status-cell"></div></div>
+              </div>
+              <ul class="product-short-info">
+                <li class="plan"><div>Тариф: <span title="СВОБОДНЫЙ">СВОБОДНЫЙ</span></div></li>
+              </ul>
+             </div>
+            <div class="clear"></div>
+            <div class="product-arrow"></div>
+          </div>
+                  </li>
+                        <li class="b-product-select-300328204         ">
+                    <div class="product-element vats-element ">
+            <div class="selector-product-logo">
+              <img src="../../Images/vpbx.png" alt="ВАТС №18 для сотрудников ОТП" title="ВАТС №18 для сотрудников ОТП">
+            </div>
+            <div class="selector-product-data">
+              <h3 class="product-name">
+                                <a  class="go-product product-title-300328204" title="Перейти на страницу продукта">ВАТС №18 для сотрудников ОТП</a>
+                              </h3>
+              <div class="product-status" title="">
+                <div class="status-table"><div class="status-cell"></div></div>
+              </div>
+              <ul class="product-short-info">
+                <li class="plan"><div>Тариф: <span title="СВОБОДНЫЙ">СВОБОДНЫЙ</span></div></li>
+              </ul>
+             </div>
+            <div class="clear"></div>
+            <div class="product-arrow"></div>
+          </div>
+                  </li>
+                        <li class="b-product-select-300331301         ">
+                    <div class="product-element vats-element ">
+            <div class="selector-product-logo">
+              <img src="../../Images/vpbx.png" alt="Березка +" title="Березка +">
+            </div>
+            <div class="selector-product-data">
+              <h3 class="product-name">
+                                <a  class="go-product product-title-300331301" title="Перейти на страницу продукта">Березка +</a>
+                              </h3>
+              <div class="product-status" title="">
+                <div class="status-table"><div class="status-cell"></div></div>
+              </div>
+              <ul class="product-short-info">
+                <li class="plan"><div>Тариф: <span title="СВОБОДНЫЙ">СВОБОДНЫЙ</span></div></li>
+              </ul>
+             </div>
+            <div class="clear"></div>
+            <div class="product-arrow"></div>
+          </div>
+                  </li>
+                        <li class="b-product-select-300337238         ">
+                    <div class="product-element vats-element ">
+            <div class="selector-product-logo">
+              <img src="../../Images/vpbx.png" alt="115 Тест АТС VIP ОТП" title="115 Тест АТС VIP ОТП">
+            </div>
+            <div class="selector-product-data">
+              <h3 class="product-name">
+                                <a  class="go-product product-title-300337238" title="Перейти на страницу продукта">115 Тест АТС VIP ОТП</a>
+                              </h3>
+              <div class="product-status" title="">
+                <div class="status-table"><div class="status-cell"></div></div>
+              </div>
+              <ul class="product-short-info">
+                <li class="plan"><div>Тариф: <span title="СВОБОДНЫЙ">СВОБОДНЫЙ</span></div></li>
+              </ul>
+             </div>
+            <div class="clear"></div>
+            <div class="product-arrow"></div>
+          </div>
+                  </li>
+                        <li class="b-product-select-400029277         ">
+                    <div class="product-element vats-element ">
+            <div class="selector-product-logo">
+              <img src="../../Images/vpbx.png" alt="Виртуальный номер" title="Виртуальный номер">
+            </div>
+            <div class="selector-product-data">
+              <h3 class="product-name">
+                                <a  class="go-product product-title-400029277" title="Перейти на страницу продукта">Виртуальный номер</a>
+                              </h3>
+              <div class="product-status" title="">
+                <div class="status-table"><div class="status-cell"></div></div>
+              </div>
+              <ul class="product-short-info">
+                <li class="plan"><div>Тариф: <span title="Виртуальный номер">Виртуальный номер</span></div></li>
+              </ul>
+             </div>
+            <div class="clear"></div>
+            <div class="product-arrow"></div>
+          </div>
+                  </li>
+                        <li class="b-product-select-400029278         ">
+                    <div class="product-element vats-element ">
+            <div class="selector-product-logo">
+              <img src="../../Images/vpbx.png" alt="Базовая + пакет 300" title="Базовая + пакет 300">
+            </div>
+            <div class="selector-product-data">
+              <h3 class="product-name">
+                                <a  class="go-product product-title-400029278" title="Перейти на страницу продукта">Базовая + пакет 300</a>
+                              </h3>
+              <div class="product-status" title="">
+                <div class="status-table"><div class="status-cell"></div></div>
+              </div>
+              <ul class="product-short-info">
+                <li class="plan"><div>Тариф: <span title="Базовая + Пакет 300">Базовая + Пакет 300</span></div></li>
+              </ul>
+             </div>
+            <div class="clear"></div>
+            <div class="product-arrow"></div>
+          </div>
+                  </li>
+                        <li class="b-product-select-400029279         ">
+                    <div class="product-element vats-element ">
+            <div class="selector-product-logo">
+              <img src="../../Images/vpbx.png" alt="Максимальная + Пакет 300" title="Максимальная + Пакет 300">
+            </div>
+            <div class="selector-product-data">
+              <h3 class="product-name">
+                                <a  class="go-product product-title-400029279" title="Перейти на страницу продукта">Максимальная + Пакет 300</a>
+                              </h3>
+              <div class="product-status" title="">
+                <div class="status-table"><div class="status-cell"></div></div>
+              </div>
+              <ul class="product-short-info">
+                <li class="plan"><div>Тариф: <span title="Максимальная + Пакет 300">Максимальная + Пакет 300</span></div></li>
+              </ul>
+             </div>
+            <div class="clear"></div>
+            <div class="product-arrow"></div>
+          </div>
+                  </li>
+                        <li class="b-product-select-400029280         ">
+                    <div class="product-element vats-element ">
+            <div class="selector-product-logo">
+              <img src="../../Images/vpbx.png" alt="Расширенная  + Пакет 300" title="Расширенная  + Пакет 300">
+            </div>
+            <div class="selector-product-data">
+              <h3 class="product-name">
+                                <a  class="go-product product-title-400029280" title="Перейти на страницу продукта">Расширенная  + Пакет 300</a>
+                              </h3>
+              <div class="product-status" title="">
+                <div class="status-table"><div class="status-cell"></div></div>
+              </div>
+              <ul class="product-short-info">
+                <li class="plan"><div>Тариф: <span title="Расширенная + Пакет 300">Расширенная + Пакет 300</span></div></li>
+              </ul>
+             </div>
+            <div class="clear"></div>
+            <div class="product-arrow"></div>
+          </div>
+                  </li>
+                        <li class="b-product-select-400032147         ">
+                    <div class="product-element vats-element ">
+            <div class="selector-product-logo">
+              <img src="../../Images/vpbx.png" alt="Виртуальная АТС №108" title="Виртуальная АТС №108">
+            </div>
+            <div class="selector-product-data">
+              <h3 class="product-name">
+                                <a  class="go-product product-title-400032147" title="Перейти на страницу продукта">Виртуальная АТС №108</a>
+                              </h3>
+              <div class="product-status" title="">
+                <div class="status-table"><div class="status-cell"></div></div>
+              </div>
+              <ul class="product-short-info">
+                <li class="plan"><div>Тариф: <span title="Расширенная + Пакет 300">Расширенная + Пакет 300</span></div></li>
+              </ul>
+             </div>
+            <div class="clear"></div>
+            <div class="product-arrow"></div>
+          </div>
+                  </li>
+                        <li class="b-product-select-400070052                  b-product-select-current
+                      vats-active
+                   ">
+                    <div class="product-element vats-element ">
+            <div class="selector-product-logo">
+              <img src="../../Images/vpbx.png" alt="Виртуальная АТС №111" title="Виртуальная АТС №111">
+            </div>
+            <div class="selector-product-data">
+              <h3 class="product-name">
+                                <a  class="go-product product-title-400070052" title="Перейти на страницу продукта">Виртуальная АТС №111</a>
+                              </h3>
+              <div class="product-status" title="">
+                <div class="status-table"><div class="status-cell"></div></div>
+              </div>
+              <ul class="product-short-info">
+                <li class="plan"><div>Тариф: <span title="Расширенная + Пакет 300">Расширенная + Пакет 300</span></div></li>
+              </ul>
+             </div>
+            <div class="clear"></div>
+            <div class="product-arrow"></div>
+          </div>
+                  </li>
+                        <li class="b-product-select-400075601         ">
+                    <div class="product-element vats-element ">
+            <div class="selector-product-logo">
+              <img src="../../Images/vpbx.png" alt="Центр Обучения Mango Office" title="Центр Обучения Mango Office">
+            </div>
+            <div class="selector-product-data">
+              <h3 class="product-name">
+                                <a  class="go-product product-title-400075601" title="Перейти на страницу продукта">Центр Обучения Mango Office</a>
+                              </h3>
+              <div class="product-status" title="">
+                <div class="status-table"><div class="status-cell"></div></div>
+              </div>
+              <ul class="product-short-info">
+                <li class="plan"><div>Тариф: <span title="Виртуальный номер">Виртуальный номер</span></div></li>
+              </ul>
+             </div>
+            <div class="clear"></div>
+            <div class="product-arrow"></div>
+          </div>
+                  </li>
+                        <li class="b-product-select-400075871         ">
+                    <div class="product-element vats-element ">
+            <div class="selector-product-logo">
+              <img src="../../Images/vpbx.png" alt="Виртуальная АТС №113" title="Виртуальная АТС №113">
+            </div>
+            <div class="selector-product-data">
+              <h3 class="product-name">
+                                <a  class="go-product product-title-400075871" title="Перейти на страницу продукта">Виртуальная АТС №113</a>
+                              </h3>
+              <div class="product-status" title="">
+                <div class="status-table"><div class="status-cell"></div></div>
+              </div>
+              <ul class="product-short-info">
+                <li class="plan"><div>Тариф: <span title="Виртуальный номер">Виртуальный номер</span></div></li>
+              </ul>
+             </div>
+            <div class="clear"></div>
+            <div class="product-arrow"></div>
+          </div>
+                  </li>
+                        <li class="b-product-select-400081355         ">
+                    <div class="product-element vats-element ">
+            <div class="selector-product-logo">
+              <img src="../../Images/vpbx.png" alt="Виртуальная АТС №114" title="Виртуальная АТС №114">
+            </div>
+            <div class="selector-product-data">
+              <h3 class="product-name">
+                                <a  class="go-product product-title-400081355" title="Перейти на страницу продукта">Виртуальная АТС №114</a>
+                              </h3>
+              <div class="product-status" title="">
+                <div class="status-table"><div class="status-cell"></div></div>
+              </div>
+              <ul class="product-short-info">
+                <li class="plan"><div>Тариф: <span title="Максимальная (без МГП)">Максимальная (без МГП)</span></div></li>
+              </ul>
+             </div>
+            <div class="clear"></div>
+            <div class="product-arrow"></div>
+          </div>
+                  </li>
+              </ul>
+    </div>
+        <div class="b-products b-brand-calling_card">
+      <div class="product-header">
+        <h2>Выгодный межгород<span class="b-tooltip b-info-tooltip" title="Исходящая связь по минимальным ценам и без ограничения числа линий"></span></h2>
+      </div>
+      <ul class="b-product">
+                        <li class="b-product-select-300297486         ">
+                    <div class="product-element vats-element ">
+            <div class="selector-product-logo">
+              <img src="../../Images/calling_card.png" alt="Выгодный межгород №13 - Москва" title="Выгодный межгород №13 - Москва">
+            </div>
+            <div class="selector-product-data">
+              <h3 class="product-name">
+                                <a  class="go-product product-title-300297486" title="Перейти на страницу продукта">Выгодный межгород №13 - Москва</a>
+                              </h3>
+              <div class="product-status" title="">
+                <div class="status-table"><div class="status-cell"></div></div>
+              </div>
+              <ul class="product-short-info">
+                <li class="plan"><div>Тариф: <span title="МИДИ">МИДИ</span></div></li>
+              </ul>
+             </div>
+            <div class="clear"></div>
+            <div class="product-arrow"></div>
+          </div>
+                  </li>
+              </ul>
+    </div>
+        <div class="b-products b-brand-crm">
+      <div class="product-header">
+        <h2>CRM-система<span class="b-tooltip b-info-tooltip" title="Система управления взаимоотношениями с клиентами, поддерживающая работу с телефонией, для любого вида бизнеса"></span></h2>
+      </div>
+      <ul class="b-product last-block">
+                        <li class="b-product-select-300296825         ">
+                    <div class="product-element vats-element ">
+            <div class="selector-product-logo">
+              <img src="../../Images/crm.png" alt="CRM №1" title="CRM №1">
+            </div>
+            <div class="selector-product-data">
+              <h3 class="product-name">
+                                <a  class="go-product product-title-300296825" title="Перейти на страницу продукта">CRM №1</a>
+                                  <br><span class="product-code">(код продукта: №921603)</span>
+                              </h3>
+              <div class="product-status" title="">
+                <div class="status-table"><div class="status-cell"></div></div>
+              </div>
+              <ul class="product-short-info">
+                <li class="plan"><div>Тариф: <span title="ОФИС">ОФИС</span></div></li>
+              </ul>
+             </div>
+            <div class="clear"></div>
+            <div class="product-arrow"></div>
+          </div>
+                  </li>
+                        <li class="b-product-select-300294187         ">
+                    <div class="product-element vats-element ">
+            <div class="selector-product-logo">
+              <img src="../../Images/crm.png" alt="CRM №10" title="CRM №10">
+            </div>
+            <div class="selector-product-data">
+              <h3 class="product-name">
+                                <a  class="go-product product-title-300294187" title="Перейти на страницу продукта">CRM №10</a>
+                                  <br><span class="product-code">(код продукта: №128265)</span>
+                              </h3>
+              <div class="product-status" title="">
+                <div class="status-table"><div class="status-cell"></div></div>
+              </div>
+              <ul class="product-short-info">
+                <li class="plan"><div>Тариф: <span title="ПРОМО">ПРОМО</span></div></li>
+              </ul>
+             </div>
+            <div class="clear"></div>
+            <div class="product-arrow"></div>
+          </div>
+                  </li>
+                        <li class="b-product-select-300296837         ">
+                    <div class="product-element vats-element ">
+            <div class="selector-product-logo">
+              <img src="../../Images/crm.png" alt="CRM №11" title="CRM №11">
+            </div>
+            <div class="selector-product-data">
+              <h3 class="product-name">
+                                <a  class="go-product product-title-300296837" title="Перейти на страницу продукта">CRM №11</a>
+                                  <br><span class="product-code">(код продукта: №489828)</span>
+                              </h3>
+              <div class="product-status" title="">
+                <div class="status-table"><div class="status-cell"></div></div>
+              </div>
+              <ul class="product-short-info">
+                <li class="plan"><div>Тариф: <span title="ОФИС">ОФИС</span></div></li>
+              </ul>
+             </div>
+            <div class="clear"></div>
+            <div class="product-arrow"></div>
+          </div>
+                  </li>
+                        <li class="b-product-select-300335244         ">
+                    <div class="product-element vats-element ">
+            <div class="selector-product-logo">
+              <img src="../../Images/crm.png" alt="CRM №23" title="CRM №23">
+            </div>
+            <div class="selector-product-data">
+              <h3 class="product-name">
+                                <a  class="go-product product-title-300335244" title="Перейти на страницу продукта">CRM №23</a>
+                                  <br><span class="product-code">(код продукта: №504779)</span>
+                              </h3>
+              <div class="product-status" title="">
+                <div class="status-table"><div class="status-cell"></div></div>
+              </div>
+              <ul class="product-short-info">
+                <li class="plan"><div>Тариф: <span title="ОТДЕЛ">ОТДЕЛ</span></div></li>
+              </ul>
+             </div>
+            <div class="clear"></div>
+            <div class="product-arrow"></div>
+          </div>
+                  </li>
+                        <li class="b-product-select-300336613         ">
+                    <div class="product-element vats-element ">
+            <div class="selector-product-logo">
+              <img src="../../Images/crm.png" alt="CRM №25" title="CRM №25">
+            </div>
+            <div class="selector-product-data">
+              <h3 class="product-name">
+                                <a  class="go-product product-title-300336613" title="Перейти на страницу продукта">CRM №25</a>
+                                  <br><span class="product-code">(код продукта: №484249)</span>
+                              </h3>
+              <div class="product-status" title="">
+                <div class="status-table"><div class="status-cell"></div></div>
+              </div>
+              <ul class="product-short-info">
+                <li class="plan"><div>Тариф: <span title="ОФИС">ОФИС</span></div></li>
+              </ul>
+             </div>
+            <div class="clear"></div>
+            <div class="product-arrow"></div>
+          </div>
+                  </li>
+                        <li class="b-product-select-400012825         ">
+                    <div class="product-element vats-element ">
+            <div class="selector-product-logo">
+              <img src="../../Images/crm.png" alt="CRM №102" title="CRM №102">
+            </div>
+            <div class="selector-product-data">
+              <h3 class="product-name">
+                                <a  class="go-product product-title-400012825" title="Перейти на страницу продукта">CRM №102</a>
+                                  <br><span class="product-code">(код продукта: №0702517)</span>
+                              </h3>
+              <div class="product-status" title="">
+                <div class="status-table"><div class="status-cell"></div></div>
+              </div>
+              <ul class="product-short-info">
+                <li class="plan"><div>Тариф: <span title="ПРОМО">ПРОМО</span></div></li>
+              </ul>
+             </div>
+            <div class="clear"></div>
+            <div class="product-arrow"></div>
+          </div>
+                  </li>
+              </ul>
+    </div>
+        <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+  </div>
+<!-- <script>
+  require(['require/products', 'require/action-log-event'], function() {
+    $('.b-product-selector').ics__product_novats('7se2t9edui2qiks8or6vrc95g3');
+    $('.b-buy-more-product a').ics__action_log_event("vats.shop.jump", []);
+  });
+</script> -->
+        </div>
+                </li>
+        <li class="">
+      <a >Финансы</a>
+                </li>
+        <li class=" feedback">
+      <a >Поддержка</a>
+                </li>
+    </ul>
+    </div>
+    <div class="account-header-info">
+  <ul>
+        <li>
+                  <span title="Mango Helper" class="name">Mango Helper</span>
+      <div class="name-overflow"></div>
+    </li>
+  </ul>
+  <div class="logout">
+        <a  title="Выйти">Выйти</a>
+      </div>
+
+</div>
+  </div>
+        
+  <div class="b-account-panel account-info">
+    <ul class="l-part">
+      <li class="account">
+        <div class="account-info-cell">
+          <span>Лицевой счет</span>
+          <span class="value">16600000</span>
+        </div>
+      </li>
+            <li class="balance ">
+        <div class="account-info-cell" title="Остаток 500&nbsp;000&nbsp;руб.">
+	<span>Остаток</span>
+	<span class="value">500&nbsp;000&nbsp;руб.</span>
+</div>      </li>
+
+              <!-- PAYMENT Menu -->
+        <li class="payment">
+          <div class="account-info-cell">
+  
+  <a  data-action="recharge" class="switch switch-front">
+    Пополнить счёт  </a>
+
+<!--  <div class="switch-control-box">-->
+<!--    <a href="#" class="switch switch-control"></a>-->
+<!--    <div class="sub-menu">-->
+<!--      --><!--        <a data-action="--><!--" href="--><!--">--><!--</a>-->
+<!--      --><!--    </div>-->
+<!--  </div>-->
+
+</div>        </li>
+        <!-- <<<payment-menu -->
+      
+    </ul>
+        <ul class="r-part">
+      <li class="spend">
+        <div class="account-info-cell transparent-blur">
+          Расходы в феврале          <span>400&nbsp;000&nbsp;руб.</span>
+
+                      &nbsp;
+            в январе            <span>500&nbsp;000&nbsp;руб.</span>
+                  </div>
+      </li>
+    </ul>
+        <div class="clear"></div>
+
+    
+  </div>
+<!-- 
+  <script type="text/javascript">
+    $(function() {
+      require(['require/account-panel'], function() {
+        $(".b-account-panel").ics__account_panel();
+      });
+    });
+  </script> -->
+
+      
+  <div class="no-script ">
+    Для полной функциональности Личного кабинета необходимо включить JavaScript в вашем браузере.  </div>
+
+  
+      <div class="b-product-panel">
+  
+  
+  <div class="b-product-box">
+    <a  class="product-logo vpbx"><!-- --></a>
+    <div class="product-desc">
+      <a  class="product-title">
+        <span>Виртуальная АТС №111</span>
+        <div class="transparent-gradient"><!-- --></div>
+      </a>
+
+              <span class="g-link product-rename" title="Переименовать"><!-- --></span>
+        <div class="b-dialog-container" id="dialog-container-rename-product" title="Переименование продукта">
+        <div class="b-dialog b-dialog-rename-product">
+  <form id="product-rename-form" enctype="application/x-www-form-urlencoded" action="" method="post" class="ics-form"><div>
+<div class="control-holder"><div class="control-label"><label for="productname" class="optional">Название</label>
+</div><div class="control-element">
+<input type="text" name="productname" id="productname" value="" maxlength="64">
+<span class="control-desc"><!-- --></span>
+<ul class="errors"><li><!-- --></li></ul></div></div></div></form></div>
+      </div>      
+      
+
+                    
+        <div class="b-plan">
+                    <span>
+            Версия          </span>
+                      <span class="g-link switch-plan-version-link" data-brand="vpbx">
+              «Расширенная»
+            </span>
+            <div class="b-dialog-container" id="dialog-container-switch-plan-version" title="Смена версии продукта">
+        
+<div class="b-switch-version">
+
+  <!-- Шаг 0. Отказ в выборе версии (план не сконфигурирован). -->
+  <div class="b-step b-plan-version-not-configured b-static">
+    <div class="b-icon"><!-- --></div>
+    <div class="b-title">
+      Для смены версии продукта необходимо обратиться к вашему менеджеру    </div>
+    <div class="b-note">
+      Для вашей версии Виртуальной АТС недоступно самостоятельное изменение версии. <br>Для смены версии необходимо обратиться к вашему менеджеру по тел. 8 800 555 55 22    </div>
+  </div>
+
+
+  <!-- Шаг 1. Выбор версии. -->
+  <div class="b-step b-versions-collection"><!-- --></div>
+
+
+  <!-- Шаг 2. Информация о переходе на другую версию. -->
+  <div class="b-step b-switch-info"><!-- --></div>
+
+
+  <!-- Шаг 3. Сравнительная таблица дополнительных услуг текущей и выбранной версий. -->
+  <div class="b-step b-compare-versions"><!-- --></div>
+
+
+  <!-- Шаг 4. Блок с сообщением об успешной смене версии. -->
+  <div class="b-step b-congratulation b-static">
+    <div class="b-icon"><!-- --></div>
+    <div class="b-title">
+      Версия продукта успешно изменена.    </div>
+    <div class="b-note">
+      Теперь вы используете версию «<span>%s</span>»    </div>
+  </div>
+
+
+  <!-- -->
+  <div class="b-step b-switch-license"><!-- --></div>
+
+</div>
+
+      </div>          
+
+                                <span class="txt-tariff">
+              Тариф на связь            </span>
+                                                    <span class="g-link switch-plan-tariff-link" data-brand="vpbx">
+                «ПАКЕТ 300»              </span>
+              <div class="b-dialog-container" id="dialog-container-switch-plan-tariff" title="Смена тарифа на связь">
+        
+<div class="b-switch-tariff">
+
+  <!-- Шаг 0. Отказ в выборе тарифа (план вне списка "новых" планов). -->
+  <div class="b-step b-switch-via-manager b-static">
+    <div class="b-icon"><!-- --></div>
+    <div class="b-title">
+              Для смены тарифа на связь необходимо обратиться к вашему менеджеру          </div>
+    <div class="b-note">
+              Для вашей версии Виртуальной АТС недоступно изменение тарифа на связь. <br>Для смены тарифа на связь необходимо обратиться к вашему менеджеру по тел. 8 800 555 55 22          </div>
+  </div>
+
+
+  <!-- Шаг 1. Выбор версии. -->
+  <div class="b-step b-tariffs-collection"><!-- --></div>
+
+
+  <!-- Шаг 2. Информация о переходе на другую версию. -->
+  <div class="b-step b-switch-info"><!-- --></div>
+
+
+  <!-- Шаг 3. Сравнительная таблица дополнительных услуг текущей и выбранной версий. -->
+  <div class="b-step b-compare-tariffs"><!-- --></div>
+
+
+  <!-- Шаг 4. Блок с сообщением об успешной смене версии. -->
+  <div class="b-step b-congratulation b-static">
+    <div class="b-icon"><!-- --></div>
+    <div class="b-title">
+      Тариф на связь успешно изменен.    </div>
+    <div class="b-note">
+      Теперь вы используете тариф на связь «<span>%s</span>»    </div>
+  </div>
+
+
+  <!-- -->
+  <div class="b-step b-switch-license"><!-- --></div>
+
+</div>
+
+      </div>                              </div>
+
+      
+    </div>
+  </div>
+
+  <iframe style="border: 0;" scrolling="no" class="banner" width="379" height="51" src=></iframe>
+
+  <div class="clear"></div>
+
+  <!-- <script type="text/javascript">
+    $(function() {
+      require(['require/product-panel'], function() {
+        $(".b-product-box").ics__product_panel();
+      });
+    });
+  </script>    <script type="text/javascript">
+    $(function() {
+      require(['require/product'], function() {
+        $("div.b-product-panel").ics__product();
+      })
+    });
+  </script> -->
+</div>
+  
+  <div class="b-content b-ajax-content">
+      
+  
+
+    <div class="b-point-members-page">
+  <div class="b-breadcrumbs">
+  <ul>
+        <li><a  class="ajax-page">Настройки и инструменты</a></li>
+      </ul>
+  <div class="clear"></div>
+</div>
+
+
+    <h1>Сотрудники и группы</h1>
+
+  <div class="b-tabs b-tabs-service-settings">
+  <ul>
+            <li>
+      <a  class="skip-address ajax-page">Описание</a>
+    </li>
+            <li class="active current">
+      <a  class="skip-address ajax-page current">Список абонентов</a>
+    </li>
+            <li>
+      <a  class="skip-address ajax-page">Группы обзвона</a>
+    </li>
+            <li id="lsn2_2">
+      <a href="./lsn2_3.html" class="skip-address no-link icon add-member">Добавить сотрудника</a>
+    </li>
+      </ul>
+  <div class="clear"></div>
+</div>
+      <div class="b-service-full-description" style="display: none;"><div style="font-size: 14px;">
+
+<strong>Добавление сотрудников</strong>
+
+<br><br>
+
+Данное видео демонстрирует процедуру добавления сотрудников в Виртуальную АТС. 
+
+<br><br>
+
+<iframe width="560" height="315" src="" frameborder="0" style="border: 1px solid; color: #353535" allowfullscreen=""></iframe>
+
+<br><br>
+
+<strong>Объединение в группы</strong>
+
+<br><br>
+
+Объединение сотрудников в группы, выбор алгоритма распределения входящих вызовов.
+
+<br><br>
+
+<iframe width="560" height="315" src="" frameborder="0" style="border: 1px solid; color: #353535" allowfullscreen=""></iframe>
+
+<br><br>
+
+<strong>Настройка SIP учетной записи</strong>
+
+<br><br>
+
+Демонстрация создания учетной записи SIP для сотрудника.
+
+<br><br>
+
+<iframe width="560" height="315" src="" frameborder="0" style="border: 1px solid; color: #353535" allowfullscreen=""></iframe>
+
+</div></div>
+      
+
+<div class="point-members-block">
+
+  <div class="b-find-options">
+    <div class="find-widget">
+      <label for="search" style="float: left;">Найти</label>
+      <div class="b-widget-filter b-members-list-filter">
+        <label for="search">&nbsp;</label>
+        <input type="text" maxlength="64" name="clue" id="search" class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+        <div>&nbsp;</div>
+      </div>
+      <div class="b-group-info">
+        <span>Всего абонентов:</span>
+        <span id="count-members">2</span>
+      </div>
+    </div>
+    <div class="buttons">
+      <button class="collapse pressed ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" data-mode="short" role="button" aria-disabled="false"><span class="ui-button-text">кратко</span></button>
+      <button class="expand ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" data-mode="full" role="button" aria-disabled="false"><span class="ui-button-text">подробно</span></button>
+    </div>
+  </div>
+
+  <table class="point-members-table" id="point-members-table">
+    <thead>
+    <tr>
+      <td class="fake-left"></td>
+      <td class="role">
+        <span class="sort" data-type="role">
+          Роль          <span class="icon"></span>
+        </span>
+      </td>
+      <td class="pointer-title asc">
+        <span class="sort asc" data-type="name">
+          Сотрудник          <span class="icon asc"></span>
+        </span>
+      </td>
+      <td class="pointer-title">
+        <span class="sort" data-type="number">
+          Внутренний<br>номер          <span class="icon"></span>
+        </span>
+      </td>
+      <td>Способ приема звонков</td>
+      <td class="pointer-title">
+        <span class="sort" data-type="ani">
+          Исходящий номер          <span class="icon"></span>
+        </span>
+      </td>
+      <td colspan="2">
+        <span class="sort" data-type="advise">
+          Совет          <span class="icon"></span>
+        </span>
+      </td>
+    </tr>
+    </thead>
+    <tbody><tr class="filtered-item is-system"><td class="fake-left"></td>
+    <td class="role" title="Администратор"><i class="icon member system admin ">&nbsp;</i></td>
+    <td class="member-name" title="admin" data-member-id="11309707"><span class="name filterable-data">admin</span><br><span class="role filterable-data"></span></td>
+    <td class="transfer-number filterable-data"></td>
+    <td class="numbers"></td>
+    <td class="ani">
+      <div class="b-data"><span class="filterable-data">7 (495) 518-94-36</span><span class="gray filterable-data">Москва</span></div>
+      <div class="t-screen"><!-- --></div>
+    </td>
+    <td class="hint">
+      <span class="c-tooltip red-icon" data-class="tooltip-red-custom" title="<strong>Внимание!</strong> Для абонента не выполнены важные настройки. Использование им телефонии невозможно или затруднено. Для решения проблемы откройте карточку сотрудника и следуйте инструкциям системы" style="display: inline;"></span>
+      <span class="c-tooltip yellow-icon" title="Для абонента не выполнены некоторые рекомендованные настройки. Откройте карточку сотрудника и следуйте инструкциям системы" style="display: none;"></span>
+      <span class="c-tooltip green-icon" title="Основные возможности абонента Виртуальной АТС настроены" style="display: none;"></span>
+    </td>
+    <td class="fake-right"></td></tr>
+	
+	
+	
+	</tbody>
+  </table>
+
+</div>
+
+  <div class="b-dialog-container" id="dialog-container-create-point-member" title="dialog.create-point-member">
+        <div class="b-dialog b-dialog-create-point-member">
+  <form class="b-form ajax-page" method="post" action="">
+    <div class="b-create-member-step b-create-member-step1">
+      <ul>
+        <li>Шаг 1</li>
+        <li>
+          <label for="member-name">Укажите фамилию и имя сотрудника</label>
+          <input id="member-name" name="member-name" maxlength="64" style="display: none;">
+          <input id="member-name-fake" name="member-name-fake" class="fake" value="Иванов Иван" maxlength="64" readonly="true">
+          <span class="c-tooltip" title="Укажите фамилию и имя сотрудника"></span>
+          <span id="alert-finded" class="alert-finded" style="display: none;">Сотрудник с таким ФИО уже существует. <span class="open-blue">Открыть карточку</span></span>
+        </li>
+      </ul>
+    </div>
+    <div class="b-create-member-step b-create-member-step2">
+      <ul>
+        <li>Шаг 2</li>
+        <li>
+          <label for="member-number">Присвойте ему внутренний номер</label>
+          <input id="member-number" name="member-number" maxlength="7" style="display: none;">
+          <input id="member-number-fake" name="member-number-fake" class="fake" value="11" maxlength="5" readonly="true">
+          <span class="c-tooltip" title="От 2 до 5 цифр. Избегайте использовать короткие номера аварийных служб (01, 02, 03, 112, 911 и пр.)."></span>
+                  </li>
+      </ul>
+    </div>
+    <div class="b-create-member-step b-create-member-step3">
+      <ul>
+        <li>Шаг 3</li>
+        <li>
+          <label for="member-target">Выберите на что принимать звонки</label>
+          <select id="member-target" name="member-target" class="fake google-chrome">
+                          <option value="null">Не выбрано</option>
+                          <option value="ip-tel">На обычный IP-телефон</option>
+                          <option value="softphone">На софтфон (компьютер)</option>
+                          <option value="another-number">Перевод на другой номер</option>
+                      </select>
+          <span class="c-tooltip" title="Вы сможете изменить способ приема звонков или добавить новые позднее в карточке сотрудника."></span>
+        </li>
+      </ul>
+    </div>
+    <div class="b-create-member-step b-target-option b-target-option-ip-tel" style="display: none;">
+      <div class="b-choise-block">
+        <div class="b-choise-legend">
+          Для приема звонков выбранным способом, сотруднику требуется учетная запись SIP, которую нужно указать в настройках телефона.        </div>
+        <div class="b-choise-legend-softphone">
+          Для приема звонков выбранным способом, сотруднику требуется учетная запись SIP, которую нужно указать в настройках софтфона.        </div>
+        <div>
+          <input id="sip-select-create" type="radio" name="sip-select" value="create" checked="checked">
+          <label for="sip-select-create">Создать новую учетную запись SIP автоматически</label><br>
+          <input id="sip-select-not-create" type="radio" name="sip-select" value="not-create">
+          <label for="sip-select-not-create">Не создавать учетную запись, я настрою ее самостоятельно</label><br>
+        </div>
+      </div>
+    </div>
+    <div class="b-create-member-step b-target-option b-target-option-another-number" style="display: none;">
+      <div class="b-choise-block">
+        <div>
+          <label for="member-number-create">Укажите номер обычного или мобильного телефона для перевода звонка сотрудника в формате: 7 925 123-45-67</label><br>
+          <input id="member-number-create-fake" type="text" name="number-create-fake" maxlength="19" class="fake" value="7 925 123-45-67">
+          <input id="member-number-create" type="text" name="number-create" style="display: none;" maxlength="19">
+          <span class="c-tooltip" title="Укажите номер обычного или мобильного телефона"></span>
+        </div>
+      </div>
+    </div>
+    <div class="b-create-member-step b-target-option b-target-option-skype" style="display: none;">
+      <div class="b-choise-block">
+        <div>
+          <label for="member-skype-create">Укажите логин Skype для перевода звонка сотруднику</label><br>
+          <input id="member-skype-create-fake" type="text" name="skype-create-fake" maxlength="64" class="fake" value="Skype">
+          <input id="member-skype-create" type="text" name="skype-create" style="display: none;" maxlength="64">
+          <span class="c-tooltip" title="Убедитесь, что в настройках Skype разрешен прием звонков от любых людей, а не только из списка контактов."></span>
+        </div>
+      </div>
+    </div>
+    
+  
+  <div class="b-create-member-step b-create-member-step4 ">
+    <ul>
+      <li>
+        Шаг 4      </li>
+
+      <li>
+        <label for="member-ani">Выберите линию для исходящих звонков</label>
+
+        <select id="member-ani" name="member-ani" class="fake grouped-anis google-chrome">
+
+          
+
+                                  <optgroup label="Москва">
+                                              <option value="did_400561382" label="7 (495) 518-94-36" data-desc="">7 (495) 518-94-36</option>
+                          </optgroup>
+                      
+
+          
+
+          
+                    <option value="sp_6">
+            Не указан номер - Нет исходящей связи          </option>
+                  </select>
+
+        <span class="c-tooltip" title="Отображается на определителе номера у человека, которому звонит сотрудник. Также служит для определения региона звонка для расчета стоимости связи. Если номер не указан, то сотруднику не доступна внешняя исходящая связь."></span>
+      </li>
+    </ul>
+  </div>    <div class="b-members-payment-warning">
+      <div class="b-free-abonent-warning">
+        Абонент превышает количество, включенное в вашу версию АТС.<br>Дополнительная оплата составит <span class="member-fee"></span>      </div>
+      <div class="b-members-services">
+        <div class="b-members-warning"></div>
+        <div class="b-agreement-block">
+          <input id="member_agree" type="checkbox" name="member_agree" value="1">
+          <label for="member_agree">Я принимаю условия подключения</label>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+      </div>  <div class="b-dialog-container" id="dialog-container-success-create-point-member" title="dialog.success-create-point-member">
+        <div class="b-dialog b-dialog-success-create-point-member">
+    <div class="b-create-member-step">
+
+
+<div class="print print-send">
+<div>Создан новый абонент Виртуальной АТС.
+</div>
+<div>ФИО сотрудника: <span class="new-member-fio"></span>
+</div>
+<div>Внутренний номер: <span class="new-member-transfer"></span>
+</div>
+<div class="new-sip" style="display: none;">
+Создана учетная запись SIP:<br>
+SIP ID: <span class="new-member-sip-id"></span><br>
+Пароль: <span class="new-member-sip-pwd"></span><br>
+
+Данные SIP-сервера:<br>
+Домен: <span class="new-member-sip-domain"></span><br>
+Порт: 5060<br>
+</div>
+<div class="no-padding new-tel" style="display: none;">
+<span id="new-member-tel-hint" data-hint="Для приема звонков установлен перевод вызовов на %s: "></span><span class="new-member-tel"></span><br>
+</div>
+<div>
+Изменить данные сотрудника и учетной записи SIP, а также прочие настройки вы можете в карточке сотрудника.
+<br>
+<br>Список тоновых команд для управления звонками:
+<br/div>
+</div>
+
+<div class="print print-pdf">
+<div>Создан новый абонент Виртуальной АТС.
+<br></div>
+<div>ФИО сотрудника: <span class="new-member-fio"></span><br>
+</div>
+<div>Внутренний номер: <span class="new-member-transfer"></span><br>
+<br>
+</div>
+<div class="new-sip" style="display: none;">
+Создана учетная запись SIP:<br>
+SIP ID: <span class="new-member-sip-id"></span><br>
+Пароль: <span class="new-member-sip-pwd"></span><br>
+<br>
+Данные SIP-сервера:<br>
+Домен: <span class="new-member-sip-domain"></span><br>
+Порт: 5060<br>
+<br>
+</div>
+<div class="no-padding new-tel" style="display: none;">
+<span id="new-member-tel-hint" data-hint="Для приема звонков установлен перевод вызовов на %s: "></span><span class="new-member-tel"></span><br>
+<br>
+</div>
+<div>
+Изменить данные сотрудника и учетной записи SIP, а также прочие настройки вы можете в карточке сотрудника.
+<br>
+<br>Список тоновых команд для управления звонками:
+<br/div>
+</div>
+
+<div class="print print-print">
+<div>Создан новый абонент Виртуальной АТС.
+</div>
+<div>ФИО сотрудника: <span class="new-member-fio"></span>
+</div>
+<div>Внутренний номер: <span class="new-member-transfer"></span><br>
+<br>
+</div>
+<div class="new-sip" style="display: none;">
+Создана учетная запись SIP:<br>
+SIP ID: <span class="new-member-sip-id"></span><br>
+Пароль: <span class="new-member-sip-pwd"></span><br>
+<br>
+Данные SIP-сервера:<br>
+Домен: <span class="new-member-sip-domain"></span><br>
+Порт: 5060<br>
+<br>
+</div>
+<div class="no-padding new-tel" style="display: none;">
+<span id="new-member-tel-hint" data-hint="Для приема звонков установлен перевод вызовов на %s: "></span><span class="new-member-tel"></span><br>
+<br>
+</div>
+<div>
+Изменить данные сотрудника и учетной записи SIP, а также прочие настройки вы можете в карточке сотрудника.
+<br>
+<br>Список тоновых команд для управления звонками:
+<br/div>
+</div>
+
+      <ul>
+        <li class="icon"><i class="green"></i></li>
+        <li>
+          <div class="padding-bottom create-title">Новый абонент виртуальной АТС успешно создан!</div>
+          <div class="no-padding small-padding">
+            <div class="fixed-width">ФИО сотрудника: </div><span id="new-member-fio"></span>
+          </div>
+          <div>
+            <div class="fixed-width">Внутренний номер: </div><span id="new-member-transfer"></span>
+          </div>
+          <div class="padding-bottom new-sip" style="display: none;">
+            Для приема и совершения звонков создана учетная запись SIP:          </div>
+          <div class="no-padding new-sip small-padding" style="display: none;">
+            <div class="fixed-width left-padding">SIP ID: </div><span id="new-member-sip-id"></span>
+          </div>
+          <div class="no-padding new-sip" style="display: none;">
+            <div class="fixed-width left-padding">Пароль: </div><span id="new-member-sip-pwd"></span>
+          </div>
+          <div class="padding-bottom new-sip" style="display: none;">
+            Для настройки IP-телефона, IP-шлюза, софтфона или MangoTalker, используйте следующие серверные данные:          </div>
+          <div class="no-padding new-sip small-padding" style="display: none;">
+            <div class="fixed-width left-padding">Домен: </div><span id="new-member-sip-domain"></span>
+          </div>
+          <div class="no-padding new-sip" style="display: none;">
+            <div class="fixed-width left-padding">Порт: </div><span id="new-member-sip-port">5060</span>
+          </div>
+          <div class="no-padding new-tel" style="display: none;">
+            <div id="new-member-tel-hint" data-hint="Для приема звонков установлен перевод вызовов на %s:"></div>
+            <div id="new-member-tel"></div>
+          </div>
+          <div class="padding-bottom new-tel" style="display: none;">
+            Для совершения дешевых исходящих звонков рекомендуем<br> настроить сотруднику авторизацию по номеру доступа<br> или создать учетную запись SIP в карточке сотрудника.          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="b-create-member-step">
+      <ul>
+        <li class="icon"><i class="blue"></i></li>
+        <li>
+          <div>Вы сможете изменить данные сотрудника и учетной записи SIP, добавить и изменить способы приема звонков, настроить другие дополнительные возможности в карточке сотрудника.</div>
+        </li>
+      </ul>
+    </div>
+</div>
+
+      </div>    <div class="b-dialog-container" id="dialog-container-add-multi-object" title="dialog.add-multi-object">
+        <div class="b-dialog b-dialog-members b-dialog multi-options">
+  <form action="">
+    <table>
+      <tbody>
+      <tr>
+        <td>
+          <div class="b-widget-filter">
+            <label for="search">&nbsp;</label>
+            <input type="text" id="search" name="clue" maxlength="64">
+            <div>&nbsp;</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div>
+            <div class="multi-items"></div>
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </form>
+  <div class="b-point-members-add-info">
+
+  </div>
+</div>
+
+      </div>  <div class="b-dialog-container" id="dialog-container-schedule" title="Расписание">
+        <div class="b-dialog b-dialog-schedule">
+  <form class="b-form" action="">
+    
+    <!--<span class="ui-helper-hidden-accessible"><input type="text" class="autofocus-field" disabled="true"/></span>-->
+    <table>
+      <tbody><tr>
+        <td class="label"><span>Период</span></td>
+      </tr>
+      <tr>
+        <td class="element">
+          <label for="schedule-valid-from-date">с</label>
+          <input class="date" type="text" name="from-date" id="schedule-valid-from-date">
+          <input class="time" type="text" name="from-time">
+          <label for="schedule-valid-until-date">по</label>
+          <input class="date" type="text" name="until-date" id="schedule-valid-until-date">
+          <input class="time" type="text" name="until-time">
+        </td>
+      </tr>
+    </tbody></table>
+    <div class="line"></div>
+    <table>
+      <tbody><tr>
+        <td class="label"><span>День и время</span></td>
+      </tr>
+      <tr>
+        <td class="element">
+          <ul class="items"><!-- --></ul>
+          <div class="b-dropdown">
+
+            <button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Добавить&nbsp;<small>▼</small></span></button>
+          </div>
+        </td>
+      </tr>
+    </tbody></table>
+      </form>
+</div>
+      </div>  <div class="b-dialog-container" id="dialog-container-white-continents-point-members" title="dialog.white-continents-point-members">
+        <div class="b-dialog b-dialog-white-continents-member">
+  <form class="b-form" action="">
+
+    <input type="hidden" name="abonent-id" value="">
+
+    <div>
+      <label>
+        <input type="radio" value="product" name="settings-mode">
+        <span class="dsc-default">По умолчанию (используются общие настройки АТС)</span>
+      </label>
+    </div>
+
+    <div>
+      <label>
+        <input type="radio" value="member" name="settings-mode">
+        Особые настройки      </label>
+    </div>
+
+    
+    <div class="b-continents">
+              <div class="col">
+                  <div>
+            <label>
+              <input type="checkbox" name="continents[0]" data-member="" data-product="1" data-russia="">
+              Все            </label>
+          </div>
+                  <div>
+            <label>
+              <input type="checkbox" name="continents[7]" data-member="" data-product="1" data-russia="1">
+              Россия            </label>
+          </div>
+                  <div>
+            <label>
+              <input type="checkbox" name="continents[9]" data-member="" data-product="0" data-russia="">
+              СНГ и Балтия            </label>
+          </div>
+                  <div>
+            <label>
+              <input type="checkbox" name="continents[5]" data-member="" data-product="0" data-russia="">
+              Европа            </label>
+          </div>
+                  <div>
+            <label>
+              <input type="checkbox" name="continents[4]" data-member="" data-product="0" data-russia="">
+              Австралия            </label>
+          </div>
+                </div>
+              <div class="col">
+                  <div>
+            <label>
+              <input type="checkbox" name="continents[6]" data-member="" data-product="0" data-russia="">
+              Азия            </label>
+          </div>
+                  <div>
+            <label>
+              <input type="checkbox" name="continents[3]" data-member="" data-product="0" data-russia="">
+              Африка            </label>
+          </div>
+                  <div>
+            <label>
+              <input type="checkbox" name="continents[1]" data-member="" data-product="0" data-russia="">
+              Северная Америка            </label>
+          </div>
+                  <div>
+            <label>
+              <input type="checkbox" name="continents[2]" data-member="" data-product="0" data-russia="">
+              Южная Америка            </label>
+          </div>
+                  <div>
+            <label>
+              <input type="checkbox" name="continents[8]" data-member="" data-product="0" data-russia="">
+              Прочее            </label>
+          </div>
+                </div>
+          </div>
+
+  </form>
+</div>
+
+      </div>    <div class="b-dialog-container" id="dialog-container-input-field" title="dialog.input-field">
+        
+<div class="b-box">
+
+  <!-- Number (not fmtn) -->
+  <div class="b-input">
+    <input id="input-field" type="text" maxlength="255">
+  </div>
+
+  <!-- FMTN -->
+  <div class="b-select">
+    <div class="note">Выберите FMTN (FMC) номер, подключенный к АТС</div>
+    <div class="b-dropkick">
+      <select name="fmc" id="fmc">
+    <option value="" label="<span class=&quot;empty&quot;>Выберите номер</span>">&lt;span class="empty"&gt;Выберите номер&lt;/span&gt;</option>
+</select>    </div>
+    <div class="reassign-number">Номер будет переназначен на нового сотрудника.</div>
+  </div>
+
+</div>
+
+      </div></div></div>
+
+    <div class="push"></div>
+  <div class="b-footer-push"></div>
+</div>
+<div class="clear"></div>
+<div class="b-footer">
+  <div class="copyright">© MANGO OFFICE   Москва, ул. Профсоюзная д. 57, офис 833   Тел.: +7 495 540-44-44, 745-33-99</div>
+</div>
+  <!-- <script type="text/javascript">
+    $(function() {
+      require(['require/navigation'], function() {
+        $('div.navigation').ics__navigation();
+      });
+    });
+  </script> -->
+
+
+
+<a id="toTop" href="#" style="display: none;"><span id="toTopHover"></span></a>
+
+<!-- <script type="text/javascript">
+  $(function(){
+    var $top = $('#toTop');
+
+    $(window).scroll(function(){
+      if ($(this).scrollTop() > 300) {
+        $top.fadeIn();
+      } else {
+        $top.fadeOut();
+      }
+    });
+
+    $top.click(function(){
+      $("html, body").animate({ scrollTop: 0 }, 480);
+      return false;
+    });
+
+  });
+</script>
+
+  
+   
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','//connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '210930112580186');
+    fbq('track', "PageView");
+    fbq('track', 'Lead');
+  </script> -->
+
+  <noscript>
+    &lt;img height="1" width="1" style="display:none" src=/&gt;
+  </noscript>
+  <!-- End Facebook Pixel Code -->
+
+  <!-- VK Pixel Code -->
+ <!--  <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = location.protocol + '//vk.com/rtrg?r=hnxKKLRkcmOK5i4McFZd/6GrYlpy22YjoWUukW0YvPDkaJ61*AKQmpKFJO5jtz6/cK4KMUkq4btuDBFWYobFdnRoxUZ87bvX7UhaSpqv0*ox/1yE3MWw1TpguOJRerO7bKMnRhB*x9JWAp1cpqS7boyihE8BJfOojuTlAur*EWs-';</script>
+  --> <!-- End VK Pixel Code -->
+  
+
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading" style="display: none;"><div style="top: -400px;"></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all dialog-sip-account-control ui-draggable ui-dialog-buttons" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-dialog-container-sip-account-control" style="display: none; outline: 0px; z-index: 1000;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-dialog-title-dialog-container-sip-account-control">Учетная запись SIP</span><a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div><div class="b-dialog-container ui-dialog-content ui-widget-content" id="dialog-container-sip-account-control" style="display: block;">
+        
+  <div class="b-sip-account-control">
+
+    <form class="b-form" action="">
+      <div class="hidden">
+        <input type="text" name="init_sip_account">
+        <input type="text" name="number_id">
+        <input type="text" name="abonent">
+      </div>
+      <table class="b-sip-account-table">
+        <tbody><tr>
+          <td class="label">Закреплена за сотрудником</td>
+          <td>
+            <div class="b-search-members-widget">
+              <input type="text" name="member_name" maxlength="55">
+              <span class="icon search"><!-- --></span>
+              <span class="icon close"><!-- --></span>
+
+              <div class="b-list hide-out-click"><span data-abonent-id="400561381">admin</span><span data-abonent-id="400614809">Алексей</span></div>
+            </div>
+          </td>
+          <td class="icon">
+            <span title="Выберите сотрудника, для которого требуется создать учетную запись SIP." class="c-tooltip"></span>
+          </td>
+        </tr>
+        <tr class="notice no-create-new-1">
+          <td><!-- --></td>
+          <td colspan="2">
+            Сотрудник с таким именем не найден. Согласно условиям версии вашей Виртуальной АТС, вы больше не можете добавить новых сотрудников.          </td>
+        </tr>
+        <tr class="notice no-create-new-2">
+          <td><!-- --></td>
+          <td colspan="2">
+            Ошибка: Количество сотрудников превышает количество лицензий. Обратитесь в службу технической поддержки.          </td>
+        </tr>
+        <tr class="notice no-found-new">
+          <td><!-- --></td>
+          <td colspan="2">
+            Сотрудник с таким именем не найден.            Будет создан новый сотрудник.          </td>
+        </tr>
+        <tr class="notice new">
+          <td><!-- --></td>
+          <td colspan="2">
+            Будет создан новый сотрудник.          </td>
+        </tr>
+        <tr>
+          <td class="label">SIP-адрес</td>
+          <td class="b-address">
+            <input type="text" name="username">
+            <span>@</span>
+            <select name="schema">
+                              <option value="vpbx400070052.mangosip.ru">
+                  vpbx400070052.mangosip.ru                </option>
+                              <option value="mangosip.ru">
+                  mangosip.ru                </option>
+                          </select>
+                      </td>
+          <td class="icon">
+            <span title="Первый символ должен быть буквой латинского алфавита, остальные - буквы латинского алфавита, цифры или символы. <br><br>ИЛИ <br>Начинаться с цифры, но содержать как минимум одну букву. <br><br>ИЛИ <br>Если вам необходимо имя пользователя, состоящее только из цифр, - оно должно начинаться на &quot;000&quot;. <br><br>Длина имени пользователя должна быть больше или равна 4 симв." class="c-tooltip"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Пароль</td>
+          <td class="b-password" colspan="2">
+            <input type="password" name="password" maxlength="64">
+            <input type="text" id="sip-fake-password" maxlength="64">
+            <span title="Пароль должен содержать не менее 8 символов, включать строчные, заглавные буквы и цифры." class="c-tooltip"></span>
+            <span class="g-link g-password-display">
+              <span class="g-password-show">Показать,</span>
+              <span class="g-password-hide">Скрыть,</span>
+            </span>
+            <span class="g-link g-password-generate">Сгенерировать новый</span>
+          </td>
+        </tr>
+        <tr class="b-extend-options">
+          <td><!-- --></td>
+          <td colspan="2">
+            <span class="g-link extend-options-switcher">
+              Расширенные настройки            </span>
+          </td>
+        </tr>
+        <tr class="extended">
+          <td class="label">Переадресация</td>
+          <td class="b-forwarding">
+            <select name="alias_to" id="alias_to">
+    <option value="" label="Нет">Нет</option>
+    <option value="10298505" label="user1@vpbx400070052.mangosip.ru">user1@vpbx400070052.mangosip.ru</option>
+</select>          </td>
+          <td class="icon">
+            <span title="Автоматически перенаправлять звонки на выбранный в выпадающем списке sip-адрес. Например, если сотрудник в отпуске, адресованные ему вызовы поступят заместителю." class="c-tooltip"></span>
+          </td>
+        </tr>
+        <tr class="break">
+          <td colspan="3"><!-- --></td>
+        </tr>
+
+
+
+        <tr class="message services">
+          <td><!-- --></td>
+          <td colspan="2">
+                        <span class="b-add-license">
+            </span>
+            <div class="b-confirm">
+              <input type="checkbox" name="confirm" id="confirm"><label for="confirm">Я принимаю условия подключения</label>
+            </div>
+          </td>
+        </tr>
+
+        <tr class="message reconfig">
+          <td></td>
+          <td colspan="2">
+              <strong>Внимание!</strong>
+              После сохранения этих изменений вам также потребуется самостоятельно внести их в настройки всех IP-телефонов и софтфонов, на которых используется данная учетная запись SIP.          </td>
+        </tr>
+
+      </tbody></table>
+
+    </form>
+
+  </div>
+
+      </div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Создать</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Отменить</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Удалить учетную запись</span></button></div></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ics-ui-dialog ui-dialog-buttons" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-dialog-container-point-member-cart" style="display: none; outline: 0px; z-index: 1000;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix ui-dialog-titlebar-point-member-cart"><div class="ui-dialog-fake"></div><div class="ui-dialog-slide ui-dialog-slide-left"></div><div class="ui-dialog-slide ui-dialog-slide-right"></div><div class="ui-dialog-title-edit-component"><span class="ui-dialog-title editable editable-click" id="ui-dialog-title-dialog-container-point-member-cart">dialog.point-member-cart</span><div class="ui-dialog-title-edit"></div></div><a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a><div class="ui-dialog-close"></div></div><div class="b-dialog-container ui-dialog-content ui-widget-content" id="dialog-container-point-member-cart" style="display: block;">
+        <div class="b-cart-all">
+  <div class="b-cart-tabs">
+    <ul class="tab-index">
+      <li class="active" data-tab="cart"><span>Карточка</span><span class="c-tooltip yellow-icon" title="<strong>Внимание!</strong> На этой вкладке<br/>не сделаны важные настройки.<br/>Для решения этой проблемы</br>откройте вкладку и следуйте<br/>рекомендациям системы."></span></li>
+      <li data-tab="phone"><span>Телефония</span><span class="c-tooltip" title="<strong>Внимание!</strong> На этой вкладке<br/>не сделаны важные настройки.<br/>Для решения этой проблемы</br>откройте вкладку и следуйте<br/>рекомендациям системы." data-class="tooltip-red-custom"></span></li>
+              <li data-tab="call-centre"><span>ЦОВ</span></li>
+                    <li data-tab="cpc"><span>КПК</span></li>
+          </ul>
+  </div>
+
+  <div class="b-cart-tab">
+    <div class="b-cart-tab-cart">
+
+      <div class="b-general-options">
+        <div class="b-option-placeholder">
+          <span class="title">Профиль сотрудника</span>
+        </div>
+        <div class="b-option-placeholder">
+          <label for="email">E-mail</label><input name="email" id="email" type="text" maxlength="64"><input class="fake" id="email-fake" type="text" value="не указано" maxlength="64"><span class="c-tooltip" title="Укажите e-mail сотрудника, например, <i>username@example.com</i>"></span><span class="c-tooltip tooltip-email yellow-icon hidden" title="Чтобы сотрудник мог получать записи голосовой почты и иную информацию, укажите e-mail сотрудника"></span>
+        </div>
+        <div class="b-option-placeholder">
+          <label for="desc">Отдел</label><input name="department" id="department" type="text" maxlength="255"><input id="department-fake" class="fake" type="text" value="не указано" maxlength="255"><span class="c-tooltip" title="Укажите отдел, к которому относится сотрудник, например, <i>Отдел продаж</i>"></span>
+        </div>
+        <div class="b-option-placeholder">
+          <label for="department">Должность</label><input name="desc" id="desc" type="text" maxlength="255"><input class="fake" id="desc-fake" type="text" value="не указано" maxlength="255"><span class="c-tooltip" title="Укажите должность сотрудника, например, <i>Менеджер по продажам</i>"></span>
+        </div>
+      </div>
+
+      <div class="b-sip-accounts-options padding-top">
+        <div class="b-option-placeholder">
+          <span class="title">Учетные записи SIP</span>
+          <span class="c-tooltip" title="Учетная запись SIP необходима сотруднику для приема и совершения звонков с использованием IP-телефонии"></span><span class="c-tooltip tooltip-sip-check yellow-icon hidden" title="<strong>Внимание!</strong> Чтобы сотрудник мог принимать звонки на компьютер и IP-телефон, а также совершать вызовы по дешевым тарифам, необходимо создать ему учетную запись SIP"></span>
+        </div>
+        <div class="b-option-placeholder">
+          <table class="sip-accounts">
+            <tbody><tr>
+              <td>SIP-адрес</td>
+              <td class="sip-accounts"><span class="g-link create">Создать</span></td>
+            </tr>
+          </tbody></table>
+        </div>
+      </div>
+
+      <div class="b-access-options padding-top">
+        <div class="b-option-placeholder">
+          <span class="title">Доступ в Личный кабинет</span>
+        </div>
+        <div class="b-option-placeholder">
+          <label for="abonent_role">Права доступа</label>
+          <select class="rights" id="abonent_role" name="abonent_role">
+            <option value="1">Администратор</option>
+            <option value="2">Бухгалтер</option>
+            <option value="0">Сотрудник</option>
+            <option value="3">Нет доступа</option>
+          </select>
+          <span class="c-tooltip fix-position" title="Администратор — полный доступ к разделу<br/>«Финансы» и всем разделам Виртуальной АТС.<br/><br/>Бухгалтер — полный доступ к разделу «Финансы»,<br/>ограниченный доступ к разделам Виртуальной АТС.<br/><br/>Сотрудник — нет доступа к разделу «Финансы»,<br/>ограниченный доступ к разделам Виртуальной АТС.<br/><br/>Нет доступа — нельзя войти в Личный кабинет. <br/>"></span>
+        </div>
+        <div class="b-option-placeholder b-account-access">
+          <input class="sip-access" name="sip-access" id="sip-access" type="checkbox">
+          <label class="sip-access" for="sip-access">Разрешить вход в Личный кабинет по учетным записям SIP<span class="c-tooltip" title="Если включено, сотрудник сможет авторизовываться в софтфонах и входить в Личный кабинет используя логин и пароль любой своей учетной записи SIP"></span></label>
+          <div class="clr"></div>
+
+          <input class="sip-access" name="web-access" id="web-access" type="checkbox">
+          <label class="sip-access" for="web-access">Создать отдельные логин/пароль для Личного кабинета и ЦОВ<span class="c-tooltip" title="Если вы не хотите сообщать сотруднику данные учетной записи SIP, вы можете задать отдельный логин и пароль. <br>Отдельный логин и пароль также требуются для входа в ЦОВ"></span></label>
+          <div class="clr"></div>
+          <div class="b-option-web-access">
+            <div class="b-option-placeholder">
+              <label for="login">Логин</label>
+
+              <div class="background">400070052/</div>
+              <input data-not-clear="400070052/" name="login" id="login" type="text" maxlength="64">
+              <input id="login-fake" class="fake" value="400070052/не указано" type="text" maxlength="64">
+            <span class="c-tooltip login-tooltip" title="Сотрудники, для которых задан логин и пароль, смогут входить в личный кабинет и менять настройки Виртуальной АТС. Ограничить права доступа сотрудников можно на странице «Безопасность и ограничения»."></span>
+            </div>
+            <div class="b-option-placeholder b-password-member no-padding-bottom">
+              <label for="password">Пароль</label><input class="password" name="password" id="password" type="password" maxlength="64">
+              <input class="password fake" id="password-fake" type="text" value="не указано">
+              <input class="password open-password" id="open-password" type="text" maxlength="64">
+            <span class="c-tooltip password-tooltip" title="Пароль должен содержать не менее 8 символов, содержать строчные, заглавные буквы и цифры"></span>
+
+              <div class="b-fix-width">
+              <span class="g-link show">Показать</span><span class="g-link hide">Скрыть</span>
+              <span class="g-link generate">Сгенерировать</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="b-cart-tab-phone">
+     <!--  <script id="number-row-tpl" type="text/template">
+        <td class="first-child"></td>
+        <td class="order"><span class="drag"></span></td>
+        <td class="number">
+          <div class="fixed-width g-link transparent-blur" data-type="text" data-protocol="<%-protocol%>" title="<%print(_.escape(number));%>"><%-number%></div>
+          <div class="delete"></div>
+        </td>
+       <td class="wait-time"><%
+            print ('<div class="input"><input id="wait-time-' + id + '" type="text" maxlength="5" data-value="' + _(_.isNaN(wait_time) || _.isNull(wait_time) ? '' : wait_time).escape() + '" value="' + _(_.isNaN(wait_time) || _.isNull(wait_time) || wait_time === 0 ? '\u221e' : wait_time).escape() + '"></input><div class="sek">с.</div></div>');
+        %>
+        </td>
+                <td class="schedule"><span class="g-link">
+        <%
+            var fn = function(schedule) {
+              for (var i in schedule) {
+                var element = schedule[i];
+                if (($.isArray(element) && element.length > 0)
+                  || "" != element) {
+                  return true;
+                }
+              }
+              return false;
+            };
+           if(!fn(schedule)) {
+             print("Указать");
+           }
+           else
+             print("Изменить");
+         %></span></td>
+                  <td class="is_active"><input type="checkbox" <% if(parseInt(is_active) == 1) print("checked='checked'"); %> /></td>
+        <td class="last-child"></td>
+      </script> -->
+      <div class="b-options-abonent">
+        <div class="b-option-placeholder padding-bottom">
+          <span class="title">Данные абонента АТC</span>
+        </div>
+        <div class="b-option-placeholder b-field-env">
+          <span class="label">Внутренний номер</span>
+          <input name="transfer_number" id="transfer-number" type="text" maxlength="7">
+          <span class="c-tooltip" title="От 2 до 5 цифр. Наберите этот номер, чтобы позвонить сотруднику. Для перевода звонка сотруднику наберите: ##номер"></span>
+          <span class="c-tooltip tooltip-transfer-check red-icon hidden" data-class="tooltip-red-custom" title="<strong>Внимание!</strong> Для возможности быстрого звонка и перевода вызова сотруднику, необходимо задать ему внутренний номер"></span>
+                  </div>
+       <div class="b-option-placeholder b-field-env">
+          <span class="label">Принимать звонки</span>
+          <select id="member-algs" class="google-chrome" name="dial_alg" aria-disabled="false" tabindex="0" style="display: none;">
+                          <option value="1" data-service-code="ALG_M_MAIN">Только на основной номер</option>
+                          <option value="2" data-service-code="ALG_M_ALL">На все номера одновременно</option>
+                          <option value="3" data-service-code="ALG_M_LINE">На все номера по очереди</option>
+                      </select><span><a class="ui-selectmenu ui-widget ui-state-default ui-corner-all google-chrome ui-selectmenu-dropdown" id="member-algs-button" role="button" href="#nogo" tabindex="0" aria-haspopup="true" aria-owns="member-algs-menu" aria-disabled="false" style="width: 370px;"><span class="ui-selectmenu-status">Только на основной номер</span><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span></a></span>
+          <span class="c-tooltip" title="Выберите порядок, в котором входящий вызов, пришедший на внутренний номер сотрудника, будет поступать на его средства приема звонков"></span>
+        </div>
+      </div>
+      <div class="b-options-sip-accounts padding-top">
+        <div class="b-option-placeholder incoming-padding">
+          <span class="title">Средства приема звонков</span>
+          <span class="c-tooltip" title="Порядок — показывает, в каком порядке будут использованы средства для приема звонков. Чтобы изменить порядок, перетащите контакты мышкой. <br>Телефоны или учетные записи — список контактов для голосовой связи, используемых сотрудником. <br>Ждать ответ — максимальное время дозвона по контакту (0 — без ограничений). <br>Расписание — позволяет ограничить определенное день/время использования контакта. <br>Активен — если выключено, контакт не будет использоваться для дозвона на сотрудника."></span>
+          <span class="c-tooltip tooltip-incoming-check red-icon hidden" title="<strong>Внимание!</strong> Чтобы сотрудник мог принимать звонки, необходимо указать хотя бы одно средство для приема звонков — учетную запись SIP, мобильный телефон или FMC-номер для переадресации"></span>
+          <span class="c-tooltip tooltip-tel-fmc-check yellow-icon hidden" title="<strong>Внимание!</strong> Чтобы сотрудник мог принять звонок, даже находясь удаленно от рабочего места, укажите его номер мобильного телефона или FMC-номер"></span>
+        </div>
+        <div class="b-option-placeholder tabled">
+          <table class="b-phone-table">
+            <thead>
+            <tr>
+              <td class="first-child">&nbsp;</td>
+              <td class="order">Порядок</td>
+              <td>Телефоны или учетные записи</td>
+              <td class="wait-time">Ждать ответ</td>
+                              <td class="schedule">Расписание</td>
+                            <td class="active">Активен</td>
+              <td class="last-child">&nbsp;</td>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+          <span class="g-link add-number">Добавить номер<span class="number-add-icon">&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+        </div>
+        <div class="b-option-placeholder padding-top incoming-padding">
+          <span class="title">Совершение звонков</span>
+        </div>
+        <div class="b-option-placeholder floated b-field-env">
+          <span class="label">Исходящий номер</span>
+          <select class="grouped-anis google-chrome" name="ani" id="ani"></select>
+          <span class="no-ani">Нет номеров</span>
+          <span class="c-tooltip" title="Отображается на определителе номера у человека, которому звонит сотрудник. Также служит для определения региона звонка для расчета стоимости связи. Если номер не указан, то сотруднику не доступна внешняя исходящая связь."></span>
+        </div>
+        <div class="b-option-placeholder b-regions b-field-env">
+          <span class="label">Направления</span>
+          <span class="regions g-link"><!-- --></span>
+          <span class="transfer-hint"><!-- --></span>
+        </div>
+      </div>
+      <div class="b-warning-block">
+        <div class="b-warning-message">
+          При сохранении настроек будет подключена услуга:        </div>
+        <div class="b-connected-services">
+          <ul class="b-service-list"></ul>
+        </div>
+        <div class="b-agreement-block">
+          <input id="member_agree" type="checkbox" name="member_agree" value="1">
+          <label for="member_agree">Я принимаю условия подключения</label>
+        </div>
+      </div>
+    </div>
+
+        <div class="b-cart-tab-call-centre">
+    <!--   <script id="group-template" type="text/template">
+        <span class="member-group" data-group="<%-id%>"><span class="name"><%-name%></span><span class="delete"></span></span>
+        <br/>
+      </script> -->
+     <!--  <script id="add-group" type="text/template">
+        <input type="checkbox" name="group[]" value="<%-id%>" id="group-<%-id%>"/><label
+          for="group-<%-id%>"><%-name%></label>
+      </script> -->
+                    <div class="b-option-placeholder">
+          <span class="title">ЦОВ (Центр Обработки Вызовов)</span>
+        </div>
+        <div class="b-option-placeholder about-text">
+          Центр Обработки Вызовов - это специальное дополнение к Виртуальной АТС, позволяющее управлять звонками и очередями вызовов в реальном времени и более гибко организовывать работу в группах сотрудников.<br><br>На компьютерах устанавливается специальная программа, которая позволяет:<br>- Видеть очередь звонков на экране компьютера в реальном времени<br>- Перехватывать и перенаправлять звонки в один клик мышкой<br>- Присоединяться к разговорам в режиме "суфлирования"<br>- Управлять статусами сотрудников (на линии / не принимает звонки пр.)<br>- Назначать Супервизоров, которые могут менять настройки своей группы<br>- Вести адресную книгу контрагентов (клиентов, партнеров)<br>- Сохранять информацию о беседах в карточках контрагентов<br>- Видеть всех сотрудников в корпоративной адресной книге<br>- Управлять настольным IP-телефоном и многое другое<br><br>Подключить услугу "Центр Обработки Вызовов" и бесплатно загрузить нужное число программ можно в один клик прямо в Личном кабинете.<br><br><a class="call-centre-link" target="_blank" ><span class="g-link">Узнать больше о ЦОВ и стоимости подключения →</span></a><br><br><span class="gray">После подключения ЦОВ на этой вкладке появятся дополнительные настройки, связанные с разделением прав сотрудника в группах.</span>        </div>
+          </div>
+    
+          <div class="b-cart-tab-cpc">
+        <div class="b-option-placeholder">
+          <span class="title">Авторизация на номере доступа</span><span class="c-tooltip" title="Выберите способы авторизации сотрудника при звонке на номер доступа"></span>
+        </div>
+        <div class="b-option-placeholder pin-code">
+          <label for="pin-code">По пин-коду</label><input readonly="readonly" name="pin-code" id="pin-code" type="text"><span class="c-tooltip" title="При звонке на номер доступа потребуется ввести пин-код, сгенерированный на данной странице. Пин-код уникален для каждого сотрудника."></span>
+          <span class="g-link show">Показать</span><span class="g-link hide">Скрыть</span>
+          <span class="g-link generate">Сгенерировать</span>
+          <span class="g-link remove">Удалить</span>
+        </div>
+        <div class="b-option-placeholder">
+          <label for="auth-number">По номеру</label><input name="auth-number" id="auth-number" type="checkbox"><label class="auth-number" for="auth-number">Авторизовать при звонке с любого телефона сотрудника</label>
+        </div>
+        <div class="b-option-placeholder title">
+          <span class="title">Инструкция по использованию</span>
+        </div>
+        <div class="b-option-placeholder about-text">
+          Вы можете совершать исходящие звонки с любого номера за счет средств вашей Виртуальной АТС. Для этого необходимо позвонить на номер доступа (их список приведен на сайте «Манго-Офис») и набрать в тональном режиме желаемый номер собеседника. Наиболее часто эта возможность используется для дешевых звонков за границу или во время командировок. <br><br> Чтобы совершить звонок нужно пройти авторизацию одним из двух способов: <br><br> 1. Авторизация с помощью пин-кода. При звонке на номер доступа потребуется ввести пин-код, сгенерированный на данной странице. Пин-код уникален для каждого сотрудника. <br><br> 2. Авторизация по номеру. При звонке на номер доступа система "узнает" вас по определившемуся номеру (АОН). Пин-код в этом случае вводить не потребуется. Номера телефонов задаются на вкладке "Телефония".         </div>
+      </div>
+      </div>
+</div>
+      </div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset point-members-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Сохранить</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Отменить</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only delete-member" role="button" aria-disabled="false"><span class="ui-button-text">Удалить сотрудника</span></button></div></div></div><ul class="b-dropdown-list success-member-drop-down" style="display: none;"><li>Телефон</li><li>SIP-адрес</li></ul><div class="ui-selectmenu-menu google-chrome" style="z-index: 1002; top: 26px; left: 0px;"><ul class="ui-widget ui-widget-content ui-selectmenu-menu-dropdown ui-corner-bottom" aria-hidden="true" role="listbox" aria-labelledby="member-algs-button" id="member-algs-menu" aria-disabled="false" tabindex="0" aria-activedescendant="ui-selectmenu-item-787" style="width: 370px; min-width: 370px; height: auto;"><li role="presentation" class="ui-selectmenu-item-selected ui-selectmenu-item-focus"><a href="#nogo" tabindex="-1" role="option" aria-selected="true" id="ui-selectmenu-item-787">Только на основной номер</a></li><li role="presentation"><a href="#nogo" tabindex="-1" role="option" aria-selected="false">На все номера одновременно</a></li><li role="presentation" class="ui-corner-bottom"><a href="#nogo" tabindex="-1" role="option" aria-selected="false">На все номера по очереди</a></li></ul></div></body></html>

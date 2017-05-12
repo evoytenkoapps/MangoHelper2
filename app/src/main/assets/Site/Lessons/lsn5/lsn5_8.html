@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0039)http://192.168.33.119/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Конфигурация IP | C610A IP</title>
+  
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type="text/css" media="screen" href="../../Devices/C610/main.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="../../Devices/C610/siemens.css">
+  <link rel="shortcut icon" href="../../Devices/C610/favicon.ico">
+</head>
+
+
+<script language="JavaScript" type="text/javascript">
+var flash;
+function flashBorder(elmId, stopFlash)
+{
+var elm = document.getElementById("lsn5_10");
+if (stopFlash == "true")
+{
+elm.style.border = "";
+clearInterval(flash);
+}
+else
+{
+var borderPattern = false;
+flash = setInterval(setBorder, 700);
+
+function setBorder()
+{
+if (borderPattern)
+{
+borderPattern = false;
+elm.style.border = "solid transparent";
+elm.style.borderWidth = "4px";
+}
+else
+{
+borderPattern = true;
+elm.style.border = " solid Red";
+elm.style.borderWidth = "4px";
+}
+}
+}
+}
+</script>
+
+<body onload="flashBorder();">
+
+  <!--  CONTAINER -->
+  <div id="container">
+  
+    <!-- <script language="JavaScript" type="text/javascript">
+      writeBlockStaticAreaTop();
+      writeBlockSubmenu();
+    </script> -->
+	
+	
+	<div id="Gigalogo"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td id="logotd" width="1"><img src="../../Devices/C610/gigaset.png" alt="Gigaset" border="0" align="left"></td><td id="productnametxt" align="left">C610A IP</td></tr></tbody></table></div><div id="div_tabs"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="padding:0;"><a href="">Главная</a></td><td style="padding:0;">
+	<a class="active3" href="">Настройки</a></td><td style="padding:0;"><a href="">Состояние</a></td></tr></tbody></table></div><div id="div_home_logout"><a id="logouttoptext" href="" title="Завершить сеанс конфигурации">Выйти из системы</a></div><div id="greyTop"><img src="../../Devices/C610/spacer.gif" alt="" width="1" height="5" border="0"></div><div id="greyMiddle"><div id="div_menue"><ul><li><div><div><a href="">Сеть</a></div></div><ul><li><div class="activeSub" style="width: 196px;"><div><a href="">Конфигурация IP</a></div></div></li><li><div><div><a href="">Безопасность</a></div></div></li></ul></li><li><div>
+	<div id="lsn5_10"><a href="./lsn5_9.html">Телефония</a></div></div></li><li><div><div><a href="">Обмен сообщениями</a></div></div></li><li><div><div><a href="">Справочные службы</a></div></div></li><li><div><div><a href="">Телефонные справочники</a></div></div></li><li><div><div><a href="">Управление</a></div></div></li></ul></div>
+
+      <!-- content -->
+      <div id="content">
+      <div id="minheight340"></div>
+      <form name="gigaset" action="" method="post">
+        <div class="contentColumn">
+          <table border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+            <tbody><tr>
+              <td class="label"><h2 class="first">Назначение адреса</h2></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr id="tr_ip_address_type">
+              <td class="label">Тип IP-адреса:</td>
+              <td class="rightSide">
+                <select name="ip_address_type" id="ip_address_type" onchange="javascript:repaint_gigaset_form();">
+                <option value="0" selected="selected">Статический</option><option value="1" selected="selected">Получить автоматически</option>
+                </select>
+              </td>
+            </tr>
+            <tr id="tr_ip_address">
+              <td class="label" id="ip_text" style="color: rgb(153, 153, 153);">IP-адрес:</td>
+              <td class="rightSide">
+                <input type="text" maxlength="3" size="3" class="textfield edit_32" value="192" name="ip_address_1" id="ip_address_1" onkeypress="return isNumber(event);" style="width: 32px; text-align: center; color: rgb(96, 96, 96); background-color: rgb(221, 221, 221);" readonly="">
+                .
+                <input type="text" maxlength="3" size="3" class="textfield edit_32" value="168" name="ip_address_2" id="ip_address_2" onkeypress="return isNumber(event);" style="width: 32px; text-align: center; color: rgb(96, 96, 96); background-color: rgb(221, 221, 221);" readonly="">
+                .
+                <input type="text" maxlength="3" size="3" class="textfield edit_32" value="033" name="ip_address_3" id="ip_address_3" onkeypress="return isNumber(event);" style="width: 32px; text-align: center; color: rgb(96, 96, 96); background-color: rgb(221, 221, 221);" readonly="">
+                .
+                <input type="text" maxlength="3" size="3" class="textfield edit_32" value="119" name="ip_address_4" id="ip_address_4" onkeypress="return isNumber(event);" style="width: 32px; text-align: center; color: rgb(96, 96, 96); background-color: rgb(221, 221, 221);" readonly="">
+              </td>
+            </tr>
+            <tr id="tr_subnet_mask">
+              <td class="label" id="subnet_mask_text" style="color: rgb(153, 153, 153);">Маска подсети:</td>
+              <td class="rightSide">
+                <input type="text" maxlength="3" size="3" class="textfield edit_32" value="255" name="subnet_mask_1" id="subnet_mask_1" onkeypress="return isNumber(event);" style="width: 32px; text-align: center; color: rgb(96, 96, 96); background-color: rgb(221, 221, 221);" readonly="">
+                .
+                <input type="text" maxlength="3" size="3" class="textfield edit_32" value="255" name="subnet_mask_2" id="subnet_mask_2" onkeypress="return isNumber(event);" style="width: 32px; text-align: center; color: rgb(96, 96, 96); background-color: rgb(221, 221, 221);" readonly="">
+                .
+                <input type="text" maxlength="3" size="3" class="textfield edit_32" value="254" name="subnet_mask_3" id="subnet_mask_3" onkeypress="return isNumber(event);" style="width: 32px; text-align: center; color: rgb(96, 96, 96); background-color: rgb(221, 221, 221);" readonly="">
+                .
+                <input type="text" maxlength="3" size="3" class="textfield edit_32" value="000" name="subnet_mask_4" id="subnet_mask_4" onkeypress="return isNumber(event);" style="width: 32px; text-align: center; color: rgb(96, 96, 96); background-color: rgb(221, 221, 221);" readonly="">
+              </td>
+            </tr>
+            <tr id="tr_default_gateway">
+              <td class="label" id="default_gateway_text" style="color: rgb(153, 153, 153);">Стандартный шлюз:</td>
+              <td class="rightSide">
+                <input type="text" maxlength="3" size="3" class="textfield edit_32" value="192" name="default_gateway_1" id="default_gateway_1" onkeypress="return isNumber(event);" style="width: 32px; text-align: center; color: rgb(96, 96, 96); background-color: rgb(221, 221, 221);" readonly="">
+                .
+                <input type="text" maxlength="3" size="3" class="textfield edit_32" value="168" name="default_gateway_2" id="default_gateway_2" onkeypress="return isNumber(event);" style="width: 32px; text-align: center; color: rgb(96, 96, 96); background-color: rgb(221, 221, 221);" readonly="">
+                .
+                <input type="text" maxlength="3" size="3" class="textfield edit_32" value="032" name="default_gateway_3" id="default_gateway_3" onkeypress="return isNumber(event);" style="width: 32px; text-align: center; color: rgb(96, 96, 96); background-color: rgb(221, 221, 221);" readonly="">
+                .
+                <input type="text" maxlength="3" size="3" class="textfield edit_32" value="001" name="default_gateway_4" id="default_gateway_4" onkeypress="return isNumber(event);" style="width: 32px; text-align: center; color: rgb(96, 96, 96); background-color: rgb(221, 221, 221);" readonly="">
+              </td>
+            </tr>
+            <tr id="tr_preferred_dns_server">
+              <td class="label" id="preferred_dns_server_text" style="color: rgb(153, 153, 153);">Предпочитаемый DNS-сервер:</td>
+              <td class="rightSide">
+                <input type="text" maxlength="3" size="3" class="textfield edit_32" value="192" name="preferred_dns_server_1" id="preferred_dns_server_1" onkeypress="return isNumber(event);" style="width: 32px; text-align: center; color: rgb(96, 96, 96); background-color: rgb(221, 221, 221);" readonly="">
+                .
+                <input type="text" maxlength="3" size="3" class="textfield edit_32" value="168" name="preferred_dns_server_2" id="preferred_dns_server_2" onkeypress="return isNumber(event);" style="width: 32px; text-align: center; color: rgb(96, 96, 96); background-color: rgb(221, 221, 221);" readonly="">
+                .
+                <input type="text" maxlength="3" size="3" class="textfield edit_32" value="000" name="preferred_dns_server_3" id="preferred_dns_server_3" onkeypress="return isNumber(event);" style="width: 32px; text-align: center; color: rgb(96, 96, 96); background-color: rgb(221, 221, 221);" readonly="">
+                .
+                <input type="text" maxlength="3" size="3" class="textfield edit_32" value="004" name="preferred_dns_server_4" id="preferred_dns_server_4" onkeypress="return isNumber(event);" style="width: 32px; text-align: center; color: rgb(96, 96, 96); background-color: rgb(221, 221, 221);" readonly="">
+              </td>
+            </tr>
+            <tr id="tr_alternate_dns_server">
+              <td class="label" id="alternate_dns_server_text" style="color: rgb(153, 153, 153);">Альтернативный DNS-сервер:</td>
+              <td class="rightSide">
+                <input type="text" maxlength="3" size="3" class="textfield edit_32" value="192" name="alternate_dns_server_1" id="alternate_dns_server_1" onkeypress="return isNumber(event);" style="width: 32px; text-align: center; color: rgb(96, 96, 96); background-color: rgb(221, 221, 221);" readonly="">
+                .
+                <input type="text" maxlength="3" size="3" class="textfield edit_32" value="168" name="alternate_dns_server_2" id="alternate_dns_server_2" onkeypress="return isNumber(event);" style="width: 32px; text-align: center; color: rgb(96, 96, 96); background-color: rgb(221, 221, 221);" readonly="">
+                .
+                <input type="text" maxlength="3" size="3" class="textfield edit_32" value="000" name="alternate_dns_server_3" id="alternate_dns_server_3" onkeypress="return isNumber(event);" style="width: 32px; text-align: center; color: rgb(96, 96, 96); background-color: rgb(221, 221, 221);" readonly="">
+                .
+                <input type="text" maxlength="3" size="3" class="textfield edit_32" value="008" name="alternate_dns_server_4" id="alternate_dns_server_4" onkeypress="return isNumber(event);" style="width: 32px; text-align: center; color: rgb(96, 96, 96); background-color: rgb(221, 221, 221);" readonly="">
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:0;"><img src="../../Devices/C610/spacer.gif" alt="" width="200" height="1" border="0"></td>
+              <td style="padding:0;"><img src="../../Devices/C610/spacer.gif" alt="" width="360" height="1" border="0"></td>
+            </tr>
+          </tbody></table>
+
+            <div id="advbuttonshow" style="display:block;">
+              <table border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+                <tbody><tr>
+                  <td>&nbsp;</td>
+                  <td style="padding-left:1em;"><a href="" onclick="javascript:showAdvanced(); return false;" class="buttonLink215">Показать доп. настройки</a></td>
+                </tr>
+                <!-- fixes the width of the first column -->
+                <tr>
+                  <td style="padding:0;"><img src="../../Devices/C610/spacer.gif" alt="" width="200" height="1" border="0"></td>
+                  <td style="padding:0;"><img src="../../Devices/C610/spacer.gif" alt="" width="360" height="1" border="0"></td>
+                </tr>
+              </tbody></table>
+            </div>
+            <div id="advbuttonhide" style="display:none;">
+              <table border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+                <tbody><tr>
+                  <td>&nbsp;</td>
+                  <td style="padding-left:1em;"><a href="" onclick="javascript:hideAdvanced(); return false;" class="buttonLink215">Скрыть дополнительные настройки</a></td>
+                </tr>
+                <!-- fixes the width of the first column -->
+                <tr>
+                  <td style="padding:0;"><img src="../../Devices/C610/spacer.gif" alt="" width="200" height="1" border="0"></td>
+                  <td style="padding:0;"><img src="../../Devices/C610/spacer.gif" alt="" width="360" height="1" border="0"></td>
+                </tr>
+              </tbody></table>
+            </div>
+            <div id="advanced" style="display:none;">
+
+            <table border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+              <tbody><tr>
+                <td class="label"><h2 class="first">Удаленное управление</h2></td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td class="label">Разрешить доступ из других сетей:</td>
+                <td class="rightSide">
+                  <input type="radio" name="foreign_sub" value="1" class="radioButton" checked="checked">Да
+                  &nbsp;&nbsp;&nbsp;<input type="radio" name="foreign_sub" value="0" class="radioButton">Нет
+                </td>
+              </tr>
+              <tr>
+                <td class="label">&nbsp;</td>
+                <td class="rightSide">
+                  При активации этого параметра повышается риск несанкционированного доступа к настройкам данного устройства.
+                </td>
+              </tr>
+
+
+              <!-- Device Name ad Network -->
+              <tr>
+                <td class="label">Имя устройства в сети:</td>
+                <td class="rightSide"><input type="text" maxlength="20" size="16" class="textfield edit_250" value="C610A-IP" name="network_name" id="network_name" onkeypress="return isValidNetworkNameChar(event);"></td>
+              </tr>
+              <!-- Device Name ad Network -->
+
+
+              <!-- HTTP-PROXY -->
+              <tr>
+                <td class="label"><h2 class="first">HTTP прокси</h2></td>
+                <td>&nbsp;</td>
+              </tr>
+               <tr>
+                <td class="label">Включить прокси:</td>
+                <td class="rightSide">
+                  <input type="radio" name="http_proxy_enable" value="1" class="radioButton" onclick="javascript:enable_proxy_port(1)">Да
+                  &nbsp;&nbsp;&nbsp;<input type="radio" name="http_proxy_enable" value="0" class="radioButton" onclick="javascript:enable_proxy_port(0)" checked="checked">Нет
+                </td>
+              </tr>
+              <tr>
+                <td class="label">Адрес прокси-сервера:</td>
+          <td class="rightSide">
+            <div class="edit_250">
+              <input type="text" maxlength="75" size="16" class="textfield edit_250" value="" name="http_proxy_url" id="http_proxy_url" onkeypress="return checkUTF8Bytes(this, event, 74);">
+            </div>
+          </td>
+              </tr>
+              <tr>
+                <td class="label">Порт прокси-сервера:</td>
+                <td class="rightSide"><input type="text" maxlength="5" size="5" class="textfield edit_68" value="0" name="http_proxy_port" id="http_proxy_port" onkeypress="return isNumber(event);" style="width: 68px; text-align: center; color: rgb(96, 96, 96); background-color: rgb(221, 221, 221);" readonly=""></td>
+              </tr>
+              <!-- HTTP-PROXY -->
+
+              <!-- VLAN tagging, ESz -->
+              <tr>
+                <td class="label"><h2 class="first">Идентификатор  VLAN</h2></td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr>
+                <td class="label">&nbsp;</td>
+                <td class="rightSide">
+                  Вы должны получить значение идентификатора виртуальной LAN от вашего провайдера. Неправильные настройки потребуют перезагрузки оборудования.
+                </td>
+              </tr>
+               <tr>
+                <td class="label">Использовать идентификатор VLAN:</td>
+                <td class="rightSide">
+                  <input type="radio" name="vlan_enable" id="vlan_enable" value="1" class="radioButton" onclick="return enable_vlan_tagging(1)" checked="checked">Да
+                  &nbsp;&nbsp;&nbsp;<input type="radio" name="vlan_enable" value="0" class="radioButton" onclick="return enable_vlan_tagging(0)">Нет
+                </td>
+              </tr>
+              <tr>
+                <td class="label">Идентификатор VLAN:</td>
+                <td class="rightSide"><input type="text" maxlength="5" size="5" class="textfield edit_68" value="232" name="vlan_identifier" id="vlan_identifier" onkeypress="return isNumber(event);" style="width: 68px; text-align: center; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"></td>
+              </tr>
+              <tr>
+                <td class="label">Приоритет VLAN:</td>
+                <td class="rightSide"><input type="text" maxlength="5" size="5" class="textfield edit_68" value="0" name="vlan_priority" id="vlan_priority" onkeypress="return isNumber(event);" style="width: 68px; text-align: center; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"></td>
+              </tr>
+              <!-- VLAN tagging, ESz -->
+
+            <tr>
+              <td style="padding:0;"><img src="../../Devices/C610/spacer.gif" alt="" width="200" height="1" border="0"></td>
+              <td style="padding:0;"><img src="../../Devices/C610/spacer.gif" alt="" width="360" height="1" border="0"></td>
+            </tr>
+          </tbody></table>
+          </div>
+
+        </div>
+
+          
+        <div id="bottombuttons">
+          <table border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+            <!-- buttons -->
+            <tbody><tr>
+              <td>&nbsp;</td>
+              <td class="separatorButton">
+                <table border="0" cellspacing="0" cellpadding="0">
+                  <tbody><tr>
+                    <td><a href="" onclick="javascript:submit_gigaset_form(); return false;" class="buttonLink100">Настроить</a></td>
+                    <td><a href="" onclick="javascript:cancel_gigaset_form(); return false;" class="buttonLink100">Отмена</a></td>
+                  </tr>
+                </tbody></table>
+              </td>
+            </tr>
+            <!-- fixes the width of the first column -->
+            <tr>
+              <td style="padding:0;"><img src="../../Devices/C610/spacer.gif" alt="" width="200" height="1" border="0"></td>
+              <td style="padding:0;"><img src="../../Devices/C610/spacer.gif" alt="" width="360" height="1" border="0"></td>
+            </tr>
+          </tbody></table>
+        </div>
+      </form>
+      <div id="endminheight"></div>
+      </div>
+      <!-- END of content -->
+
+   <!--  <script language="JavaScript" type="text/javascript">
+      writeBlockHelp();
+      writeBlockStaticAreaBottom();
+    </script> -->
+	
+	<div id="div_help"><a href="" onclick="javascript:open_gigaset_help_window(); return false;" title=""><img src="../../Devices/C610/help.gif" alt="" width="20" height="30" border="0"></a></div></div><div id="greyBottom"><img src="../../Devices/C610/spacer.gif" alt="" width="1" height="7" border="0"></div>
+
+  </div>
+  <!-- END CONTAINER -->
+  
+
+
+</body>
+
+
+</body></html>

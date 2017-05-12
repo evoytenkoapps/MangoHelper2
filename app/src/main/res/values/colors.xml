@@ -1,0 +1,15 @@
+
+
+<resources>
+    <color name="window_background">#D78128</color>
+    <color name="black">#000000</color>
+    <color name="blue">#0CACE9</color>
+    <color name="orange">#E14504</color>
+    <color name="grey">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF9800</color>
+    
+</resources>

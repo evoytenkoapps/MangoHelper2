@@ -1,0 +1,2485 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0051) -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" class=" js csstransforms csstransforms3d csstransitions">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta http-equiv="Content-Language" content="ru">
+<meta http-equiv="imagetoolbar" content="no">
+<link rel="stylesheet" href="../../CSS/mango-styles.css" type="text/css" charset="utf-8">
+<link rel="stylesheet" href="../../CSS/mango-styles1.css" type="text/css" charset="utf-8">
+<link rel="stylesheet" href="../../CSS/mango-styles2.css" type="text/css" charset="utf-8">
+<link rel="stylesheet" href="../../CSS/mango-styles4.css" type="text/css" charset="utf-8">
+<link rel="stylesheet" href="../../CSS/mango-styles-ru.css" type="text/css" charset="utf-8">
+<link rel="stylesheet" href="../../CSS/border.css" type="text/css" charset="utf-8">
+<link rel="stylesheet" media="screen,projection" href="../../CSS/ui.totop.css">
+<!-- 
+
+
+
+
+-->
+
+<title>Личный кабинет</title>
+
+
+
+<!-- 
+
+
+
+</head>
+-->
+
+
+<body class="hide-easy-start" address="true" onload="flashBorder('lsn6_4_1');">
+<script>
+var flash;
+var stopFlash = false;
+function flashBorder(elmId, stop)
+{
+stopFlash = stop;
+elm = document.getElementById(elmId);
+clearInterval(flash);
+
+
+if (stopFlash == "true")
+{
+elm.style.border = "";
+clearInterval(flash);
+}
+else
+{
+var borderPattern = false;
+flash = setInterval(setBorder, 700);
+
+function setBorder()
+{
+if (borderPattern)
+{
+borderPattern = false;
+elm.style.border = " solid transparent";
+elm.style.borderWidth = "1px";
+}
+else
+{
+borderPattern = true;
+elm.style.border = "solid Red";
+elm.style.borderWidth = "4px";
+}
+}
+}
+}
+
+
+function f1(lsnId){
+var x = document.getElementsByClassName('ui-dialog-title-edit-component')[0]; 
+if ( lsnId == "lsn6_4_1"){
+//var z = document.getElementsByClassName('editable-input')[0]; 
+//var str = z.childNodes[0].value;
+var y = "<span class='ui-dialog-title editable editable-click editable-open' id='ui-dialog-title-dialog-container-point-group-cart' style='display: none;'></span><span class='editable-container editable-inline'><div><div class='editableform-loading' style='display: none;'></div><form class='form-inline editableform' style=''><div class='control-group'><div><div class='editable-input' style='position: relative;'><input type='text' maxlength='64' value='Новая группа' style='padding-right: 24px;'><span class='editable-clear-x'></span></div><div class='editable-buttons'><button id ='lsn6_4_3' onclick='f1(this.id); flashBorder(\"lsn6_4_5\");' type='submit' class='editable-submit ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only' role='button' aria-disabled='false'><span class='ui-button-icon-primary ui-icon ui-icon-check'></span> <span class='ui-button-text'>ok</span></button><button id='lsn6_4_2' onclick='f1(this.id); flashBorder(\"lsn6_4_1\")' type='button' class='editable-cancel ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only' role='button' aria-disabled='false'><span class='ui-button-icon-primary ui-icon ui-icon-closethick'></span><span class='ui-button-text'>cancel</span></button></div></div><div class='editable-error-block' style='display: none;'></div></div></form></div></span><div class='ui-dialog-title-edit ' style='display: none;'></div>";
+x.innerHTML=y; 
+}
+if ( lsnId == "lsn6_4_2"){
+var z = document.getElementsByClassName('editable-input')[0]; 
+var str = z.childNodes[0].value;
+var y ="<span class='ui-dialog-title editable editable-click' id='ui-dialog-title-dialog-container-point-group-cart'>"+str+"</span><div id='lsn6_4_1' class='ui-dialog-title-edit '  onclick='f1(this.id); flashBorder(\"lsn6_4_1\");'></div>";
+x.innerHTML=y;
+}
+if ( lsnId == "lsn6_4_3"){
+var z = document.getElementsByClassName('editable-input')[0]; 
+var str = z.childNodes[0].value;
+var y ="<span class='ui-dialog-title editable editable-click' id='ui-dialog-title-dialog-container-point-group-cart'>"+str+"</span><div id='lsn6_4_4' class='ui-dialog-title-edit'  onclick='f1(this.id);'></div>";
+x.innerHTML=y;
+}
+if ( lsnId == "lsn6_4_4"){
+var z = document.getElementsByClassName('ui-dialog-title editable editable-click')[0]; 
+var str = z.childNodes[0].nodeValue;
+var y ="<span class='ui-dialog-title editable editable-click' id='ui-dialog-title-dialog-container-point-group-cart'>"+str+"</span><div id='lsn6_4_4' class='ui-dialog-title-edit'  onclick='f1(this.id);'></div>";
+x.innerHTML=y; 
+}
+}
+
+// Отображение подсказки для текущего этапа урока
+function showToastFromHTML(lsnStage){
+Android.showToastFromHTML(lsnStage);
+}
+
+// Конец
+ function showDialogFromHTML(){
+Android.showDialogFromHTML();
+}
+
+
+
+</script>
+
+
+<!--  -->
+
+<!-- Yandex.Metrika counter -->
+<!--   -->
+<noscript>&lt;div&gt;&lt;img src="https://mc.yandex.ru/watch/285436" style="position:absolute; left:-9999px;" alt="" /&gt;&lt;/div&gt;</noscript>
+<!-- /Yandex.Metrika counter -->
+<!--[if lt IE 7]>
+<div class="b-notification-bar">У вас установлена устаревшая версия браузера. Некоторые функции сайта не будут работать или будут работать неправильно. Рекомендуем <a href="$s">установить</a> более новую версию.</div>
+<![endif]-->
+
+<div class="header-background">
+<div class="left-background"></div>
+<div class="right-background"></div>
+</div>
+
+<div class="account-info-background"></div>
+
+<div class="product-panel-background "></div>
+
+<div class="product-panel-background-no-script "></div>
+
+<div class="easy-start-background">
+<div class="help-panel"></div>
+</div>
+
+<div class="b-wrapper">
+<a name="top"></a>
+<div class="b-header">
+<div style="color: #000000; position: absolute; top: 0; left: 0;">P</div>
+
+<a class="logo"  alt="MANGO OFFICE"><!-- --></a>
+
+<div class="navigation">
+<ul>
+<li class="products active">
+<a id="menu-products" class="products" style="border-bottom-width: 1px;">Продукты <span class="expand" style="display: inline-block;"></span><span class="collapse" style="display: none;"></span></a>
+<div class="bridge" style="display: none;">
+<div><!-- --></div>
+</div>
+<div class="product-selector" style="display: none;">
+<div class="b-product-selector">
+<div class="b-buy-more-product"><a>Купить еще</a></div>
+<div class="b-product-selector-close" title="Закрыть"></div>
+<div class="product-selector-block product-status product-status-active">
+<div class="b-products b-brand-vpbx">
+<div class="product-header">
+<h2>Виртуальная АТС<span class="b-tooltip b-info-tooltip" title="Облачная офисная IP АТС высочайшего класса, имеющая неограниченные возможности по масштабированию и адаптации к любым потребностям Вашего бизнеса"></span></h2>
+</div>
+<ul class="b-product">
+<li class="b-product-select-300225072         ">
+<div class="product-element vats-element ">
+<div class="selector-product-logo">
+<img src="../../Images/products/vpbx.png" alt="ВАТС №3 для Тестирование работ сервера Опенсисп " title="ВАТС №3 для Тестирование работ сервера Опенсисп ">
+</div>
+<div class="selector-product-data">
+<h3 class="product-name">
+<a  class="go-product product-title-300225072" title="Перейти на страницу продукта">ВАТС №3 для Тестирование работ сервера Опенсисп </a>
+</h3>
+<div class="product-status" title="">
+<div class="status-table"><div class="status-cell"></div></div>
+</div>
+<ul class="product-short-info">
+<li class="plan"><div>Тариф: <span title="Для внутреннего использования">Для внутреннего использования</span></div></li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="product-arrow"></div>
+</div>
+</li>
+<li class="b-product-select-300291335         ">
+<div class="product-element vats-element ">
+<div class="selector-product-logo">
+<img src="../../Images/products/vpbx.png" alt="ВАТС №9 для тестирование Емкостей  " title="ВАТС №9 для тестирование Емкостей  ">
+</div>
+<div class="selector-product-data">
+<h3 class="product-name">
+<a  class="go-product product-title-300291335" title="Перейти на страницу продукта">ВАТС №9 для тестирование Емкостей  </a>
+</h3>
+<div class="product-status" title="">
+<div class="status-table"><div class="status-cell"></div></div>
+</div>
+<ul class="product-short-info">
+<li class="plan"><div>Тариф: <span title="Для внутреннего использования">Для внутреннего использования</span></div></li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="product-arrow"></div>
+</div>
+</li>
+<li class="b-product-select-300304055         ">
+<div class="product-element vats-element ">
+<div class="selector-product-logo">
+<img src="../../Images/products/vpbx.png" alt="ВАТС №14 проброс ANI" title="ВАТС №14 проброс ANI">
+</div>
+<div class="selector-product-data">
+<h3 class="product-name">
+<a class="go-product product-title-300304055" title="Перейти на страницу продукта">ВАТС №14 проброс ANI</a>
+</h3>
+<div class="product-status" title="">
+<div class="status-table"><div class="status-cell"></div></div>
+</div>
+<ul class="product-short-info">
+<li class="plan"><div>Тариф: <span title="СВОБОДНЫЙ">СВОБОДНЫЙ</span></div></li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="product-arrow"></div>
+</div>
+</li>
+<li class="b-product-select-300305397         ">
+<div class="product-element vats-element ">
+<div class="selector-product-logo">
+<img src="../../Images/products/vpbx.png" alt="Виртуальная АТС №16" title="Виртуальная АТС №16">
+</div>
+<div class="selector-product-data">
+<h3 class="product-name">
+<a class="go-product product-title-300305397" title="Перейти на страницу продукта">Виртуальная АТС №16</a>
+</h3>
+<div class="product-status" title="">
+<div class="status-table"><div class="status-cell"></div></div>
+</div>
+<ul class="product-short-info">
+<li class="plan"><div>Тариф: <span title="СВОБОДНЫЙ">СВОБОДНЫЙ</span></div></li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="product-arrow"></div>
+</div>
+</li>
+<li class="b-product-select-300328204         ">
+<div class="product-element vats-element ">
+<div class="selector-product-logo">
+<img src="../../Images/products/vpbx.png" alt="ВАТС №18 для сотрудников ОТП" title="ВАТС №18 для сотрудников ОТП">
+</div>
+<div class="selector-product-data">
+<h3 class="product-name">
+<a  class="go-product product-title-300328204" title="Перейти на страницу продукта">ВАТС №18 для сотрудников ОТП</a>
+</h3>
+<div class="product-status" title="">
+<div class="status-table"><div class="status-cell"></div></div>
+</div>
+<ul class="product-short-info">
+<li class="plan"><div>Тариф: <span title="СВОБОДНЫЙ">СВОБОДНЫЙ</span></div></li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="product-arrow"></div>
+</div>
+</li>
+<li class="b-product-select-300331301         ">
+<div class="product-element vats-element ">
+<div class="selector-product-logo">
+<img src="../../Images/products/vpbx.png" alt="Березка +" title="Березка +">
+</div>
+<div class="selector-product-data">
+<h3 class="product-name">
+<a  class="go-product product-title-300331301" title="Перейти на страницу продукта">Березка +</a>
+</h3>
+<div class="product-status" title="">
+<div class="status-table"><div class="status-cell"></div></div>
+</div>
+<ul class="product-short-info">
+<li class="plan"><div>Тариф: <span title="СВОБОДНЫЙ">СВОБОДНЫЙ</span></div></li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="product-arrow"></div>
+</div>
+</li>
+<li class="b-product-select-300337238         ">
+<div class="product-element vats-element ">
+<div class="selector-product-logo">
+<img src="../../Images/products/vpbx.png" alt="115 Тест АТС VIP ОТП" title="115 Тест АТС VIP ОТП">
+</div>
+<div class="selector-product-data">
+<h3 class="product-name">
+<a class="go-product product-title-300337238" title="Перейти на страницу продукта">115 Тест АТС VIP ОТП</a>
+</h3>
+<div class="product-status" title="">
+<div class="status-table"><div class="status-cell"></div></div>
+</div>
+<ul class="product-short-info">
+<li class="plan"><div>Тариф: <span title="СВОБОДНЫЙ">СВОБОДНЫЙ</span></div></li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="product-arrow"></div>
+</div>
+</li>
+<li class="b-product-select-400029277         ">
+<div class="product-element vats-element ">
+<div class="selector-product-logo">
+<img src="../../Images/products/vpbx.png" alt="Виртуальный номер" title="Виртуальный номер">
+</div>
+<div class="selector-product-data">
+<h3 class="product-name">
+<a class="go-product product-title-400029277" title="Перейти на страницу продукта">Виртуальный номер</a>
+</h3>
+<div class="product-status" title="">
+<div class="status-table"><div class="status-cell"></div></div>
+</div>
+<ul class="product-short-info">
+<li class="plan"><div>Тариф: <span title="Виртуальный номер">Виртуальный номер</span></div></li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="product-arrow"></div>
+</div>
+</li>
+<li class="b-product-select-400029278         ">
+<div class="product-element vats-element ">
+<div class="selector-product-logo">
+<img src="../../Images/products/vpbx.png" alt="Базовая + пакет 300" title="Базовая + пакет 300">
+</div>
+<div class="selector-product-data">
+<h3 class="product-name">
+<a class="go-product product-title-400029278" title="Перейти на страницу продукта">Базовая + пакет 300</a>
+</h3>
+<div class="product-status" title="">
+<div class="status-table"><div class="status-cell"></div></div>
+</div>
+<ul class="product-short-info">
+<li class="plan"><div>Тариф: <span title="Базовая + Пакет 300">Базовая + Пакет 300</span></div></li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="product-arrow"></div>
+</div>
+</li>
+<li class="b-product-select-400029279         ">
+<div class="product-element vats-element ">
+<div class="selector-product-logo">
+<img src="../../Images/products/vpbx.png" alt="Максимальная + Пакет 300" title="Максимальная + Пакет 300">
+</div>
+<div class="selector-product-data">
+<h3 class="product-name">
+<a  class="go-product product-title-400029279" title="Перейти на страницу продукта">Максимальная + Пакет 300</a>
+</h3>
+<div class="product-status" title="">
+<div class="status-table"><div class="status-cell"></div></div>
+</div>
+<ul class="product-short-info">
+<li class="plan"><div>Тариф: <span title="Максимальная + Пакет 300">Максимальная + Пакет 300</span></div></li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="product-arrow"></div>
+</div>
+</li>
+<li class="b-product-select-400029280         ">
+<div class="product-element vats-element ">
+<div class="selector-product-logo">
+<img src="../../Images/products/vpbx.png" alt="Расширенная  + Пакет 300" title="Расширенная  + Пакет 300">
+</div>
+<div class="selector-product-data">
+<h3 class="product-name">
+<a  class="go-product product-title-400029280" title="Перейти на страницу продукта">Расширенная  + Пакет 300</a>
+</h3>
+<div class="product-status" title="">
+<div class="status-table"><div class="status-cell"></div></div>
+</div>
+<ul class="product-short-info">
+<li class="plan"><div>Тариф: <span title="Расширенная + Пакет 300">Расширенная + Пакет 300</span></div></li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="product-arrow"></div>
+</div>
+</li>
+<li class="b-product-select-400032147         ">
+<div class="product-element vats-element ">
+<div class="selector-product-logo">
+<img src="../../Images/products/vpbx.png" alt="Виртуальная АТС №108" title="Виртуальная АТС №108">
+</div>
+<div class="selector-product-data">
+<h3 class="product-name">
+<a  class="go-product product-title-400032147" title="Перейти на страницу продукта">Виртуальная АТС №108</a>
+</h3>
+<div class="product-status" title="">
+<div class="status-table"><div class="status-cell"></div></div>
+</div>
+<ul class="product-short-info">
+<li class="plan"><div>Тариф: <span title="Расширенная + Пакет 300">Расширенная + Пакет 300</span></div></li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="product-arrow"></div>
+</div>
+</li>
+<li class="b-product-select-400070052                  b-product-select-current
+vats-active
+">
+<div class="product-element vats-element ">
+<div class="selector-product-logo">
+<img src="../../Images/products/vpbx.png" alt="Виртуальная АТС №111" title="Виртуальная АТС №111">
+</div>
+<div class="selector-product-data">
+<h3 class="product-name">
+<a class="go-product product-title-400070052" title="Перейти на страницу продукта">Виртуальная АТС №111</a>
+</h3>
+<div class="product-status" title="">
+<div class="status-table"><div class="status-cell"></div></div>
+</div>
+<ul class="product-short-info">
+<li class="plan"><div>Тариф: <span title="Расширенная + Пакет 300">Расширенная + Пакет 300</span></div></li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="product-arrow"></div>
+</div>
+</li>
+<li class="b-product-select-400075601         ">
+<div class="product-element vats-element ">
+<div class="selector-product-logo">
+<img src="../../Images/products/vpbx.png" alt="Центр Обучения Mango Office" title="Центр Обучения Mango Office">
+</div>
+<div class="selector-product-data">
+<h3 class="product-name">
+<a  class="go-product product-title-400075601" title="Перейти на страницу продукта">Центр Обучения Mango Office</a>
+</h3>
+<div class="product-status" title="">
+<div class="status-table"><div class="status-cell"></div></div>
+</div>
+<ul class="product-short-info">
+<li class="plan"><div>Тариф: <span title="Виртуальный номер">Виртуальный номер</span></div></li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="product-arrow"></div>
+</div>
+</li>
+<li class="b-product-select-400075871         ">
+<div class="product-element vats-element ">
+<div class="selector-product-logo">
+<img src="../../Images/products/vpbx.png" alt="Виртуальная АТС №113" title="Виртуальная АТС №113">
+</div>
+<div class="selector-product-data">
+<h3 class="product-name">
+<a class="go-product product-title-400075871" title="Перейти на страницу продукта">Виртуальная АТС №113</a>
+</h3>
+<div class="product-status" title="">
+<div class="status-table"><div class="status-cell"></div></div>
+</div>
+<ul class="product-short-info">
+<li class="plan"><div>Тариф: <span title="Виртуальный номер">Виртуальный номер</span></div></li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="product-arrow"></div>
+</div>
+</li>
+<li class="b-product-select-400081355         ">
+<div class="product-element vats-element ">
+<div class="selector-product-logo">
+<img src="../../Images/products/vpbx.png" alt="Виртуальная АТС №114" title="Виртуальная АТС №114">
+</div>
+<div class="selector-product-data">
+<h3 class="product-name">
+<a  class="go-product product-title-400081355" title="Перейти на страницу продукта">Виртуальная АТС №114</a>
+</h3>
+<div class="product-status" title="">
+<div class="status-table"><div class="status-cell"></div></div>
+</div>
+<ul class="product-short-info">
+<li class="plan"><div>Тариф: <span title="Максимальная (без МГП)">Максимальная (без МГП)</span></div></li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="product-arrow"></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="b-products b-brand-calling_card">
+<div class="product-header">
+<h2>Выгодный межгород<span class="b-tooltip b-info-tooltip" title="Исходящая связь по минимальным ценам и без ограничения числа линий"></span></h2>
+</div>
+<ul class="b-product">
+<li class="b-product-select-300297486         ">
+<div class="product-element vats-element ">
+<div class="selector-product-logo">
+<img src="../../Images/products/calling_card.png" alt="Выгодный межгород №13 - Москва" title="Выгодный межгород №13 - Москва">
+</div>
+<div class="selector-product-data">
+<h3 class="product-name">
+<a  class="go-product product-title-300297486" title="Перейти на страницу продукта">Выгодный межгород №13 - Москва</a>
+</h3>
+<div class="product-status" title="">
+<div class="status-table"><div class="status-cell"></div></div>
+</div>
+<ul class="product-short-info">
+<li class="plan"><div>Тариф: <span title="МИДИ">МИДИ</span></div></li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="product-arrow"></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="b-products b-brand-crm">
+<div class="product-header">
+<h2>CRM-система<span class="b-tooltip b-info-tooltip" title="Система управления взаимоотношениями с клиентами, поддерживающая работу с телефонией, для любого вида бизнеса"></span></h2>
+</div>
+<ul class="b-product last-block">
+<li class="b-product-select-300296825         ">
+<div class="product-element vats-element ">
+<div class="selector-product-logo">
+<img src="../../Images/products/crm.png" alt="CRM №1" title="CRM №1">
+</div>
+<div class="selector-product-data">
+<h3 class="product-name">
+<a  class="go-product product-title-300296825" title="Перейти на страницу продукта">CRM №1</a>
+<br><span class="product-code">(код продукта: №921603)</span>
+</h3>
+<div class="product-status" title="">
+<div class="status-table"><div class="status-cell"></div></div>
+</div>
+<ul class="product-short-info">
+<li class="plan"><div>Тариф: <span title="ОФИС">ОФИС</span></div></li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="product-arrow"></div>
+</div>
+</li>
+<li class="b-product-select-300294187         ">
+<div class="product-element vats-element ">
+<div class="selector-product-logo">
+<img src="../../Images/products/crm.png" alt="CRM №10" title="CRM №10">
+</div>
+<div class="selector-product-data">
+<h3 class="product-name">
+<a  class="go-product product-title-300294187" title="Перейти на страницу продукта">CRM №10</a>
+<br><span class="product-code">(код продукта: №128265)</span>
+</h3>
+<div class="product-status" title="">
+<div class="status-table"><div class="status-cell"></div></div>
+</div>
+<ul class="product-short-info">
+<li class="plan"><div>Тариф: <span title="ПРОМО">ПРОМО</span></div></li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="product-arrow"></div>
+</div>
+</li>
+<li class="b-product-select-300296837         ">
+<div class="product-element vats-element ">
+<div class="selector-product-logo">
+<img src="../../Images/products/crm.png" alt="CRM №11" title="CRM №11">
+</div>
+<div class="selector-product-data">
+<h3 class="product-name">
+<a class="go-product product-title-300296837" title="Перейти на страницу продукта">CRM №11</a>
+<br><span class="product-code">(код продукта: №489828)</span>
+</h3>
+<div class="product-status" title="">
+<div class="status-table"><div class="status-cell"></div></div>
+</div>
+<ul class="product-short-info">
+<li class="plan"><div>Тариф: <span title="ОФИС">ОФИС</span></div></li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="product-arrow"></div>
+</div>
+</li>
+<li class="b-product-select-300335244         ">
+<div class="product-element vats-element ">
+<div class="selector-product-logo">
+<img src="../../Images/products/crm.png" alt="CRM №23" title="CRM №23">
+</div>
+<div class="selector-product-data">
+<h3 class="product-name">
+<a class="go-product product-title-300335244" title="Перейти на страницу продукта">CRM №23</a>
+<br><span class="product-code">(код продукта: №504779)</span>
+</h3>
+<div class="product-status" title="">
+<div class="status-table"><div class="status-cell"></div></div>
+</div>
+<ul class="product-short-info">
+<li class="plan"><div>Тариф: <span title="ОТДЕЛ">ОТДЕЛ</span></div></li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="product-arrow"></div>
+</div>
+</li>
+<li class="b-product-select-300336613         ">
+<div class="product-element vats-element ">
+<div class="selector-product-logo">
+<img src="../../Images/products/crm.png" alt="CRM №25" title="CRM №25">
+</div>
+<div class="selector-product-data">
+<h3 class="product-name">
+<a  class="go-product product-title-300336613" title="Перейти на страницу продукта">CRM №25</a>
+<br><span class="product-code">(код продукта: №484249)</span>
+</h3>
+<div class="product-status" title="">
+<div class="status-table"><div class="status-cell"></div></div>
+</div>
+<ul class="product-short-info">
+<li class="plan"><div>Тариф: <span title="ОФИС">ОФИС</span></div></li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="product-arrow"></div>
+</div>
+</li>
+<li class="b-product-select-400012825         ">
+<div class="product-element vats-element ">
+<div class="selector-product-logo">
+<img src="../../Images/products/crm.png" alt="CRM №102" title="CRM №102">
+</div>
+<div class="selector-product-data">
+<h3 class="product-name">
+<a  class="go-product product-title-400012825" title="Перейти на страницу продукта">CRM №102</a>
+<br><span class="product-code">(код продукта: №0702517)</span>
+</h3>
+<div class="product-status" title="">
+<div class="status-table"><div class="status-cell"></div></div>
+</div>
+<ul class="product-short-info">
+<li class="plan"><div>Тариф: <span title="ПРОМО">ПРОМО</span></div></li>
+</ul>
+</div>
+<div class="clear"></div>
+<div class="product-arrow"></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+
+</div>
+</li>
+<li class="">
+<a >Финансы</a>
+</li>
+<li class=" feedback">
+<a >Поддержка</a>
+</li>
+</ul>
+</div>
+<div class="account-header-info">
+<ul>
+<li>
+<span title="Mango Helper" class="name">Mango Helper</span>
+<div class="name-overflow"></div>
+</li>
+</ul>
+<div class="logout">
+<a title="Выйти">Выйти</a>
+</div>
+
+</div>
+</div>
+
+<div class="b-account-panel account-info">
+<ul class="l-part">
+<li class="account">
+<div class="account-info-cell">
+<span>Лицевой счет</span>
+<span class="value">16600000</span>
+</div>
+</li>
+<li class="balance ">
+<div class="account-info-cell" title="Остаток 3&nbsp;572,42&nbsp;руб.">
+<span>Остаток</span>
+<span class="value">3&nbsp;572,42&nbsp;руб.</span>
+</div>      </li>
+
+<!-- PAYMENT Menu -->
+<li class="payment">
+<div class="account-info-cell">
+
+<a data-action="recharge" class="switch switch-front">
+Пополнить счёт  </a>
+
+<!--  <div class="switch-control-box">-->
+<!--    <a href="#" class="switch switch-control"></a>-->
+<!--    <div class="sub-menu">-->
+<!--      --><!--        <a data-action="--><!--" href="--><!--">--><!--</a>-->
+<!--      --><!--    </div>-->
+<!--  </div>-->
+
+</div>        </li>
+<!-- <<<payment-menu -->
+
+</ul>
+<ul class="r-part">
+<li class="spend">
+<div class="account-info-cell transparent-blur">
+Расходы в марте          <span>118,67&nbsp;руб.</span>
+
+&nbsp;
+в феврале            <span>3&nbsp;366,60&nbsp;руб.</span>
+</div>
+</li>
+</ul>
+<div class="clear"></div>
+
+
+</div>
+
+
+
+
+<div class="no-script ">
+Для полной функциональности Личного кабинета необходимо включить JavaScript в вашем браузере.  </div>
+
+
+<div class="b-product-panel">
+
+
+<div class="b-product-box">
+<a   class="product-logo vpbx"><!-- --></a>
+<div class="product-desc">
+<a class="product-title">
+<span>Виртуальная АТС №111</span>
+<div class="transparent-gradient"><!-- --></div>
+</a>
+
+<span class="g-link product-rename" title="Переименовать"><!-- --></span>
+<div class="b-dialog-container" id="dialog-container-rename-product" title="Переименование продукта">
+<div class="b-dialog b-dialog-rename-product">
+<form id="product-rename-form" enctype="application/x-www-form-urlencoded" action="" method="post" class="ics-form"><div>
+<div class="control-holder"><div class="control-label"><label for="productname" class="optional">Название</label>
+</div><div class="control-element">
+<input type="text" name="productname" id="productname" value="" maxlength="64">
+<span class="control-desc"><!-- --></span>
+<ul class="errors"><li><!-- --></li></ul></div></div></div></form></div>
+</div>      
+
+
+
+<div class="b-plan">
+<span>
+Версия          </span>
+<span class="g-link switch-plan-version-link" data-brand="vpbx">
+«Расширенная»
+</span>
+<div class="b-dialog-container" id="dialog-container-switch-plan-version" title="Смена версии продукта">
+
+<div class="b-switch-version">
+
+<!-- Шаг 0. Отказ в выборе версии (план не сконфигурирован). -->
+<div class="b-step b-plan-version-not-configured b-static">
+<div class="b-icon"><!-- --></div>
+<div class="b-title">
+Для смены версии продукта необходимо обратиться к вашему менеджеру    </div>
+<div class="b-note">
+Для вашей версии Виртуальной АТС недоступно самостоятельное изменение версии. <br>Для смены версии необходимо обратиться к вашему менеджеру по тел. 8 800 555 55 22    </div>
+</div>
+
+
+<!-- Шаг 1. Выбор версии. -->
+<div class="b-step b-versions-collection"><!-- --></div>
+
+
+<!-- Шаг 2. Информация о переходе на другую версию. -->
+<div class="b-step b-switch-info"><!-- --></div>
+
+
+<!-- Шаг 3. Сравнительная таблица дополнительных услуг текущей и выбранной версий. -->
+<div class="b-step b-compare-versions"><!-- --></div>
+
+
+<!-- Шаг 4. Блок с сообщением об успешной смене версии. -->
+<div class="b-step b-congratulation b-static">
+<div class="b-icon"><!-- --></div>
+<div class="b-title">
+Версия продукта успешно изменена.    </div>
+<div class="b-note">
+Теперь вы используете версию «<span>%s</span>»    </div>
+</div>
+
+
+<!-- -->
+<div class="b-step b-switch-license"><!-- --></div>
+
+</div>
+
+</div>          
+
+<span class="txt-tariff">
+Тариф на связь            </span>
+			<span class="g-link switch-plan-tariff-link" data-brand="vpbx">
+«ПАКЕТ 300»              </span>
+<div class="b-dialog-container" id="dialog-container-switch-plan-tariff" title="Смена тарифа на связь">
+
+<div class="b-switch-tariff">
+
+<!-- Шаг 0. Отказ в выборе тарифа (план вне списка "новых" планов). -->
+<div class="b-step b-switch-via-manager b-static">
+<div class="b-icon"><!-- --></div>
+<div class="b-title">
+Для смены тарифа на связь необходимо обратиться к вашему менеджеру          </div>
+<div class="b-note">
+Для вашей версии Виртуальной АТС недоступно изменение тарифа на связь. <br>Для смены тарифа на связь необходимо обратиться к вашему менеджеру по тел. 8 800 555 55 22          </div>
+</div>
+
+
+<!-- Шаг 1. Выбор версии. -->
+<div class="b-step b-tariffs-collection"><!-- --></div>
+
+
+<!-- Шаг 2. Информация о переходе на другую версию. -->
+<div class="b-step b-switch-info"><!-- --></div>
+
+
+<!-- Шаг 3. Сравнительная таблица дополнительных услуг текущей и выбранной версий. -->
+<div class="b-step b-compare-tariffs"><!-- --></div>
+
+
+<!-- Шаг 4. Блок с сообщением об успешной смене версии. -->
+<div class="b-step b-congratulation b-static">
+<div class="b-icon"><!-- --></div>
+<div class="b-title">
+Тариф на связь успешно изменен.    </div>
+<div class="b-note">
+Теперь вы используете тариф на связь «<span>%s</span>»    </div>
+</div>
+
+
+<!-- -->
+<div class="b-step b-switch-license"><!-- --></div>
+
+</div>
+
+</div>                              </div>
+
+
+</div>
+</div>
+
+<iframe style="border: 0;" scrolling="no" class="banner" width="379" height="51" src=""></iframe>
+
+<div class="clear"></div>
+
+
+</div>
+
+<div class="b-content b-ajax-content">
+<div class="b-point-members-page b-point-members-grouped-page">
+<div class="b-breadcrumbs">
+<ul>
+<li><a class="ajax-page" address="true">Настройки и инструменты</a></li>
+</ul>
+<div class="clear"></div>
+</div>
+<div class="media-player">
+<div id="jquery_jplayer" class="jp-jplayer" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"><object id="jp_flash_0" name="jp_flash_0" data="/flash/Jplayer.swf" type="application/x-shockwave-flash" width="1" height="1" tabindex="-1" style="width: 0px; height: 0px;"><param name="flashvars" value="jQuery=jQuery&amp;id=jquery_jplayer&amp;vol=0.8&amp;muted=false"><param name="allowscriptaccess" value="always"><param name="bgcolor" value="#000000"><param name="wmode" value="window"></object></div>
+<div id="jp_container_1" class="jp-audio hidden-player unselectable" unselectable="on">
+<div class="jp-type-single">
+<div class="jp-download" title="Скачать">
+<a></a>
+</div>
+<div class="jp-gui jp-interface">
+<ul class="jp-controls">
+<li><a href="#" class="jp-play" tabindex="1" title="Проиграть">Проиграть</a></li>
+<li><a href="#" class="jp-pause" tabindex="1" title="Пауза" style="display: none;">Пауза</a></li>
+<li><a href="#" class="mute volume80" tabindex="1" title=""></a></li>
+</ul>
+<div class="jp-progress">
+<div class="jp-seek-bar slider seekbar" style="width: 0%;">
+<div class="jp-play-bar" style="width: 0%;"></div>
+</div>
+</div>
+<div class="jp-volume-bar slider volumebar">
+<div class="jp-volume-bar-value" style="width: 80%;"></div>
+</div>
+<div class="jp-time-holder">
+<div class="jp-current-time" title="Текущее время">00:00</div>
+<div class="jp-duration" title="Продолжительность мелодии">00:00</div>
+</div>
+<div class="js-close" title="Закрыть">
+<a class="link" href="#" tabindex="3">x</a>
+</div>
+</div>
+<div class="jp-no-solution" style="display: none;">
+<span>Необходимо обновление</span>Для проигрывания мелодий неоходибо обновление flash-плеера, скачать его можно по ссылке - <a target="_blank">Flash plugin</a>.      </div>
+</div>
+</div>
+
+</div>
+
+<h1>Сотрудники и группы</h1>
+
+<div class="b-tabs b-tabs-service-settings">
+<ul>
+<li>
+<a  class="skip-address ajax-page">Описание</a>
+</li>
+<li>
+<a class="skip-address ajax-page">Список абонентов</a>
+</li>
+<li class="active current">
+<a class="skip-address ajax-page current">Группы обзвона</a>
+</li>
+<li>
+<a class="skip-address no-link icon add-group">Добавить группу</a>
+</li>
+</ul>
+<div class="clear"></div>
+</div>
+<div class="b-service-full-description" style="display: none;"><div style="font-size: 14px;">
+
+<strong>Добавление сотрудников</strong>
+
+<br><br>
+
+Данное видео демонстрирует процедуру добавления сотрудников в Виртуальную АТС. 
+
+<br><br>
+
+<!-- <iframe width="560" height="315" src="//www.youtube.com/embed/v66wyB3KCX0?rel=0&amp;wmode=opaque" frameborder="0" style="border: 1px solid; color: #353535" allowfullscreen=""></iframe> -->
+
+<br><br>
+
+<strong>Объединение в группы</strong>
+
+<br><br>
+
+Объединение сотрудников в группы, выбор алгоритма распределения входящих вызовов.
+
+<br><br>
+
+<!-- <iframe width="560" height="315" src="//www.youtube.com/embed/B0fl0RrPY4Y?rel=0&amp;wmode=opaque" frameborder="0" style="border: 1px solid; color: #353535" allowfullscreen=""></iframe> -->
+
+<br><br>
+
+<strong>Настройка SIP учетной записи</strong>
+
+<br><br>
+
+Демонстрация создания учетной записи SIP для сотрудника.
+
+<br><br>
+
+<!-- <iframe width="560" height="315" src="//www.youtube.com/embed/jyhveGC7Opg?rel=0&amp;wmode=opaque" frameborder="0" style="border: 1px solid; color: #353535" allowfullscreen=""></iframe> -->
+
+</div></div>
+
+
+
+
+
+
+
+
+<div class="point-members-block">
+
+<div class="b-find-options">
+<div class="find-widget">
+<label for="search" style="float: left;">Найти</label>
+<div class="b-widget-filter b-groups-list-filter">
+<label for="search">&nbsp;</label>
+<input type="text" maxlength="64" name="clue" id="search" class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+<div>&nbsp;</div>
+</div>
+<div class="b-group-info">
+<span>Всего групп:</span>
+<span id="count-groups">1</span>,
+<span>cотрудников:</span>
+<span id="count-members">0</span>.
+</div>
+</div>
+<div class="buttons">
+<button class="collapse pressed ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" data-mode="short" role="button" aria-disabled="false"><span class="ui-button-text">кратко</span></button>
+<button class="expand ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" data-mode="full" role="button" aria-disabled="false"><span class="ui-button-text">подробно</span></button>
+</div>
+</div>
+
+<table class="point-members-groups" id="point-members-groups"></table>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="b-dialog-container" id="dialog-container-point-member-cart" title="dialog.point-member-cart">
+<div class="b-cart-all">
+<div class="b-cart-tabs">
+<ul class="tab-index">
+<li class="active" data-tab="cart"><span>Карточка</span><span class="c-tooltip yellow-icon" title="<strong>Внимание!</strong> На этой вкладке<br/>не сделаны важные настройки.<br/>Для решения этой проблемы</br>откройте вкладку и следуйте<br/>рекомендациям системы."></span></li>
+<li data-tab="phone"><span>Телефония</span><span class="c-tooltip" title="<strong>Внимание!</strong> На этой вкладке<br/>не сделаны важные настройки.<br/>Для решения этой проблемы</br>откройте вкладку и следуйте<br/>рекомендациям системы." data-class="tooltip-red-custom"></span></li>
+<li data-tab="call-centre"><span>ЦОВ</span></li>
+<li data-tab="cpc"><span>КПК</span></li>
+</ul>
+</div>
+
+<div class="b-cart-tab">
+<div class="b-cart-tab-cart">
+
+<div class="b-general-options">
+<div class="b-option-placeholder">
+<span class="title">Профиль сотрудника</span>
+</div>
+<div class="b-option-placeholder">
+<label for="email">E-mail</label><input name="email" id="email" type="text" maxlength="64"><input class="fake" id="email-fake" type="text" value="не указано" maxlength="64"><span class="c-tooltip" title="Укажите e-mail сотрудника, например, <i>username@example.com</i>"></span><span class="c-tooltip tooltip-email yellow-icon hidden" title="Чтобы сотрудник мог получать записи голосовой почты и иную информацию, укажите e-mail сотрудника"></span>
+</div>
+<div class="b-option-placeholder">
+<label for="desc">Отдел</label><input name="department" id="department" type="text" maxlength="255"><input id="department-fake" class="fake" type="text" value="не указано" maxlength="255"><span class="c-tooltip" title="Укажите отдел, к которому относится сотрудник, например, <i>Отдел продаж</i>"></span>
+</div>
+<div class="b-option-placeholder">
+<label for="department">Должность</label><input name="desc" id="desc" type="text" maxlength="255"><input class="fake" id="desc-fake" type="text" value="не указано" maxlength="255"><span class="c-tooltip" title="Укажите должность сотрудника, например, <i>Менеджер по продажам</i>"></span>
+</div>
+</div>
+
+<div class="b-sip-accounts-options padding-top">
+<div class="b-option-placeholder">
+<span class="title">Учетные записи SIP</span>
+<span class="c-tooltip" title="Учетная запись SIP необходима сотруднику для приема и совершения звонков с использованием IP-телефонии"></span><span class="c-tooltip tooltip-sip-check yellow-icon hidden" title="<strong>Внимание!</strong> Чтобы сотрудник мог принимать звонки на компьютер и IP-телефон, а также совершать вызовы по дешевым тарифам, необходимо создать ему учетную запись SIP"></span>
+</div>
+<div class="b-option-placeholder">
+<table class="sip-accounts">
+<tbody><tr>
+<td>SIP-адрес</td>
+<td class="sip-accounts"><span class="g-link create">Создать</span></td>
+</tr>
+</tbody></table>
+</div>
+</div>
+
+<div class="b-access-options padding-top">
+<div class="b-option-placeholder">
+<span class="title">Доступ в Личный кабинет</span>
+</div>
+<div class="b-option-placeholder">
+<label for="abonent_role">Права доступа</label>
+<select class="rights" id="abonent_role" name="abonent_role">
+<option value="1">Администратор</option>
+<option value="2">Бухгалтер</option>
+<option value="0">Сотрудник</option>
+<option value="3">Нет доступа</option>
+</select>
+<span class="c-tooltip fix-position" title="Администратор — полный доступ к разделу<br/>«Финансы» и всем разделам Виртуальной АТС.<br/><br/>Бухгалтер — полный доступ к разделу «Финансы»,<br/>ограниченный доступ к разделам Виртуальной АТС.<br/><br/>Сотрудник — нет доступа к разделу «Финансы»,<br/>ограниченный доступ к разделам Виртуальной АТС.<br/><br/>Нет доступа — нельзя войти в Личный кабинет. <br/>"></span>
+</div>
+<div class="b-option-placeholder b-account-access">
+<input class="sip-access" name="sip-access" id="sip-access" type="checkbox">
+<label class="sip-access" for="sip-access">Разрешить вход в Личный кабинет по учетным записям SIP<span class="c-tooltip" title="Если включено, сотрудник сможет авторизовываться в софтфонах и входить в Личный кабинет используя логин и пароль любой своей учетной записи SIP"></span></label>
+<div class="clr"></div>
+
+<input class="sip-access" name="web-access" id="web-access" type="checkbox">
+<label class="sip-access" for="web-access">Создать отдельные логин/пароль для Личного кабинета и ЦОВ<span class="c-tooltip" title="Если вы не хотите сообщать сотруднику данные учетной записи SIP, вы можете задать отдельный логин и пароль. <br>Отдельный логин и пароль также требуются для входа в ЦОВ"></span></label>
+<div class="clr"></div>
+<div class="b-option-web-access">
+<div class="b-option-placeholder">
+<label for="login">Логин</label>
+
+<div class="background">400070052/</div>
+<input data-not-clear="400070052/" name="login" id="login" type="text" maxlength="64">
+<input id="login-fake" class="fake" value="400070052/не указано" type="text" maxlength="64">
+<span class="c-tooltip login-tooltip" title="Сотрудники, для которых задан логин и пароль, смогут входить в личный кабинет и менять настройки Виртуальной АТС. Ограничить права доступа сотрудников можно на странице «Безопасность и ограничения»."></span>
+</div>
+<div class="b-option-placeholder b-password-member no-padding-bottom">
+<label for="password">Пароль</label><input class="password" name="password" id="password" type="password" maxlength="64">
+<input class="password fake" id="password-fake" type="text" value="не указано">
+<input class="password open-password" id="open-password" type="text" maxlength="64">
+<span class="c-tooltip password-tooltip" title="Пароль должен содержать не менее 8 символов, содержать строчные, заглавные буквы и цифры"></span>
+
+<div class="b-fix-width">
+<span class="g-link show">Показать</span><span class="g-link hide">Скрыть</span>
+<span class="g-link generate">Сгенерировать</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="b-cart-tab-phone">
+
+<div class="b-options-abonent">
+<div class="b-option-placeholder padding-bottom">
+<span class="title">Данные абонента АТC</span>
+</div>
+<div class="b-option-placeholder b-field-env">
+<span class="label">Внутренний номер</span>
+<input name="transfer_number" id="transfer-number" type="text" maxlength="7">
+<span class="c-tooltip" title="От 2 до 5 цифр. Наберите этот номер, чтобы позвонить сотруднику. Для перевода звонка сотруднику наберите: ##номер"></span>
+<span class="c-tooltip tooltip-transfer-check red-icon hidden" data-class="tooltip-red-custom" title="<strong>Внимание!</strong> Для возможности быстрого звонка и перевода вызова сотруднику, необходимо задать ему внутренний номер"></span>
+</div>
+<div class="b-option-placeholder b-field-env">
+<span class="label">Принимать звонки</span>
+<select id="member-algs" class="google-chrome" name="dial_alg">
+<option value="1" data-service-code="ALG_M_MAIN">Только на основной номер</option>
+<option value="2" data-service-code="ALG_M_ALL">На все номера одновременно</option>
+<option value="3" data-service-code="ALG_M_LINE">На все номера по очереди</option>
+</select>
+<span class="c-tooltip" title="Выберите порядок, в котором входящий вызов, пришедший на внутренний номер сотрудника, будет поступать на его средства приема звонков"></span>
+</div>
+</div>
+<div class="b-options-sip-accounts padding-top">
+<div class="b-option-placeholder incoming-padding">
+<span class="title">Средства приема звонков</span>
+<span class="c-tooltip" title="Порядок — показывает, в каком порядке будут использованы средства для приема звонков. Чтобы изменить порядок, перетащите контакты мышкой. <br>Телефоны или учетные записи — список контактов для голосовой связи, используемых сотрудником. <br>Ждать ответ — максимальное время дозвона по контакту (0 — без ограничений). <br>Расписание — позволяет ограничить определенное день/время использования контакта. <br>Активен — если выключено, контакт не будет использоваться для дозвона на сотрудника."></span>
+<span class="c-tooltip tooltip-incoming-check red-icon hidden" title="<strong>Внимание!</strong> Чтобы сотрудник мог принимать звонки, необходимо указать хотя бы одно средство для приема звонков — учетную запись SIP, мобильный телефон или FMC-номер для переадресации"></span>
+<span class="c-tooltip tooltip-tel-fmc-check yellow-icon hidden" title="<strong>Внимание!</strong> Чтобы сотрудник мог принять звонок, даже находясь удаленно от рабочего места, укажите его номер мобильного телефона или FMC-номер"></span>
+</div>
+<div class="b-option-placeholder tabled">
+<table class="b-phone-table">
+<thead>
+<tr>
+<td class="first-child">&nbsp;</td>
+<td class="order">Порядок</td>
+<td>Телефоны или учетные записи</td>
+<td class="wait-time">Ждать ответ</td>
+<td class="schedule">Расписание</td>
+<td class="active">Активен</td>
+<td class="last-child">&nbsp;</td>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<span class="g-link add-number">Добавить номер<span class="number-add-icon">&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+</div>
+<div class="b-option-placeholder padding-top incoming-padding">
+<span class="title">Совершение звонков</span>
+</div>
+<div class="b-option-placeholder floated b-field-env">
+<span class="label">Исходящий номер</span>
+<select class="grouped-anis google-chrome" name="ani" id="ani"></select>
+<span class="no-ani">Нет номеров</span>
+<span class="c-tooltip" title="Отображается на определителе номера у человека, которому звонит сотрудник. Также служит для определения региона звонка для расчета стоимости связи. Если номер не указан, то сотруднику не доступна внешняя исходящая связь."></span>
+</div>
+<div class="b-option-placeholder b-regions b-field-env">
+<span class="label">Направления</span>
+<span class="regions g-link"><!-- --></span>
+<span class="transfer-hint"><!-- --></span>
+</div>
+</div>
+<!-- <div class="b-warning-block">
+<div class="b-warning-message">
+При сохранении настроек будет подключена услуга:        </div>
+<div class="b-connected-services">
+<ul class="b-service-list"></ul>
+</div>
+<div class="b-agreement-block">
+<input id="member_agree" type="checkbox" name="member_agree" value="1">
+<label for="member_agree">Я принимаю условия подключения</label>
+</div>
+</div> -->
+</div>
+
+<div class="b-cart-tab-call-centre">
+
+
+<div class="b-option-placeholder">
+<span class="title">ЦОВ (Центр Обработки Вызовов)</span>
+</div>
+<div class="b-option-placeholder about-text">
+Центр Обработки Вызовов - это специальное дополнение к Виртуальной АТС, позволяющее управлять звонками и очередями вызовов в реальном времени и более гибко организовывать работу в группах сотрудников.<br><br>На компьютерах устанавливается специальная программа, которая позволяет:<br>- Видеть очередь звонков на экране компьютера в реальном времени<br>- Перехватывать и перенаправлять звонки в один клик мышкой<br>- Присоединяться к разговорам в режиме "суфлирования"<br>- Управлять статусами сотрудников (на линии / не принимает звонки пр.)<br>- Назначать Супервизоров, которые могут менять настройки своей группы<br>- Вести адресную книгу контрагентов (клиентов, партнеров)<br>- Сохранять информацию о беседах в карточках контрагентов<br>- Видеть всех сотрудников в корпоративной адресной книге<br>- Управлять настольным IP-телефоном и многое другое<br><br>Подключить услугу "Центр Обработки Вызовов" и бесплатно загрузить нужное число программ можно в один клик прямо в Личном кабинете.<br><br><a class="call-centre-link" target="_blank"><span class="g-link">Узнать больше о ЦОВ и стоимости подключения →</span></a><br><br><span class="gray">После подключения ЦОВ на этой вкладке появятся дополнительные настройки, связанные с разделением прав сотрудника в группах.</span>        </div>
+</div>
+
+<div class="b-cart-tab-cpc">
+<div class="b-option-placeholder">
+<span class="title">Авторизация на номере доступа</span><span class="c-tooltip" title="Выберите способы авторизации сотрудника при звонке на номер доступа"></span>
+</div>
+<div class="b-option-placeholder pin-code">
+<label for="pin-code">По пин-коду</label><input readonly="readonly" name="pin-code" id="pin-code" type="text"><span class="c-tooltip" title="При звонке на номер доступа потребуется ввести пин-код, сгенерированный на данной странице. Пин-код уникален для каждого сотрудника."></span>
+<span class="g-link show">Показать</span><span class="g-link hide">Скрыть</span>
+<span class="g-link generate">Сгенерировать</span>
+<span class="g-link remove">Удалить</span>
+</div>
+<div class="b-option-placeholder">
+<label for="auth-number">По номеру</label><input name="auth-number" id="auth-number" type="checkbox"><label class="auth-number" for="auth-number">Авторизовать при звонке с любого телефона сотрудника</label>
+</div>
+<div class="b-option-placeholder title">
+<span class="title">Инструкция по использованию</span>
+</div>
+<div class="b-option-placeholder about-text">
+Вы можете совершать исходящие звонки с любого номера за счет средств вашей Виртуальной АТС. Для этого необходимо позвонить на номер доступа (их список приведен на сайте «Манго-Офис») и набрать в тональном режиме желаемый номер собеседника. Наиболее часто эта возможность используется для дешевых звонков за границу или во время командировок. <br><br> Чтобы совершить звонок нужно пройти авторизацию одним из двух способов: <br><br> 1. Авторизация с помощью пин-кода. При звонке на номер доступа потребуется ввести пин-код, сгенерированный на данной странице. Пин-код уникален для каждого сотрудника. <br><br> 2. Авторизация по номеру. При звонке на номер доступа система "узнает" вас по определившемуся номеру (АОН). Пин-код в этом случае вводить не потребуется. Номера телефонов задаются на вкладке "Телефония".         </div>
+</div>
+</div>
+</div>
+</div>    
+
+<div class="b-dialog-container" id="dialog-container-add-multi-object" title="dialog.add-multi-object">
+<div class="b-dialog b-dialog-members b-dialog multi-options">
+<form>
+<table>
+<tbody>
+<tr>
+<td>
+<div class="b-widget-filter">
+<label for="search">&nbsp;</label>
+<input type="text" id="search" name="clue" maxlength="64">
+<div>&nbsp;</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div>
+<div class="multi-items"></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</form>
+<div class="b-point-members-add-info">
+
+</div>
+</div>
+
+</div>  <div class="b-dialog-container" id="dialog-container-schedule" title="Расписание">
+<div class="b-dialog b-dialog-schedule">
+<form class="b-form" action="">
+
+<!--<span class="ui-helper-hidden-accessible"><input type="text" class="autofocus-field" disabled="true"/></span>-->
+<table>
+<tbody><tr>
+<td class="label"><span>Период</span></td>
+</tr>
+<tr>
+<td class="element">
+<label for="schedule-valid-from-date">с</label>
+<input class="date" type="text" name="from-date" id="schedule-valid-from-date">
+<input class="time" type="text" name="from-time">
+<label for="schedule-valid-until-date">по</label>
+<input class="date" type="text" name="until-date" id="schedule-valid-until-date">
+<input class="time" type="text" name="until-time">
+</td>
+</tr>
+</tbody></table>
+<div class="line"></div>
+<table>
+<tbody><tr>
+<td class="label"><span>День и время</span></td>
+</tr>
+<tr>
+<td class="element">
+<ul class="items"><!-- --></ul>
+<div class="b-dropdown">
+
+<button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Добавить&nbsp;<small>▼</small></span></button>
+</div>
+</td>
+</tr>
+</tbody></table>
+</form>
+</div>
+</div>  <div class="b-dialog-container" id="dialog-container-white-continents-point-members" title="dialog.white-continents-point-members">
+<div class="b-dialog b-dialog-white-continents-member">
+<form class="b-form">
+
+<input type="hidden" name="abonent-id" value="">
+
+<div>
+<label>
+<input type="radio" value="product" name="settings-mode">
+<span class="dsc-default">По умолчанию (используются общие настройки АТС)</span>
+</label>
+</div>
+
+<div>
+<label>
+<input type="radio" value="member" name="settings-mode">
+Особые настройки      </label>
+</div>
+
+
+<div class="b-continents">
+<div class="col">
+<div>
+<label>
+<input type="checkbox" name="continents[0]" data-member="" data-product="1" data-russia="">
+Все            </label>
+</div>
+<div>
+<label>
+<input type="checkbox" name="continents[7]" data-member="" data-product="1" data-russia="1">
+Россия            </label>
+</div>
+<div>
+<label>
+<input type="checkbox" name="continents[9]" data-member="" data-product="0" data-russia="">
+СНГ и Балтия            </label>
+</div>
+<div>
+<label>
+<input type="checkbox" name="continents[5]" data-member="" data-product="0" data-russia="">
+Европа            </label>
+</div>
+<div>
+<label>
+<input type="checkbox" name="continents[4]" data-member="" data-product="0" data-russia="">
+Австралия            </label>
+</div>
+</div>
+<div class="col">
+<div>
+<label>
+<input type="checkbox" name="continents[6]" data-member="" data-product="0" data-russia="">
+Азия            </label>
+</div>
+<div>
+<label>
+<input type="checkbox" name="continents[3]" data-member="" data-product="0" data-russia="">
+Африка            </label>
+</div>
+<div>
+<label>
+<input type="checkbox" name="continents[1]" data-member="" data-product="0" data-russia="">
+Северная Америка            </label>
+</div>
+<div>
+<label>
+<input type="checkbox" name="continents[2]" data-member="" data-product="0" data-russia="">
+Южная Америка            </label>
+</div>
+<div>
+<label>
+<input type="checkbox" name="continents[8]" data-member="" data-product="0" data-russia="">
+Прочее            </label>
+</div>
+</div>
+</div>
+
+</form>
+</div>
+
+</div>    <div class="b-dialog-container" id="dialog-container-input-field" title="dialog.input-field">
+
+<div class="b-box">
+
+<!-- Number (not fmtn) -->
+<div class="b-input">
+<input id="input-field" type="text" maxlength="255">
+</div>
+
+<!-- FMTN -->
+<div class="b-select">
+<div class="note">Выберите FMTN (FMC) номер, подключенный к АТС</div>
+<div class="b-dropkick">
+<select name="fmc" id="fmc">
+<option value="" label="<span class=&quot;empty&quot;>Выберите номер</span>">&lt;span class="empty"&gt;Выберите номер&lt;/span&gt;</option>
+</select>    </div>
+<div class="reassign-number">Номер будет переназначен на нового сотрудника.</div>
+</div>
+
+</div>
+
+</div></div>  </div>
+
+<div class="push"></div>
+<div class="b-footer-push"></div>
+</div>
+<div class="clear"></div>
+<div class="b-footer">
+<div class="copyright">© MANGO OFFICE   Москва, ул. Профсоюзная д. 57, офис 833   Тел.: +7 495 540-44-44, 745-33-99</div>
+</div>
+
+
+
+
+<a id="toTop" href="#"><span id="toTopHover"></span></a>
+
+
+
+
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all dialog-sip-account-control ui-draggable ui-dialog-buttons" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-dialog-container-sip-account-control" style="display: none; outline: 0px; z-index: 1000;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-dialog-title-dialog-container-sip-account-control">Учетная запись SIP</span><a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div><div class="b-dialog-container ui-dialog-content ui-widget-content" id="dialog-container-sip-account-control" style="display: block;">
+
+<div class="b-sip-account-control">
+
+<form class="b-form">
+<div class="hidden">
+<input type="text" name="init_sip_account">
+<input type="text" name="number_id">
+<input type="text" name="abonent">
+</div>
+<table class="b-sip-account-table">
+<tbody><tr>
+<td class="label">Закреплена за сотрудником</td>
+<td>
+<div class="b-search-members-widget">
+<input type="text" name="member_name" maxlength="55">
+<span class="icon search"><!-- --></span>
+<span class="icon close"><!-- --></span>
+
+<div class="b-list hide-out-click"><span data-abonent-id="400561381">admin</span><span data-abonent-id="400614809">Алексей</span><span data-abonent-id="400692330">Сергей склад</span></div>
+</div>
+</td>
+<td class="icon">
+<span title="Выберите сотрудника, для которого требуется создать учетную запись SIP." class="c-tooltip"></span>
+</td>
+</tr>
+<tr class="notice no-create-new-1">
+<td><!-- --></td>
+<td colspan="2">
+Сотрудник с таким именем не найден. Согласно условиям версии вашей Виртуальной АТС, вы больше не можете добавить новых сотрудников.          </td>
+</tr>
+<tr class="notice no-create-new-2">
+<td><!-- --></td>
+<td colspan="2">
+Ошибка: Количество сотрудников превышает количество лицензий. Обратитесь в службу технической поддержки.          </td>
+</tr>
+<tr class="notice no-found-new">
+<td><!-- --></td>
+<td colspan="2">
+Сотрудник с таким именем не найден.            Будет создан новый сотрудник.          </td>
+</tr>
+<tr class="notice new">
+<td><!-- --></td>
+<td colspan="2">
+Будет создан новый сотрудник.          </td>
+</tr>
+<tr>
+<td class="label">SIP-адрес</td>
+<td class="b-address">
+<input type="text" name="username">
+<span>@</span>
+<select name="schema">
+<option value="vpbx400070052.mangosip.ru">
+vpbx400070052.mangosip.ru                </option>
+<option value="mangosip.ru">
+mangosip.ru                </option>
+</select>
+</td>
+<td class="icon">
+<span title="Первый символ должен быть буквой латинского алфавита, остальные - буквы латинского алфавита, цифры или символы. <br><br>ИЛИ <br>Начинаться с цифры, но содержать как минимум одну букву. <br><br>ИЛИ <br>Если вам необходимо имя пользователя, состоящее только из цифр, - оно должно начинаться на &quot;000&quot;. <br><br>Длина имени пользователя должна быть больше или равна 4 симв." class="c-tooltip"></span>
+</td>
+</tr>
+<tr>
+<td class="label">Пароль</td>
+<td class="b-password" colspan="2">
+<input type="password" name="password" maxlength="64">
+<input type="text" id="sip-fake-password" maxlength="64">
+<span title="Пароль должен содержать не менее 8 символов, включать строчные, заглавные буквы и цифры." class="c-tooltip"></span>
+<span class="g-link g-password-display">
+<span class="g-password-show">Показать,</span>
+<span class="g-password-hide">Скрыть,</span>
+</span>
+<span class="g-link g-password-generate">Сгенерировать новый</span>
+</td>
+</tr>
+<tr class="b-extend-options">
+<td><!-- --></td>
+<td colspan="2">
+<span class="g-link extend-options-switcher">
+Расширенные настройки            </span>
+</td>
+</tr>
+<tr class="extended">
+<td class="label">Переадресация</td>
+<td class="b-forwarding">
+<select name="alias_to" id="alias_to">
+<option value="" label="Нет">Нет</option>
+<option value="10298505" label="user1@vpbx400070052.mangosip.ru">user1@vpbx400070052.mangosip.ru</option>
+</select>          </td>
+<td class="icon">
+<span title="Автоматически перенаправлять звонки на выбранный в выпадающем списке sip-адрес. Например, если сотрудник в отпуске, адресованные ему вызовы поступят заместителю." class="c-tooltip"></span>
+</td>
+</tr>
+<tr class="break">
+<td colspan="3"><!-- --></td>
+</tr>
+
+
+
+<tr class="message services">
+<td><!-- --></td>
+<td colspan="2">
+<span class="b-add-license">
+</span>
+<div class="b-confirm">
+<input type="checkbox" name="confirm" id="confirm"><label for="confirm">Я принимаю условия подключения</label>
+</div>
+</td>
+</tr>
+
+<tr class="message reconfig">
+<td><!-- --></td>
+<td colspan="2">
+<strong>Внимание!</strong>
+После сохранения этих изменений вам также потребуется самостоятельно внести их в настройки всех IP-телефонов и софтфонов, на которых используется данная учетная запись SIP.          </td>
+</tr>
+
+</tbody></table>
+
+</form>
+
+</div>
+
+</div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Создать</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Отменить</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Удалить учетную запись</span></button></div></div></div>
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all ics-ui-dialog ui-dialog-buttons" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-dialog-container-point-group-cart" style="outline: 0px; z-index: 1002; height: auto; width: 600px; top: 86px; left: 20%; display: block;">
+<div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix ui-dialog-titlebar-point-group-cart">
+<div class="ui-dialog-fake"></div><div class="ui-dialog-slide ui-dialog-slide-left"></div><div class="ui-dialog-slide ui-dialog-slide-right"></div>
+
+
+
+<div class="ui-dialog-title-edit-component" >
+<span class="ui-dialog-title editable editable-click" id="ui-dialog-title-dialog-container-point-group-cart">Новая группа</span>
+<div id="lsn6_4_1" class="ui-dialog-title-edit"  onclick="f1(this.id); flashBorder('lsn6_4_3');"></div>
+</div>
+
+
+
+
+
+
+<a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button">
+<span class="ui-icon ui-icon-closethick">close</span></a><div class="ui-dialog-close"></div></div>
+<div class="b-dialog-container ui-dialog-content ui-widget-content" id="dialog-container-point-group-cart" style="display: block; width: auto; min-height: 28px; height: auto; position: relative;" scrolltop="0" scrollleft="0">
+<div class="b-dialog b-dialog-point-group-cart">
+
+<div class="b-cart-tabs">
+<ul class="tab-index">
+<li class="active" data-tab="receiving-calls"><span>Прием вызовов</span>
+<span class="c-tooltip general-warning yellow-icon" title="Клиенты готовы ждать в очереди дольше, если будут знать время ожидания до ответа оператора"></span>
+</li>
+<li data-tab="call-hold"><span>Очередь вызовов</span></li>
+</ul>
+</div>
+<div class="receiving-calls-tab b-cart-tab" style="display: block;">
+<div class="b-settings-block b-groups-general-settings">
+<div class="b-settings-item">
+<span class="title">Параметры группы</span>
+</div>
+<div class="b-settings-item">
+<label class="settings-label" for="group_transfer_number">Внутренний номер</label>
+<input id="lsn6_4_5" onchange="document.getElementById(this.id).style='border: transparent'; flashBorder('lsn6_4_6'); showToastFromHTML(5);" name="transfer_number" class="group_transfer_number" id="group_transfer_number" maxlength="7">
+<span class="c-tooltip" title="От 2 до 5 цифр. Наберите этот номер, чтобы позвонить на группу. <br/>Для перевода звонка на группу наберите: ##номер"></span>
+</div>
+<div class="b-settings-item">
+<label for="group_desc" class="settings-label">Примечание</label>
+<input name="desc" id="group_desc" type="text" maxlength="255" style="display: none;">
+<input id="group_desc-fake" class="fake group_desc" value="Укажите дополнительную информацию о группе" type="text">
+</div>
+<div class="b-settings-item">
+<label for="group_operator_algorithm" class="settings-label">Принимать звонки</label>
+<select name="operator_algorithm" id="group_operator_algorithm">
+<option label="Только на основные номера сотрудников" value="default_number" data-service-code="ALG_M_MAIN">
+Только на основные номера сотрудников            </option>
+<option label="На все номера сотрудников" value="all_numbers" data-service-code="ALG_M_ALL">
+На все номера сотрудников            </option>
+<option label="Только на SIP учетные записи сотрудников" value="only_sip" data-service-code="ALG_M_SIP">
+Только на SIP учетные записи сотрудников            </option>
+</select>
+<span class="c-tooltip" title="Выберите, на какие средства  приема звонков сотрудника следует направить вызов, поступающий ему в составе группы"></span>
+</div>
+</div>
+<div class="b-settings-block b-groups-dial-algorithms">
+<div class="b-settings-item">
+<span class="title">Алгоритм распределения звонков в группе</span>
+<span class="c-tooltip" title="Выберите, по какому принципу входящие звонки будут распределяться между сотрудниками, входящими в группу"></span>
+</div>
+<div id="lsn6_4_6" class="b-settings-item">
+<div class="b-groups-algorithms-border"></div>
+<div class="b-groups-algorithms-block">
+<div class="b-">
+<label>
+<input onclick="document.getElementById('lsn6_4_6').style='border: transparent'; flashBorder('lsn6_4_7'); document.getElementById('lsn6_4_7').className ='ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only'; document.getElementById('lsn6_4_7').disabled = false;  showToastFromHTML(6);" name="dial_algorithm" value="serial_by_priority" type="radio" data-service-code="ALG_SERIAL_PRIOR" checked="checked">
+&nbsp;
+Последовательный </label>
+<span class="c-tooltip" title="Последовательный набор номеров сотрудников в заданном порядке. Этот алгоритм распределения вызовов позволяет направлять звонки в первую очередь наиболее компетентным по тематике обращения сотрудникам. <br/><br/><i>Например, звонок VIP клиента направляется сначала персональному менеджеру, если он отсутствует - заместителю; если и его нет на рабочем месте – руководителю группы, а далее – секретарю отдела.</i>"><!-- --></span>
+</div>
+<div class="b-">
+<label>
+<input onclick="document.getElementById('lsn6_4_6').style='border: transparent'; flashBorder('lsn6_4_7'); document.getElementById('lsn6_4_7').className ='ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only'; document.getElementById('lsn6_4_7').disabled = false; showToastFromHTML(6);" name="dial_algorithm" value="random" type="radio" data-service-code="ALG_RANDOM">
+&nbsp;
+Случайный              </label>
+<span class="c-tooltip" title="Выбор этого типа распределения звонков позволяет создать равную нагрузку на менеджеров.<br/><br/><i> Случайный алгоритм позволяет провести оценку эффективности работы менеджеров (среднее время ожидания клиентов на линии, общее количество принятых вызовов, количество вызовов, принятых каждым менеджером, среднее время общения с клиентом в целом и по менеджерам). Кроме того, выбор данного алгоритма распределения позволяет создать примерно равную нагрузку на операторов.</i>"><!-- --></span>
+</div>
+<div class="b-">
+<label>
+<input  onclick="document.getElementById('lsn6_4_6').style='border: transparent'; flashBorder('lsn6_4_7'); document.getElementById('lsn6_4_7').className ='ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only'; document.getElementById('lsn6_4_7').disabled = false; showToastFromHTML(6);" name="dial_algorithm" value="parallel_by_priority" type="radio" data-service-code="ALG_PARALLEL_PRIOR">
+&nbsp;
+Параллельный по приоритету              </label>
+<span class="c-tooltip" title="Cначала одновременно звонят телефоны всех сотрудников, обладающих наивысшей квалификацией. Если никто не поднял трубку, звонки переводятся сотрудникам с меньшей квалификаций и так далее.<br/><br/><i>Этот способ распределения звонков позволяет достичь лучших показателей по продажам, так как в обработке звонков в большей мере задействованы наиболее квалифицированные сотрудники. В то же время, позвонивший клиент избавлен от необходимости долго ждать ответа, как это иногда происходит при последовательном сценарии распределения вызовов.</i>"><!-- --></span>
+</div>
+<div class="b-">
+<label>
+<input onclick="document.getElementById('lsn6_4_6').style='border: transparent'; flashBorder('lsn6_4_7'); document.getElementById('lsn6_4_7').className ='ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only'; document.getElementById('lsn6_4_7').disabled = false; showToastFromHTML(6);" name="dial_algorithm" value="parallel" type="radio" data-service-code="ALG_PARALLEL">
+&nbsp;
+Одновременно всем              </label>
+<span class="c-tooltip" title="Вызов поступает одновременно всем свободным операторам. Основная задача, которую решает данный алгоритм распределения вызовов – свести к минимуму время ожидания на линии.<br/><br/><i> Этот алгоритм распределения вызовов удобно сочетать с мотивацией операторов на прием максимального количества звонков. В этом случае операторы будут заинтересованы в том, чтобы максимальное время находиться на рабочем месте и быстро брать трубку.<br/><br/>Параллельный алгоритм удобно применять в момент проведения рекламных кампаний, когда значительно увеличивается количество звонков и ключевым фактором является снижение времени ожидания клиентов на линии.</i>"><!-- --></span>
+</div>
+<div class="b-">
+<label>
+<input onclick="document.getElementById('lsn6_4_6').style='border: transparent'; flashBorder('lsn6_4_7'); document.getElementById('lsn6_4_7').className ='ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only'; document.getElementById('lsn6_4_7').disabled = false; showToastFromHTML(6);" name="dial_algorithm" value="most_idle" type="radio" data-service-code="ALG_MOST_IDLE">
+&nbsp;
+Равномерный              </label>
+<span class="c-tooltip" title="Входящий звонок направляется на сотрудника, предыдущий разговор которого с клиентом был раньше, чем у других, затем на второго по списку, и так далее по остальным сотрудникам.<br/><br/><i>Такой алгоритм распределения применятся в компаниях с невысокой загрузкой менеджеров, работа которых связана с последующей постобработкой вызова (например, подготовка коммерческого предложения для клиента). Иногда данный тип распределения звонков используется для того, чтобы дать операторам отдохнуть перед очередным общением с клиентом.</i>"><!-- --></span>
+</div>
+</div>
+</div>
+<div class="b-settings-item b-noblocked-options">
+<label><input type="checkbox" name="personal_operator">&nbsp;
+Переадресовывать звонки на "знакомого" сотрудника        </label>
+<span class="c-tooltip" title="Если в течение часа после звонка в вашу компанию клиент перезванивает вам снова, звонок будет направлен на того же сотрудника, с которым общался клиент. Если сотрудник занят или недоступен, вызов будет обработан по общим правилам."></span>
+<span class="c-tooltip video-tip forwarding-repeated-calls" data-src="Qvlkzg_u-HE" title="Сервис &quot;Переадресация повторных звонков на &quot;знакомого&quot; сотрудника&quot;."></span>      </div>
+
+
+<div class="b-settings-item b-noblocked-options">
+<label>
+<input type="checkbox" name="group_auto_callback">&nbsp;
+Автоматически перезванивать по пропущенным звонкам        </label>
+<span class="c-tooltip" title="Если звонок клиента был пропущен данной группой, а затем и компанией, система будет автоматически перезванивать по номеру клиента от имени группы с интервалом в 15 минут, количество попыток при этом составит не более 6-ти. <br>Обратите внимание: если в вашей схеме распределения присутствует несколько групп, для которых подключен данный функционал, система будет перезванивать клиенту от имени каждой такой группы."><!-- --></span>
+</div>
+
+<div class="b-settings-item b-noblocked-options b-auto-callback-anis" style="display: none;">
+<span>
+Исходящий номер        </span> &nbsp; &nbsp;
+<select name="group_auto_callback_abonent_id" class="ani grouped-anis google-chrome" aria-disabled="false" tabindex="0" style="display: none;">
+<optgroup label="Москва">
+<option data-number="74955189436" data-type="did" data-desc="" value="400561382"><!-- --><span class="number">7 (495) 518-94-36</span></option>
+</optgroup>
+</select><span><a class="ui-selectmenu ui-widget ui-state-default ui-corner-all ani grouped-anis google-chrome ui-selectmenu-dropdown" id="ui-selectmenu-db78890f-button" role="button" href="#nogo" tabindex="0" aria-haspopup="true" aria-owns="ui-selectmenu-db78890f-menu" aria-disabled="false" style="width: 202px;"><span class="ui-selectmenu-status"><!-- --><span class="number">7 (495) 518-94-36</span></span><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span></a></span>
+</div>
+
+
+</div>
+<div class="b-settings-block b-groups-waiting-settings">
+<div class="b-settings-item">
+<span class="title">Во время ожидания до ответа оператора</span>
+</div>
+<div class="b-settings-item additional-bottom b-melodies-selector">
+<label for="group_operator_greeting_melody" class="settings-label">
+Играть мелодию        </label>
+<select id="group_operator_greeting_melody" name="melody_id">
+<option label="По умолчанию" value="default">
+По умолчанию    </option>
+<optgroup data-group="standard" label="Стандартные" class="standard">
+<option label="Abandoned" value="17">
+Abandoned        </option>
+<option label="abba" value="1">
+abba        </option>
+<option label="Abba Happy NY" value="86">
+Abba Happy NY        </option>
+<option label="Aisle 9 Please" value="20">
+Aisle 9 Please        </option>
+<option label="alphaville" value="2">
+alphaville        </option>
+<option label="amelie" value="13">
+amelie        </option>
+<option label="Aventura Love Story" value="56">
+Aventura Love Story        </option>
+<option label="av hold" value="16">
+av hold        </option>
+<option label="Bad boys blue Only one breath away" value="57">
+Bad boys blue Only one breath away        </option>
+<option label="Blonker sidewalk cafe" value="58">
+Blonker sidewalk cafe        </option>
+<option label="Cacho Oro" value="19">
+Cacho Oro        </option>
+<option label="Can do" value="45">
+Can do        </option>
+<option label="Challenge" value="18">
+Challenge        </option>
+<option label="China wall" value="44">
+China wall        </option>
+<option label="Companion" value="43">
+Companion        </option>
+<option label="Dark Haze" value="24">
+Dark Haze        </option>
+<option label="Determined Tumbao" value="23">
+Determined Tumbao        </option>
+<option label="direstraits" value="5">
+direstraits        </option>
+<option label="diva" value="4">
+diva        </option>
+<option label="eagles" value="6">
+eagles        </option>
+<option label="El Rey" value="22">
+El Rey        </option>
+<option label="Ennio Morricone Chi Mai" value="59">
+Ennio Morricone Chi Mai        </option>
+<option label="Ennio Morricone Once upon a time" value="60">
+Ennio Morricone Once upon a time        </option>
+<option label="Era Ameno" value="61">
+Era Ameno        </option>
+<option label="Evil Deed" value="21">
+Evil Deed        </option>
+<option label="Far from home" value="27">
+Far from home        </option>
+<option label="From the heavens" value="26">
+From the heavens        </option>
+<option label="Honor" value="49">
+Honor        </option>
+<option label="jazz" value="12">
+jazz        </option>
+<option label="jingle bells" value="91">
+jingle bells        </option>
+<option label="KickIt" value="25">
+KickIt        </option>
+<option label="Krokus" value="97">
+Krokus        </option>
+<option label="La Cha Cha" value="30">
+La Cha Cha        </option>
+<option label="La Neige Dantans" value="29">
+La Neige Dantans        </option>
+<option label="Lemar Lemar If theres any justice" value="62">
+Lemar Lemar If theres any justice        </option>
+<option label="LoveIs blue" value="15">
+LoveIs blue        </option>
+<option label="Made the grade" value="28">
+Made the grade        </option>
+<option label="marry christmas" value="92">
+marry christmas        </option>
+<option label="Metric trend" value="48">
+Metric trend        </option>
+<option label="Milagro" value="33">
+Milagro        </option>
+<option label="new year mix" value="88">
+new year mix        </option>
+<option label="password_greeting" value="330031780">
+password_greeting        </option>
+<option label="Paul Mauriat Parapuies De Cherburg" value="64">
+Paul Mauriat Parapuies De Cherburg        </option>
+<option label="Quest" value="32">
+Quest        </option>
+<option label="Red sky" value="31">
+Red sky        </option>
+<option label="REM" value="8">
+REM        </option>
+<option label="Rise and shine" value="47">
+Rise and shine        </option>
+<option label="Romantic nights" value="36">
+Romantic nights        </option>
+<option label="Running" value="35">
+Running        </option>
+<option label="Spain" value="34">
+Spain        </option>
+<option label="sting" value="10">
+sting        </option>
+<option label="Strong survive the" value="46">
+Strong survive the        </option>
+<option label="Take me higher" value="40">
+Take me higher        </option>
+<option label="The crying machine" value="38">
+The crying machine        </option>
+<option label="The opening" value="51">
+The opening        </option>
+<option label="Third floor lingerie" value="37">
+Third floor lingerie        </option>
+<option label="ub40" value="11">
+ub40        </option>
+<option label="Unity" value="98">
+Unity        </option>
+<option label="Untameable fire" value="39">
+Untameable fire        </option>
+<option label="Vanessa Mae Classical Gas" value="63">
+Vanessa Mae Classical Gas        </option>
+<option label="Vanessa Paradis Joe Le taxi" value="66">
+Vanessa Paradis Joe Le taxi        </option>
+<option label="VoiceMail" value="330029509">
+VoiceMail        </option>
+<option label="Wings of the wind" value="50">
+Wings of the wind        </option>
+<option label="wonder" value="9">
+wonder        </option>
+<option label="Your eyes on glory" value="41">
+Your eyes on glory        </option>
+<option label="Абонент не отвечает или временно недоступен" value="330055363">
+Абонент не отвечает или временно недоступен        </option>
+<option label="Бетховен" value="3">
+Бетховен        </option>
+<option label="Введите цифры" value="1000116735">
+Введите цифры        </option>
+<option label="Вертикаль" value="42">
+Вертикаль        </option>
+<option label="В лесу родилась елочка" value="90">
+В лесу родилась елочка        </option>
+<option label="Грибоедов" value="7">
+Грибоедов        </option>
+<option label="Гудок" value="96">
+Гудок        </option>
+<option label="Запрос пароля" value="68">
+Запрос пароля        </option>
+<option label="Катюша" value="52">
+Катюша        </option>
+<option label="К сожалению все операторы заняты" value="69">
+К сожалению все операторы заняты        </option>
+<option label="Маленькой елочке холодно зимой" value="89">
+Маленькой елочке холодно зимой        </option>
+<option label="Оставьте ваше сообщение после сигнала" value="67">
+Оставьте ваше сообщение после сигнала        </option>
+<option label="Подождите завершения обработки" value="1000116736">
+Подождите завершения обработки        </option>
+<option label="Сиртаки" value="14">
+Сиртаки        </option>
+<option label="Техническая тишина (1 секунда)" value="555">
+Техническая тишина (1 секунда)        </option>
+<option label="У природы нет плохой погоды" value="65">
+У природы нет плохой погоды        </option>
+<option label="Чайковский Вальс цветов" value="53">
+Чайковский Вальс цветов        </option>
+</optgroup>
+</select>
+<span class="c-tooltip" title="Выберите мелодию, которую будет слышать звонящий, пока кто-то из сотрудников не поднимет трубку. Если мелодия закончится до этого, она автоматически начнет повторяться."></span>
+<div class="jplayer icon standard" style="display: none;">
+<a class="control" href=""><!-- --></a>
+</div>
+</div>
+
+<div class="b-settings-item">
+<span class="label">Сообщать</span>
+<label class="plain" for="group_operator_dynamic_ivr">
+<input type="checkbox" id="group_operator_dynamic_ivr" name="dynamic_ivr">
+&nbsp;"До ответа оператора осталось ... минут"          </label>
+<span class="c-tooltip" title="Если включена данная опция и опция &quot;Удерживать вызовы&quot;, то ожидающим в очереди абонентам периодически будет сообщаться время, остающееся до ответа оператора. Например: &quot;Предполагаемое время до ответа оператора 2 минуты&quot;. Для расчета времени используются данные об обслуживании предыдущих звонков, обслуженных операторами данной группы, и данные о месте текущего звонка в общей очереди. Опцию рекомендуется использовать для групп с длинными очередями звонков и небольшим временем разговора."></span>
+<span class="c-tooltip video-tip " data-src="WIsHycnZyOM" title="Автоинформатор до времени ответа оператора в Виртуальной АТС Манго-Офис."></span>          <span class="c-tooltip custom-warning yellow-icon" data-field="dynamic_ivr" title="Клиенты готовы ждать в длинной очереди дольше, если будут знать время ожидания до ответа оператора"></span>
+</div>
+
+<div class="b-settings-item">
+<span class="label"><!-- --></span>
+<label class="plain" for="group_operator_dynamic_seq_num">
+<input type="checkbox" id="group_operator_dynamic_seq_num" name="dynamic_seq_num">
+&nbsp;"Ваш номер в очереди ..."          </label>
+<span class="c-tooltip" title="Если включена данная опция и опция &quot;Удерживать вызовы&quot;, то ожидающим в очереди абонентам периодически будет сообщаться текущая позиция их звонка в общей очереди на группу. Например: &quot;Ваш звонок второй в очереди&quot;. Опцию рекомендуется использовать для групп с короткими очередями звонков и продолжительным временем разговора."></span>
+<span class="c-tooltip custom-warning no-tab-warning yellow-icon" data-field="dynamic_seq_num" title="Клиенты готовы ждать в короткой очереди дольше, если будут знать текущую позицию их звонка в очереди"></span>
+</div>
+
+</div>
+<!-- <div class="b-warning-block" style="display: block;">
+<div class="b-warning-message">При сохранении настроек будет подключена услуга:</div>
+<div class="b-connected-services">
+<ul class="b-service-list"><li><span>Алгоритм «Алгоритм распределения звонков. Последовательный обзвон» за <span class="currency-int-part">0</span><span class="currency-comma-part">,</span><span class="currency-fract-part">00</span> <span class="currency-symbol">р./сут.</span> </span><span class="tariff-mon">(бесплатно)</span><span></span></li></ul>
+</div>
+<div class="b-agreement-block" style="display: block;">
+<input id="agree" type="checkbox" name="agree" value="1">
+<label for="agree">Я принимаю условия подключения</label>
+</div>
+</div> -->
+</div>
+
+<div class="call-hold-tab b-cart-tab" style="display: none;">
+<div class="b-settings-block">
+<div class="b-settings-item">
+<span class="title">Удержание вызовов</span>
+<span class="c-tooltip c-tooltip-hold-title" title="Удержание вызовов (постановка вызовов в очередь) позволяет не потерять звонок клиента, если все операторы заняты."></span>
+</div>
+<div class="b-settings-item">
+<div>
+<label><input type="radio" name="custom_settings" value="0" checked="checked">&nbsp;
+Использовать общие настройки удержания вызовов АТС          </label>
+</div>
+<div>
+<label><input type="radio" name="custom_settings" value="1">&nbsp;
+Использовать специальные настройки удержания вызовов для этой группы          </label>
+</div>
+</div>
+</div>
+<div class="b-hold-settings-container disabled">
+<div class="b-settings-block b-hold-call-settings">
+<div class="b-settings-item">
+<span class="title">Настройки удержания</span>
+</div>
+<div class="b-settings-item">
+<label><input type="checkbox" name="hold_enabled" disabled="disabled" checked="checked">
+Удерживать вызовы (ставить в очередь), если все операторы заняты          </label>
+<span class="c-tooltip" title="Включите удержание вызова, если звонки принимает только одна группа операторов. Выключите удержание, если хотите чтобы звонок был направлен дальше по схеме обработки звонка (например, на группу подстраховки)."></span>
+</div>
+<div class="b-settings-item additional-bottom">
+<label for="point-groups-waiting-time" class="settings-label">Время ожидания</label>
+<input type="text" id="point-groups-waiting-time" name="hold_max_time" maxlength="5" class="field_type_int" data-value="" disabled="disabled">
+<span class="measure">сек.</span>
+<span class="c-tooltip" title="Установите время, в течение которого вызовы будут удерживаться на группе. После истечения данного времени, вызов будет перенаправлен далее по схеме переадресации (при переадресации из пункта голосового меню), или будет передан сигнал &quot;занято&quot; (при переадресации по внутреннему номеру группы). &quot;0&quot; означает, что время удержания не ограничено, вызов будет удерживаться в очереди, пока не будет обслужен или вызывающий абонент не положит трубку."></span>
+<span class="predefined_value_tool" data-input="hold_max_time" data-value="30">
+30 сек.        </span>
+<span class="predefined_value_tool" data-input="hold_max_time" data-value="600">
+10 мин.        </span>
+<span class="predefined_value_tool" data-input="hold_max_time" data-value="0">
+неограниченно        </span>
+</div>
+<div class="b-settings-item">
+<label for="point-groups-queue" class="settings-label">Длина очереди</label>
+<input type="text" id="point-groups-queue" name="hold_max_len" maxlength="5" class="field_type_int" data-value="" disabled="disabled">
+<span class="measure">чел.</span>
+<span class="c-tooltip" title="Установите максимальную длину очереди вызовов на группу. После того, как очередь вызовов достигнет указанной длины, все вновь поступающие вызовы будут перенаправлены  далее по схеме переадресации (при переадресации из пункта голосового меню), или будет передан сигнал &quot;занято&quot; (при переадресации по внутреннему номеру группы). &quot;0&quot; означает, что длина очереди не ограничена, вызов будет удерживаться в очереди, пока не будет обслужен или вызывающий абонент не положит трубку."></span>
+<span class="predefined_value_tool" data-input="hold_max_len" data-value="3">
+3 чел.        </span>
+<span class="predefined_value_tool" data-input="hold_max_len" data-value="10">
+10 чел.        </span>
+<span class="predefined_value_tool" data-input="hold_max_len" data-value="0">
+неограниченно        </span>
+</div>
+<div class="b-settings-item">
+<span class="b-call-hold-hint">При превышении любого из этих параметров вызов будет классифицирован <br>как неотвеченный группой и направлен дальше по схеме обработки вызовов.</span>
+</div>
+</div>
+<div class="b-settings-block b-melody-settings">
+<div class="b-settings-item">
+<span class="title">
+Мелодии и звуковые сообщения        </span>
+</div>
+<div class="b-settings-item b-melodies-selector">
+<label for="point-groups-queue-message" class="settings-label">
+Постановка <br>в очередь          </label>
+<select id="point-groups-queue-message" name="hold_begin_msg_id" disabled="disabled">
+<option label="Нет" value="no">
+Нет    </option>
+<option label="По умолчанию (К сожалению все операторы заняты)" value="default">
+По умолчанию (К сожалению все операторы заняты)    </option>
+<optgroup data-group="standard" label="Стандартные" class="standard">
+<option label="Abandoned" value="17">
+Abandoned        </option>
+<option label="abba" value="1">
+abba        </option>
+<option label="Abba Happy NY" value="86">
+Abba Happy NY        </option>
+<option label="Aisle 9 Please" value="20">
+Aisle 9 Please        </option>
+<option label="alphaville" value="2">
+alphaville        </option>
+<option label="amelie" value="13">
+amelie        </option>
+<option label="Aventura Love Story" value="56">
+Aventura Love Story        </option>
+<option label="av hold" value="16">
+av hold        </option>
+<option label="Bad boys blue Only one breath away" value="57">
+Bad boys blue Only one breath away        </option>
+<option label="Blonker sidewalk cafe" value="58">
+Blonker sidewalk cafe        </option>
+<option label="Cacho Oro" value="19">
+Cacho Oro        </option>
+<option label="Can do" value="45">
+Can do        </option>
+<option label="Challenge" value="18">
+Challenge        </option>
+<option label="China wall" value="44">
+China wall        </option>
+<option label="Companion" value="43">
+Companion        </option>
+<option label="Dark Haze" value="24">
+Dark Haze        </option>
+<option label="Determined Tumbao" value="23">
+Determined Tumbao        </option>
+<option label="direstraits" value="5">
+direstraits        </option>
+<option label="diva" value="4">
+diva        </option>
+<option label="eagles" value="6">
+eagles        </option>
+<option label="El Rey" value="22">
+El Rey        </option>
+<option label="Ennio Morricone Chi Mai" value="59">
+Ennio Morricone Chi Mai        </option>
+<option label="Ennio Morricone Once upon a time" value="60">
+Ennio Morricone Once upon a time        </option>
+<option label="Era Ameno" value="61">
+Era Ameno        </option>
+<option label="Evil Deed" value="21">
+Evil Deed        </option>
+<option label="Far from home" value="27">
+Far from home        </option>
+<option label="From the heavens" value="26">
+From the heavens        </option>
+<option label="Honor" value="49">
+Honor        </option>
+<option label="jazz" value="12">
+jazz        </option>
+<option label="jingle bells" value="91">
+jingle bells        </option>
+<option label="KickIt" value="25">
+KickIt        </option>
+<option label="Krokus" value="97">
+Krokus        </option>
+<option label="La Cha Cha" value="30">
+La Cha Cha        </option>
+<option label="La Neige Dantans" value="29">
+La Neige Dantans        </option>
+<option label="Lemar Lemar If theres any justice" value="62">
+Lemar Lemar If theres any justice        </option>
+<option label="LoveIs blue" value="15">
+LoveIs blue        </option>
+<option label="Made the grade" value="28">
+Made the grade        </option>
+<option label="marry christmas" value="92">
+marry christmas        </option>
+<option label="Metric trend" value="48">
+Metric trend        </option>
+<option label="Milagro" value="33">
+Milagro        </option>
+<option label="new year mix" value="88">
+new year mix        </option>
+<option label="password_greeting" value="330031780">
+password_greeting        </option>
+<option label="Paul Mauriat Parapuies De Cherburg" value="64">
+Paul Mauriat Parapuies De Cherburg        </option>
+<option label="Quest" value="32">
+Quest        </option>
+<option label="Red sky" value="31">
+Red sky        </option>
+<option label="REM" value="8">
+REM        </option>
+<option label="Rise and shine" value="47">
+Rise and shine        </option>
+<option label="Romantic nights" value="36">
+Romantic nights        </option>
+<option label="Running" value="35">
+Running        </option>
+<option label="Spain" value="34">
+Spain        </option>
+<option label="sting" value="10">
+sting        </option>
+<option label="Strong survive the" value="46">
+Strong survive the        </option>
+<option label="Take me higher" value="40">
+Take me higher        </option>
+<option label="The crying machine" value="38">
+The crying machine        </option>
+<option label="The opening" value="51">
+The opening        </option>
+<option label="Third floor lingerie" value="37">
+Third floor lingerie        </option>
+<option label="ub40" value="11">
+ub40        </option>
+<option label="Unity" value="98">
+Unity        </option>
+<option label="Untameable fire" value="39">
+Untameable fire        </option>
+<option label="Vanessa Mae Classical Gas" value="63">
+Vanessa Mae Classical Gas        </option>
+<option label="Vanessa Paradis Joe Le taxi" value="66">
+Vanessa Paradis Joe Le taxi        </option>
+<option label="VoiceMail" value="330029509">
+VoiceMail        </option>
+<option label="Wings of the wind" value="50">
+Wings of the wind        </option>
+<option label="wonder" value="9">
+wonder        </option>
+<option label="Your eyes on glory" value="41">
+Your eyes on glory        </option>
+<option label="Абонент не отвечает или временно недоступен" value="330055363">
+Абонент не отвечает или временно недоступен        </option>
+<option label="Бетховен" value="3">
+Бетховен        </option>
+<option label="Введите цифры" value="1000116735">
+Введите цифры        </option>
+<option label="Вертикаль" value="42">
+Вертикаль        </option>
+<option label="В лесу родилась елочка" value="90">
+В лесу родилась елочка        </option>
+<option label="Грибоедов" value="7">
+Грибоедов        </option>
+<option label="Гудок" value="96">
+Гудок        </option>
+<option label="Запрос пароля" value="68">
+Запрос пароля        </option>
+<option label="Катюша" value="52">
+Катюша        </option>
+<option label="К сожалению все операторы заняты" value="69">
+К сожалению все операторы заняты        </option>
+<option label="Маленькой елочке холодно зимой" value="89">
+Маленькой елочке холодно зимой        </option>
+<option label="Оставьте ваше сообщение после сигнала" value="67">
+Оставьте ваше сообщение после сигнала        </option>
+<option label="Подождите завершения обработки" value="1000116736">
+Подождите завершения обработки        </option>
+<option label="Сиртаки" value="14">
+Сиртаки        </option>
+<option label="Техническая тишина (1 секунда)" value="555">
+Техническая тишина (1 секунда)        </option>
+<option label="У природы нет плохой погоды" value="65">
+У природы нет плохой погоды        </option>
+<option label="Чайковский Вальс цветов" value="53">
+Чайковский Вальс цветов        </option>
+</optgroup>
+</select>
+<input type="hidden" id="point-groups-queue-message_default" value="69" disabled="disabled">
+<span class="c-tooltip" title="Сообщение, проигрываемое один раз звонящему, когда все операторы группы заняты, и его вызов ставится в очередь ожидания ответа. Например, “Извините, все операторы заняты”."></span>
+
+<div class="jplayer icon">
+<a class="control" ><!-- --></a>
+</div>
+</div>
+<div class="b-settings-item b-melodies-selector">
+<label for="point-groups-waiting-melody" class="settings-label">
+Мелодия ожидания          </label>
+<select id="point-groups-waiting-melody" name="hold_msg_id" disabled="disabled">
+<option label="По умолчанию" value="default">
+По умолчанию    </option>
+<optgroup data-group="standard" label="Стандартные" class="standard">
+<option label="Abandoned" value="17">
+Abandoned        </option>
+<option label="abba" value="1">
+abba        </option>
+<option label="Abba Happy NY" value="86">
+Abba Happy NY        </option>
+<option label="Aisle 9 Please" value="20">
+Aisle 9 Please        </option>
+<option label="alphaville" value="2">
+alphaville        </option>
+<option label="amelie" value="13">
+amelie        </option>
+<option label="Aventura Love Story" value="56">
+Aventura Love Story        </option>
+<option label="av hold" value="16">
+av hold        </option>
+<option label="Bad boys blue Only one breath away" value="57">
+Bad boys blue Only one breath away        </option>
+<option label="Blonker sidewalk cafe" value="58">
+Blonker sidewalk cafe        </option>
+<option label="Cacho Oro" value="19">
+Cacho Oro        </option>
+<option label="Can do" value="45">
+Can do        </option>
+<option label="Challenge" value="18">
+Challenge        </option>
+<option label="China wall" value="44">
+China wall        </option>
+<option label="Companion" value="43">
+Companion        </option>
+<option label="Dark Haze" value="24">
+Dark Haze        </option>
+<option label="Determined Tumbao" value="23">
+Determined Tumbao        </option>
+<option label="direstraits" value="5">
+direstraits        </option>
+<option label="diva" value="4">
+diva        </option>
+<option label="eagles" value="6">
+eagles        </option>
+<option label="El Rey" value="22">
+El Rey        </option>
+<option label="Ennio Morricone Chi Mai" value="59">
+Ennio Morricone Chi Mai        </option>
+<option label="Ennio Morricone Once upon a time" value="60">
+Ennio Morricone Once upon a time        </option>
+<option label="Era Ameno" value="61">
+Era Ameno        </option>
+<option label="Evil Deed" value="21">
+Evil Deed        </option>
+<option label="Far from home" value="27">
+Far from home        </option>
+<option label="From the heavens" value="26">
+From the heavens        </option>
+<option label="Honor" value="49">
+Honor        </option>
+<option label="jazz" value="12">
+jazz        </option>
+<option label="jingle bells" value="91">
+jingle bells        </option>
+<option label="KickIt" value="25">
+KickIt        </option>
+<option label="Krokus" value="97">
+Krokus        </option>
+<option label="La Cha Cha" value="30">
+La Cha Cha        </option>
+<option label="La Neige Dantans" value="29">
+La Neige Dantans        </option>
+<option label="Lemar Lemar If theres any justice" value="62">
+Lemar Lemar If theres any justice        </option>
+<option label="LoveIs blue" value="15">
+LoveIs blue        </option>
+<option label="Made the grade" value="28">
+Made the grade        </option>
+<option label="marry christmas" value="92">
+marry christmas        </option>
+<option label="Metric trend" value="48">
+Metric trend        </option>
+<option label="Milagro" value="33">
+Milagro        </option>
+<option label="new year mix" value="88">
+new year mix        </option>
+<option label="password_greeting" value="330031780">
+password_greeting        </option>
+<option label="Paul Mauriat Parapuies De Cherburg" value="64">
+Paul Mauriat Parapuies De Cherburg        </option>
+<option label="Quest" value="32">
+Quest        </option>
+<option label="Red sky" value="31">
+Red sky        </option>
+<option label="REM" value="8">
+REM        </option>
+<option label="Rise and shine" value="47">
+Rise and shine        </option>
+<option label="Romantic nights" value="36">
+Romantic nights        </option>
+<option label="Running" value="35">
+Running        </option>
+<option label="Spain" value="34">
+Spain        </option>
+<option label="sting" value="10">
+sting        </option>
+<option label="Strong survive the" value="46">
+Strong survive the        </option>
+<option label="Take me higher" value="40">
+Take me higher        </option>
+<option label="The crying machine" value="38">
+The crying machine        </option>
+<option label="The opening" value="51">
+The opening        </option>
+<option label="Third floor lingerie" value="37">
+Third floor lingerie        </option>
+<option label="ub40" value="11">
+ub40        </option>
+<option label="Unity" value="98">
+Unity        </option>
+<option label="Untameable fire" value="39">
+Untameable fire        </option>
+<option label="Vanessa Mae Classical Gas" value="63">
+Vanessa Mae Classical Gas        </option>
+<option label="Vanessa Paradis Joe Le taxi" value="66">
+Vanessa Paradis Joe Le taxi        </option>
+<option label="VoiceMail" value="330029509">
+VoiceMail        </option>
+<option label="Wings of the wind" value="50">
+Wings of the wind        </option>
+<option label="wonder" value="9">
+wonder        </option>
+<option label="Your eyes on glory" value="41">
+Your eyes on glory        </option>
+<option label="Абонент не отвечает или временно недоступен" value="330055363">
+Абонент не отвечает или временно недоступен        </option>
+<option label="Бетховен" value="3">
+Бетховен        </option>
+<option label="Введите цифры" value="1000116735">
+Введите цифры        </option>
+<option label="Вертикаль" value="42">
+Вертикаль        </option>
+<option label="В лесу родилась елочка" value="90">
+В лесу родилась елочка        </option>
+<option label="Грибоедов" value="7">
+Грибоедов        </option>
+<option label="Гудок" value="96">
+Гудок        </option>
+<option label="Запрос пароля" value="68">
+Запрос пароля        </option>
+<option label="Катюша" value="52">
+Катюша        </option>
+<option label="К сожалению все операторы заняты" value="69">
+К сожалению все операторы заняты        </option>
+<option label="Маленькой елочке холодно зимой" value="89">
+Маленькой елочке холодно зимой        </option>
+<option label="Оставьте ваше сообщение после сигнала" value="67">
+Оставьте ваше сообщение после сигнала        </option>
+<option label="Подождите завершения обработки" value="1000116736">
+Подождите завершения обработки        </option>
+<option label="Сиртаки" value="14">
+Сиртаки        </option>
+<option label="Техническая тишина (1 секунда)" value="555">
+Техническая тишина (1 секунда)        </option>
+<option label="У природы нет плохой погоды" value="65">
+У природы нет плохой погоды        </option>
+<option label="Чайковский Вальс цветов" value="53">
+Чайковский Вальс цветов        </option>
+</optgroup>
+</select>
+<span class="c-tooltip" title="Циклически воспроизводится звонящему при ожидании ответа оператора, пока звонок находится в очереди удержания."></span>
+
+<div class="jplayer icon" style="display: none;">
+<a class="control" href=""><!-- --></a>
+</div>
+</div>
+<div class="b-settings-item b-melodies-selector">
+<label for="point-groups-end-melody" class="settings-label">
+Превышение ограничений          </label>
+<select id="point-groups-end-melody" name="hold_end_msg_id" disabled="disabled">
+<option label="Нет" value="no">
+Нет    </option>
+<option label="По умолчанию" value="default">
+По умолчанию    </option>
+<optgroup data-group="standard" label="Стандартные" class="standard">
+<option label="Abandoned" value="17">
+Abandoned        </option>
+<option label="abba" value="1">
+abba        </option>
+<option label="Abba Happy NY" value="86">
+Abba Happy NY        </option>
+<option label="Aisle 9 Please" value="20">
+Aisle 9 Please        </option>
+<option label="alphaville" value="2">
+alphaville        </option>
+<option label="amelie" value="13">
+amelie        </option>
+<option label="Aventura Love Story" value="56">
+Aventura Love Story        </option>
+<option label="av hold" value="16">
+av hold        </option>
+<option label="Bad boys blue Only one breath away" value="57">
+Bad boys blue Only one breath away        </option>
+<option label="Blonker sidewalk cafe" value="58">
+Blonker sidewalk cafe        </option>
+<option label="Cacho Oro" value="19">
+Cacho Oro        </option>
+<option label="Can do" value="45">
+Can do        </option>
+<option label="Challenge" value="18">
+Challenge        </option>
+<option label="China wall" value="44">
+China wall        </option>
+<option label="Companion" value="43">
+Companion        </option>
+<option label="Dark Haze" value="24">
+Dark Haze        </option>
+<option label="Determined Tumbao" value="23">
+Determined Tumbao        </option>
+<option label="direstraits" value="5">
+direstraits        </option>
+<option label="diva" value="4">
+diva        </option>
+<option label="eagles" value="6">
+eagles        </option>
+<option label="El Rey" value="22">
+El Rey        </option>
+<option label="Ennio Morricone Chi Mai" value="59">
+Ennio Morricone Chi Mai        </option>
+<option label="Ennio Morricone Once upon a time" value="60">
+Ennio Morricone Once upon a time        </option>
+<option label="Era Ameno" value="61">
+Era Ameno        </option>
+<option label="Evil Deed" value="21">
+Evil Deed        </option>
+<option label="Far from home" value="27">
+Far from home        </option>
+<option label="From the heavens" value="26">
+From the heavens        </option>
+<option label="Honor" value="49">
+Honor        </option>
+<option label="jazz" value="12">
+jazz        </option>
+<option label="jingle bells" value="91">
+jingle bells        </option>
+<option label="KickIt" value="25">
+KickIt        </option>
+<option label="Krokus" value="97">
+Krokus        </option>
+<option label="La Cha Cha" value="30">
+La Cha Cha        </option>
+<option label="La Neige Dantans" value="29">
+La Neige Dantans        </option>
+<option label="Lemar Lemar If theres any justice" value="62">
+Lemar Lemar If theres any justice        </option>
+<option label="LoveIs blue" value="15">
+LoveIs blue        </option>
+<option label="Made the grade" value="28">
+Made the grade        </option>
+<option label="marry christmas" value="92">
+marry christmas        </option>
+<option label="Metric trend" value="48">
+Metric trend        </option>
+<option label="Milagro" value="33">
+Milagro        </option>
+<option label="new year mix" value="88">
+new year mix        </option>
+<option label="password_greeting" value="330031780">
+password_greeting        </option>
+<option label="Paul Mauriat Parapuies De Cherburg" value="64">
+Paul Mauriat Parapuies De Cherburg        </option>
+<option label="Quest" value="32">
+Quest        </option>
+<option label="Red sky" value="31">
+Red sky        </option>
+<option label="REM" value="8">
+REM        </option>
+<option label="Rise and shine" value="47">
+Rise and shine        </option>
+<option label="Romantic nights" value="36">
+Romantic nights        </option>
+<option label="Running" value="35">
+Running        </option>
+<option label="Spain" value="34">
+Spain        </option>
+<option label="sting" value="10">
+sting        </option>
+<option label="Strong survive the" value="46">
+Strong survive the        </option>
+<option label="Take me higher" value="40">
+Take me higher        </option>
+<option label="The crying machine" value="38">
+The crying machine        </option>
+<option label="The opening" value="51">
+The opening        </option>
+<option label="Third floor lingerie" value="37">
+Third floor lingerie        </option>
+<option label="ub40" value="11">
+ub40        </option>
+<option label="Unity" value="98">
+Unity        </option>
+<option label="Untameable fire" value="39">
+Untameable fire        </option>
+<option label="Vanessa Mae Classical Gas" value="63">
+Vanessa Mae Classical Gas        </option>
+<option label="Vanessa Paradis Joe Le taxi" value="66">
+Vanessa Paradis Joe Le taxi        </option>
+<option label="VoiceMail" value="330029509">
+VoiceMail        </option>
+<option label="Wings of the wind" value="50">
+Wings of the wind        </option>
+<option label="wonder" value="9">
+wonder        </option>
+<option label="Your eyes on glory" value="41">
+Your eyes on glory        </option>
+<option label="Абонент не отвечает или временно недоступен" value="330055363">
+Абонент не отвечает или временно недоступен        </option>
+<option label="Бетховен" value="3">
+Бетховен        </option>
+<option label="Введите цифры" value="1000116735">
+Введите цифры        </option>
+<option label="Вертикаль" value="42">
+Вертикаль        </option>
+<option label="В лесу родилась елочка" value="90">
+В лесу родилась елочка        </option>
+<option label="Грибоедов" value="7">
+Грибоедов        </option>
+<option label="Гудок" value="96">
+Гудок        </option>
+<option label="Запрос пароля" value="68">
+Запрос пароля        </option>
+<option label="Катюша" value="52">
+Катюша        </option>
+<option label="К сожалению все операторы заняты" value="69">
+К сожалению все операторы заняты        </option>
+<option label="Маленькой елочке холодно зимой" value="89">
+Маленькой елочке холодно зимой        </option>
+<option label="Оставьте ваше сообщение после сигнала" value="67">
+Оставьте ваше сообщение после сигнала        </option>
+<option label="Подождите завершения обработки" value="1000116736">
+Подождите завершения обработки        </option>
+<option label="Сиртаки" value="14">
+Сиртаки        </option>
+<option label="Техническая тишина (1 секунда)" value="555">
+Техническая тишина (1 секунда)        </option>
+<option label="У природы нет плохой погоды" value="65">
+У природы нет плохой погоды        </option>
+<option label="Чайковский Вальс цветов" value="53">
+Чайковский Вальс цветов        </option>
+</optgroup>
+</select>
+<span class="c-tooltip" title="Сообщение, проигрываемое звонящему, когда было превышено максимальное время ожидания или максимальная длина очереди. Например, &quot;Внимание. Вы будете перенаправлены в голосовую почту отдела. Как только операторы освободятся, они обязательно прослушают сообщение и перезвонят&quot;.<br><b>Внимание!</b> Данная мелодия всегда проигрывается <b>полностью</b> до перехода на следующий шаг переадресации. Избегайте установки продолжительных мелодий."></span>
+
+<div class="jplayer icon" style="display: none;">
+<a class="control" href=""><!-- --></a>
+</div>
+</div>
+</div>
+</div>
+<div class="b-warning" style="display: none;"></div>
+</div>
+</div>
+
+<div class="b-dialog-container" id="dialog-container-video-frame" title="dialog.video-frame">
+
+<div class="b-dialog b-dialog-video-frame">
+
+<!-- <iframe width="760" height="427" data-src="//www.youtube.com/embed/" frameborder="0" allowfullscreen=""></iframe> -->
+
+</div>
+
+</div>
+</div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset point-group-buttonset">
+<button id="lsn6_4_7" onclick="showDialogFromHTML();" type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-button-disabled ui-state-disabled" role="button" aria-disabled="true" disabled=""><span class="ui-button-text">Сохранить</span></button>
+<button onclick="location.href='./lsn6_3.html';" type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-second-button" role="button" aria-disabled="false">
+<span class="ui-button-text">Отменить</span></button>
+<button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only delete-group ui-second-button" role="button" aria-disabled="false"><span class="ui-button-text">Удалить группу</span></button></div></div></div><div class="ui-widget-overlay" style="z-index: 1001; width: 1020px; height: 998px;"></div><div class="ui-selectmenu-menu ani grouped-anis google-chrome" style="z-index: 1004; top: 26px; left: 0px;"><ul class="ui-widget ui-widget-content ui-selectmenu-menu-dropdown ui-corner-bottom" aria-hidden="true" role="listbox" aria-labelledby="ui-selectmenu-db78890f-button" id="ui-selectmenu-db78890f-menu" aria-disabled="false" tabindex="0" aria-activedescendant="ui-selectmenu-item-280" style="width: 202px; min-width: 202px; height: auto;"><li role="presentation" class="ui-selectmenu-group ui-selectmenu-group-0"><span class="ui-selectmenu-group-label">Москва</span><ul><li role="presentation" class="ui-corner-bottom ui-selectmenu-item-selected ui-selectmenu-item-focus"><a href="#nogo" tabindex="-1" role="option" aria-selected="true" id="ui-selectmenu-item-280"><!-- --><span class="number">7 (495) 518-94-36</span></a></li></ul></li></ul></div></body>
+
+</html>

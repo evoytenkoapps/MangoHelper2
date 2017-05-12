@@ -1,0 +1,2059 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0031)http://192.168.33.119/home.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Главная | C610A IP</title>
+
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- external scripts for common tasks -->
+<script language="JavaScript" type="text/javascript">
+
+var flash;
+function flashBorder(elmId, stopFlash)
+{
+var elm = document.getElementById("lsn5_11");
+if (stopFlash == "true")
+{
+elm.style.border = "";
+clearInterval(flash);
+}
+else
+{
+var borderPattern = false;
+flash = setInterval(setBorder, 700);
+
+function setBorder()
+{
+if (borderPattern)
+{
+borderPattern = false;
+elm.style.border = "solid transparent";
+elm.style.borderWidth = "4px";
+}
+else
+{
+borderPattern = true;
+elm.style.border = " solid Red";
+elm.style.borderWidth = "4px";
+}
+}
+}
+}
+
+<!--
+/* file global.js */
+var labeling = 0;
+
+
+
+if (document.images)
+{
+var pic1 = new Image; 
+
+
+pic1.src = "../../Devices/C610/bg_button_100_pressed.gif"; 
+
+var pic2 = new Image; 
+
+
+pic2.src = "../../Devices/C610/bg_button_215_pressed.gif";
+
+}
+
+/* file tools.js */
+var browserDetect = navigator.userAgent.toLowerCase();
+var browserDetectOS,browserDetectBrowser,browserDetectVersion,browserDetectTotal,browserDetectString;
+if (checkIt('konqueror'))
+{
+browserDetectBrowser = "Konqueror";
+browserDetectOS = "Linux";
+}
+else if (checkIt('firefox')) browserDetectBrowser = "Firefox"
+else if (checkIt('safari')) browserDetectBrowser = "Safari"
+else if (checkIt('omniweb')) browserDetectBrowser = "OmniWeb"
+else if (checkIt('opera')) browserDetectBrowser = "Opera"
+else if (checkIt('webtv')) browserDetectBrowser = "WebTV";
+else if (checkIt('icab')) browserDetectBrowser = "iCab"
+else if (checkIt('msie')) browserDetectBrowser = "Internet Explorer"
+else if (!checkIt('compatible'))
+{
+browserDetectBrowser = "Netscape Navigator"
+browserDetectVersion = browserDetect.charAt(8);
+}
+else browserDetectBrowser = "An unknown browser";
+if (!browserDetectVersion) browserDetectVersion = browserDetect.charAt(broswerPlace + browserDetectString.length);
+if (!browserDetectOS)
+{
+if (checkIt('linux')) browserDetectOS = "Linux";
+else if (checkIt('x11')) browserDetectOS = "Unix";
+else if (checkIt('mac')) browserDetectOS = "Mac"
+else if (checkIt('win')) browserDetectOS = "Windows"
+else browserDetectOS = "an unknown operating system";
+}
+
+function checkIt(string)
+{
+broswerPlace = browserDetect.indexOf(string) + 1;
+browserDetectString = string;
+return broswerPlace;
+}
+
+function instr(haystack, needle)
+{
+if (haystack.lastIndexOf(needle) == -1) {
+return false;
+}
+return true;
+}
+
+function getKey(eventObj)
+{
+if (!eventObj) var eventObj = window.event;
+return document.all?eventObj.keyCode:eventObj.which;
+}
+
+function getUTF8Bytes(unicode)
+{
+if (unicode < 0x00000080)
+{
+return 1;
+}
+else if (unicode < 0x00000800)
+{
+return 2;
+}
+else if (unicode < 0x00010000)
+{
+return 3;
+}
+return 4;
+}
+
+function countUTF8Bytes(unicode)
+{
+utf8bytescount = 0;
+for (i = 0; i < unicode.length; i++)
+{
+utf8bytescount += getUTF8Bytes(unicode.charCodeAt(i));
+}
+return utf8bytescount;
+}
+
+function checkUTF8Bytes(formfield, eventObj, maxlen)
+{
+if (!eventObj) var eventObj = window.event;
+keyCode = getKey(eventObj);
+if ((keyCode == 0) || (keyCode == 8)) return true;
+return ((countUTF8Bytes(formfield.value + String.fromCharCode(getKey(eventObj))) - countUTF8Bytes(getSelected(formfield))) <= maxlen);
+}
+
+function getG0G1Bytes(unicode)
+{
+// check for euro sign
+if (unicode == 0x20AC)
+{
+return 3;
+}
+return 1;
+}
+
+function countG0G1Bytes(unicode)
+{
+g0g1bytescount = 0;
+for (i = 0; i < unicode.length; i++)
+{
+g0g1bytescount += getG0G1Bytes(unicode.charCodeAt(i));
+}
+return g0g1bytescount;
+}
+
+function checkG0G1Bytes(formfield, eventObj, maxlen)
+{
+if (!eventObj) var eventObj = window.event;
+keyCode = getKey(eventObj);
+if ((keyCode == 0) || (keyCode == 8)) return true;
+return ((countG0G1Bytes(formfield.value + String.fromCharCode(getKey(eventObj))) - countG0G1Bytes(getSelected(formfield))) <= maxlen);
+}
+
+function isValidG0G1Char(eventObj) {
+if (checkForPaste(eventObj))
+{
+return true;
+}
+if (!eventObj) var eventObj = window.event;
+keyCode = getKey(eventObj);
+keyChar = getEventCharacter(eventObj);
+unicode = keyChar.charCodeAt(0);
+// Allow only numbers, *, #, R, r, P, p, tab, backspace and enter
+if (
+("\b\r".indexOf(keyChar) != -1)
+||
+((unicode >= 0x20) && (unicode <= 0xFF))
+||
+(unicode == 0x20AC)
+||
+(keyCode == 0)
+)
+{
+return true;
+}
+return false;
+}
+
+function getSelected()
+{
+var sel = "";
+var formfield = null;
+
+if (arguments.length > 1)
+{
+return "";
+}
+
+if (arguments.length == 1)
+{
+formfield = arguments[0];
+}
+
+if (window.getSelection)
+{
+sel = window.getSelection();
+} else if (document.getSelection)
+{
+sel = document.getSelection();
+} else if (document.selection)
+{
+sel = document.selection.createRange().text;
+}
+
+if ((sel == "") && (formfield))
+{
+if (formfield.selectionStart != formfield.selectionEnd)
+{
+sel = formfield.value.substring(formfield.selectionStart, formfield.selectionEnd);
+}
+}
+
+return sel;
+}
+
+function getEventCharacter(e)
+{
+var code;
+if (!e) var e = window.event;
+if (e.keyCode) code = e.keyCode;
+else if (e.which) code = e.which;
+return String.fromCharCode(code);
+}
+
+function checkForPaste(e)
+{
+if (!e) var e = window.event;
+if (
+(e.ctrlKey)
+&&
+(
+ (getEventCharacter(e) == "x")
+ ||
+ (getEventCharacter(e) == "c")
+ ||
+ (getEventCharacter(e) == "v")
+)
+)
+{
+return true;
+}
+return false;
+}
+
+function isNumber(eventObj) {
+if (checkForPaste(eventObj))
+{
+return true;
+}
+if (!eventObj) var eventObj = window.event;
+keyCode = getKey(eventObj);
+// Allow only numbers, backspace, tab and enter
+if ((keyCode >= "0".charCodeAt(0) && keyCode <= "9".charCodeAt(0)) ||
+(keyCode == 8) ||
+(keyCode == 9) ||
+(keyCode == 0))
+{
+return true;
+}
+return false;
+}
+
+
+function isHexNumber(eventObj) {
+if (checkForPaste(eventObj))
+{
+return true;
+}
+if (!eventObj) var eventObj = window.event;
+keyCode = getKey(eventObj);
+// Allow only hex numbers, backspace, tab and enter
+if ((keyCode >= "0".charCodeAt(0) && keyCode <= "9".charCodeAt(0)) ||
+(keyCode >= "a".charCodeAt(0) && keyCode <= "f".charCodeAt(0)) ||
+(keyCode >= "A".charCodeAt(0) && keyCode <= "F".charCodeAt(0)) ||
+(keyCode == 8) ||
+(keyCode == 9) ||
+(keyCode == 0))
+{
+return true;
+}
+return false;
+}
+
+
+function checkNumber(txt)
+{
+txt = txt.replace(/\D/g, "");
+return txt;
+}
+
+
+function checkHexNumber(txt)
+{
+txt = txt.replace(/[^a-fA-F0-9]/g, "");
+return txt;
+}
+
+
+function isNegNumber(eventObj) {
+if (checkForPaste(eventObj))
+{
+return true;
+}
+if (!eventObj) var eventObj = window.event;
+keyCode = getKey(eventObj);
+// Allow only numbers, backspace, tab and enter AND '-'
+if ((keyCode >= "0".charCodeAt(0) && keyCode <= "9".charCodeAt(0)) ||
+(keyCode == "-".charCodeAt(0)) ||
+(keyCode == 8) ||
+(keyCode == 9) ||
+(keyCode == 0))
+{
+return true;
+}
+return false;
+}
+
+function checkNegNumber(txt)
+{
+var negative;
+
+if (txt.charAt(0) == "-")
+{
+negative = true;
+}
+
+txt = checkNumber(txt);
+
+if (negative)
+{
+txt = "-" + txt;
+}
+
+return txt;
+}
+
+//LwP, Check for digits only, limit to specific number of such
+function isValidPin(formfield, eventObj, maxlen) {
+if (checkForPaste(eventObj))
+{
+return true;
+};
+if (!eventObj) var eventObj = window.event;
+keyCode = getKey(eventObj);
+// Allow only numbers, backspace, tab and enter
+if (keyCode >= "0".charCodeAt(0) && keyCode <= "9".charCodeAt(0))      
+{
+if(formfield.value.length<maxlen){
+return true;
+};
+};
+if( (keyCode == 8) ||
+(keyCode == 9) ||
+(keyCode == 0)
+)
+{
+if(formfield.value.length<=maxlen){
+return true;
+};
+}
+return false;
+};
+
+function isValidDomainChar(eventObj) {
+if (checkForPaste(eventObj))
+{
+return true;
+}
+if (!eventObj) var eventObj = window.event;
+keyCode = getKey(eventObj);
+keyChar = String.fromCharCode(keyCode);
+// Allow only numbers, chars, -, ., tab and enter
+if (
+("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-.\b\r".indexOf(keyChar) != -1)
+||
+(keyCode == 0)
+)
+{
+return true;
+}
+return false;
+}
+
+function isValidSipDomainChar(eventObj) {
+if (checkForPaste(eventObj))
+{
+return true;
+}
+if (!eventObj) var eventObj = window.event;
+keyCode = getKey(eventObj);
+keyChar = String.fromCharCode(keyCode);
+// Allow only numbers, chars, -, ., tab and enter
+if (
+("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_-.\b\r".indexOf(keyChar) != -1)
+||
+(keyCode == 0)
+)
+{
+return true;
+}
+return false;
+}
+
+function isValidNetworkNameChar(eventObj) {
+if (checkForPaste(eventObj))
+{
+return true;
+}
+if (!eventObj) var eventObj = window.event;
+keyCode = getKey(eventObj);
+keyChar = String.fromCharCode(keyCode);
+// Allow only numbers, chars, -, tab and enter
+if (
+("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-\b\r".indexOf(keyChar) != -1)
+||
+(keyCode == 0)
+)
+{
+return true;
+}
+return false;
+}
+
+function isValidDomainCharWithColon(eventObj) {
+if (checkForPaste(eventObj))
+{
+return true;
+}
+if (!eventObj) var eventObj = window.event;
+keyCode = getKey(eventObj);
+keyChar = String.fromCharCode(keyCode);
+// Allow only numbers, chars, -, ., tab and enter
+//LwP, also check for Colon ( : )
+if (
+("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz:-.\b\r".indexOf(keyChar) != -1)
+||
+(keyCode == 0)
+)
+{
+return true;
+}
+return false;
+}
+
+function checkValidDomainChar(txt)
+{
+txt = txt.replace(/[^0-9a-zA-Z-.]/g, "");
+return txt;
+}
+
+function checkValidSipDomainChar(txt)
+{
+txt = txt.replace(/[^0-9a-zA-Z-._]/g, "");
+return txt;
+}
+
+function isValidTeleNoChar(eventObj) {
+if (checkForPaste(eventObj))
+{
+return true;
+}
+if (!eventObj) var eventObj = window.event;
+keyCode = getKey(eventObj);
+keyChar = getEventCharacter(eventObj);
+// Allow only numbers, *, #, R, P, tab, backspace and enter
+if (
+("0123456789*#RP\b\r".indexOf(keyChar) != -1)
+||
+(keyCode == 0)
+)
+{
+return true;
+}
+return false;
+}
+
+function checkValidTeleNoChar(txt)
+{
+txt = txt.replace(/[^0-9*#RPrp]/g, "");
+return txt;
+}
+
+function intToBin(iInt)
+{
+var sBin = "";
+var i = 0;
+
+for (i = 0; i < 8; i++)
+{
+if ((iInt % 2) == 1)
+{
+sBin = "1" + sBin;
+}
+else
+{
+sBin = "0" + sBin;
+}
+iInt = iInt >> 1;
+}
+
+return sBin;
+}
+
+function isValidSubnetmask(oSub1, oSub2, oSub3, oSub4)
+{
+var sSub;
+
+if (
+!isIntInRange(oSub1, 128, 255) ||
+!isIntInRange(oSub2, 0, 255) ||
+!isIntInRange(oSub3, 0, 255) ||
+!isIntInRange(oSub4, 0, 254)
+)
+{
+return false;
+}
+
+sSub = intToBin(parseInt(oSub1.value, 10));
+sSub += intToBin(parseInt(oSub2.value, 10));
+sSub += intToBin(parseInt(oSub3.value, 10));
+sSub += intToBin(parseInt(oSub4.value, 10));
+
+if (sSub.indexOf("0") < sSub.lastIndexOf("1"))
+{
+return false;
+}
+
+return true;
+}
+
+function isValidIP(oIP1, oIP2, oIP3, oIP4, oSub1, oSub2, oSub3, oSub4)
+{
+if (
+isIntInRange(oIP1, 127, 127) ||
+!isIntInRange(oIP1, 1, 223) ||
+!isIntInRange(oIP2, 0, 255) ||
+!isIntInRange(oIP3, 0, 255) ||
+!isIntInRange(oIP4, 0, 255)
+)
+{
+return false;
+}
+
+if (!oSub1)
+{
+return true;
+}
+
+var iIP1_1 = parseInt(oIP1.value, 10);
+var iIP1_2 = parseInt(oIP2.value, 10);
+var iIP1_3 = parseInt(oIP3.value, 10);
+var iIP1_4 = parseInt(oIP4.value, 10);
+var iSub1 = parseInt(oSub1.value, 10);
+var iSub2 = parseInt(oSub2.value, 10);
+var iSub3 = parseInt(oSub3.value, 10);
+var iSub4 = parseInt(oSub4.value, 10);
+var iSub = (iSub1 << 24) + (iSub2 << 16) + (iSub3 << 8) + iSub4;
+var iIP1 = (iIP1_1 << 24) + (iIP1_2 << 16) + (iIP1_3 << 8) + iIP1_4;
+
+iSub = ~iSub;
+if (((iIP1 & iSub) == iSub) || ((iIP1 & iSub) == 0))
+{
+// all host bits are 1 or 0 -> illegal (broadcast // net)
+return false;
+}
+
+return true;
+}
+
+function isInSameSubnet(oIP1_1, oIP1_2, oIP1_3, oIP1_4, oIP2_1, oIP2_2, oIP2_3, oIP2_4, oSub1, oSub2, oSub3, oSub4)
+{
+var iIP1_1 = parseInt(oIP1_1.value, 10);
+var iIP1_2 = parseInt(oIP1_2.value, 10);
+var iIP1_3 = parseInt(oIP1_3.value, 10);
+var iIP1_4 = parseInt(oIP1_4.value, 10);
+var iIP2_1 = parseInt(oIP2_1.value, 10);
+var iIP2_2 = parseInt(oIP2_2.value, 10);
+var iIP2_3 = parseInt(oIP2_3.value, 10);
+var iIP2_4 = parseInt(oIP2_4.value, 10);
+var iSub1 = parseInt(oSub1.value, 10);
+var iSub2 = parseInt(oSub2.value, 10);
+var iSub3 = parseInt(oSub3.value, 10);
+var iSub4 = parseInt(oSub4.value, 10);
+
+var iIP1 = (iIP1_1 << 24) + (iIP1_2 << 16) + (iIP1_3 << 8) + iIP1_4;
+var iIP2 = (iIP2_1 << 24) + (iIP2_2 << 16) + (iIP2_3 << 8) + iIP2_4;
+var iSub = (iSub1 << 24) + (iSub2 << 16) + (iSub3 << 8) + iSub4;
+
+if ((iIP1 & iSub) != (iIP2 & iSub))
+{
+return false;
+}
+
+return true;
+}
+
+function isGatewaySameAsDevice(oIP1_1, oIP1_2, oIP1_3, oIP1_4, oIP2_1, oIP2_2, oIP2_3, oIP2_4)
+{
+if ((parseInt(oIP1_1.value, 10) == parseInt(oIP2_1.value, 10)) &&
+(parseInt(oIP1_2.value, 10) == parseInt(oIP2_2.value, 10)) &&
+(parseInt(oIP1_3.value, 10) == parseInt(oIP2_3.value, 10)) &&
+(parseInt(oIP1_4.value, 10) == parseInt(oIP2_4.value, 10)))
+{
+return false;
+}
+
+return true;
+}
+
+function GetVoIPLineStatus(line) {
+//
+// Disabled
+if (line[3]-0 == 0) 
+{
+return "Отключено";
+}
+//
+//not disabled
+//Runlevel states disabled!
+if(line[4]>=10)
+{
+switch(line[4]){
+case 90: 
+case 60:
+case 50:
+return "Подключено";
+break;
+case 40:
+case 30:  
+return "Регистрация не удалась";
+break;
+case 20:
+case 15:
+case 10:
+default: 
+return "Регистрация не удалась";
+break;
+}
+};
+//in case we are asked about other type of status (like in Saturn)
+switch (line[4])
+{
+case 1:
+case 3: //left for future use
+return 'Регистрация не удалась'; // running, aka. Registration Failed
+break;
+case 2:
+return 'Подключено'; // registered
+break;
+//case 3:
+//return 'Сервер недоступен'; // failed, actually this means it's working
+//break;
+default:
+return 'Отключено'; // disabled
+break;
+}
+}
+
+function isInt(oInt)
+{
+var sInt = oInt.value;
+
+return !isNaN(sInt) && (sInt != "");
+}
+
+
+function isIntInRange(oInt, iMin, iMax)
+{
+var iInt = parseInt(oInt.value, 10);
+
+if (!isInt(oInt))
+{
+return false;
+}
+
+if ((iInt < iMin) ||
+(iInt > iMax))
+{
+return false;
+}
+
+return true;
+}
+
+function bBitSet(byteval, bitno)
+{
+return ((byteval & Math.pow(2, bitno)) != 0);
+}
+
+function iSetBit(byteval, bitno)
+{
+return (byteval | Math.pow(2, bitno));
+}
+
+function create_tag()
+{
+var e_name = "";
+var elem;
+
+if (arguments.length < 1)
+{
+return null;
+}
+
+if (arguments.length > 1)
+{
+for (var i = 1; i < arguments.length; i++)
+{
+var attributes = new Array();
+attributes[0] = arguments[i].substring(0, arguments[i].indexOf("|"));
+attributes[1] = arguments[i].substring(arguments[i].indexOf("|") + 1);
+if (attributes[0] == "name")
+{
+e_name = attributes[1];
+}
+}
+}
+
+if (e_name != "")
+{
+elem = createElementWithName(arguments[0], e_name);
+}
+else
+{
+elem = document.createElement(arguments[0]);
+}
+
+if (arguments.length > 1)
+{
+for (var i = 1; i < arguments.length; i++)
+{
+var attributes = new Array();
+attributes[0] = arguments[i].substring(0, arguments[i].indexOf("|"));
+attributes[1] = arguments[i].substring(arguments[i].indexOf("|") + 1);
+var subattributes = attributes[0].split(".");
+var is_bool_attribute = new RegExp("#" + subattributes[0] + "#");
+
+var bool_attributes = "#defaultChecked#defaultSelected#selected#multiple#disabled#";
+
+switch (subattributes.length)
+{
+case 1:
+  if (is_bool_attribute.test(bool_attributes))
+  {
+	if ((attributes[1] == "true") || (attributes[1] == "1") || (attributes[1] == "disabled") || (attributes[1] == "selected") )
+	{
+	  elem[subattributes[0]] = true;
+	}
+	else
+	{
+	  elem[subattributes[0]] = false;
+	}
+  }
+  else
+  {
+	elem[subattributes[0]] = attributes[1];
+  }
+break;
+case 2:
+  elem[subattributes[0]][subattributes[1]] = attributes[1];
+break;
+default:
+  ;
+}
+}
+}
+
+return elem;
+}
+
+function create_tr()
+{
+var tr;
+var td;
+
+if (arguments.length < 2)
+{
+return null;
+}
+
+tr = create_tag("tr");
+
+
+td = create_tag("td", "className|label");
+
+
+if ((arguments.length >= 3) && (arguments[2]))
+{
+var h2 = create_tag("h2", "className|first");
+h2.appendChild(document.createTextNode(arguments[0]));
+td.appendChild(h2);
+}
+else
+{
+td.appendChild(document.createTextNode(arguments[0]));
+}
+
+tr.appendChild(td);
+
+if ((arguments.length >= 4) && (arguments[3]))
+{
+
+
+td = create_tag("td", "className|rightSide");
+
+}
+else
+{
+
+
+td = create_tag("td");
+
+}
+
+td.appendChild(arguments[1]);
+
+tr.appendChild(td);
+
+return tr;
+}
+
+function create_trfix()
+{
+// fixes the width of the first column
+var tr = create_tag("tr");
+var td;
+var w = 360;
+var c = 1;
+
+if (arguments.length > 0)
+{
+w = arguments[0];
+}
+
+if (arguments.length > 1)
+{
+c = arguments[1];
+}
+
+td = create_tag("td", "style.padding|0");
+td.appendChild(create_tag("img", "src|../../Devices/C610/spacer.gif", "alt|", "width|200", "height|1", "border|0"));
+tr.appendChild(td);
+td = create_tag("td", "style.padding|0", "colSpan|" + c);
+td.appendChild(create_tag("img", "src|../../Devices/C610/spacer.gif", "alt|", "width|" + w, "height|1", "border|0"));
+tr.appendChild(td);
+
+return tr;
+}
+
+function create_button_table(t_save, t_cancel)
+{
+var tab, bod, tab2, bod2, tr, tr2, td, td2, a, img;
+
+tab = create_tag("table", "border|0", "cellSpacing|0", "style.width|100%");
+bod = create_tag("tbody");
+tr = create_tag("tr");
+td = create_tag("td");
+td.appendChild(document.createTextNode("\u00a0")); 
+tr.appendChild(td);
+td = create_tag("td", "className|separatorButton");
+tab2 = create_tag("table", "border|0", "cellSpacing|0");
+bod2 = create_tag("tbody");
+tr2 = create_tag("tr");
+td2 = create_tag("td");
+a = create_tag("a", "href|#", "className|buttonLink100");
+a.appendChild(document.createTextNode(t_save)); 
+a.onclick = function (e) {javascript:submit_gigaset_form(); return false;};
+td2.appendChild(a);
+tr2.appendChild(td2);
+td2 = create_tag("td");
+a = create_tag("a", "href|#", "className|buttonLink100");
+a.appendChild(document.createTextNode(t_cancel)); 
+a.onclick = function (e) {javascript:cancel_gigaset_form(); return false;};
+td2.appendChild(a);
+tr2.appendChild(td2);
+bod2.appendChild(tr2);
+tab2.appendChild(bod2);
+td.appendChild(tab2);
+tr.appendChild(td);
+bod.appendChild(tr);
+bod.appendChild(create_trfix());
+tab.appendChild(bod);
+
+return tab;
+}
+
+
+
+function printNode(node)
+{
+var output = "";
+
+return _printNode(node, output);
+}
+
+function createElementWithName(){}
+(
+function()
+{
+try
+{
+var el=document.createElement( '<div name="foo">' );
+if (
+   ('DIV'!=el.tagName)
+   ||
+   ('foo'!=el.name)
+ )
+{
+ throw 'create element error';
+}
+createElementWithName =
+function(tag, name)
+  {
+	return document.createElement('<'+tag+' name="'+name+'"></'+tag+'>');
+  }
+}
+catch(e)
+{
+createElementWithName =
+function(tag, name)
+{
+  var el = document.createElement(tag);
+  el.name = name;
+  return el;
+}
+}
+}
+)();
+
+function _printNode(node, output)
+{
+var i;
+var o = output;
+
+if (node)
+{
+if (node.nodeType != 1)
+{
+o += node.data;
+}
+else
+{
+o += "<";
+o += node.nodeName;
+if (node.attributes)
+{
+for (i = 0; i < node.attributes.length; i++)
+{
+  if (i == 0)
+  {
+	o += " ";
+  }
+  o += node.attributes[i].nodeName;
+  o += '="';
+  o += node.attributes[i].nodeValue;
+  o += '"';
+  if (i != (node.attributes.length - 1))
+  {
+	o += " ";
+  }
+}
+}
+o += ">";
+if (node.childNodes)
+{
+for (i = 0; i < node.childNodes.length; i++)
+{
+  o = _printNode(node.childNodes[i], o);
+}
+}
+o += "</" + node.nodeName + ">";
+}
+
+return o;
+}
+}
+
+function open_external_link(id, url) {
+var tmp_popup_url = url;
+var tmp_popup_identifier = id;
+var tmp_popup_width = screen.availWidth;
+var tmp_popup_height = screen.availHeight;
+var tmp_popup_x = 0;
+var tmp_popup_y = 0;
+new_window = window.open(tmp_popup_url, tmp_popup_identifier, "location=yes,menubar=yes,scrollbars=yes,status=yes,toolbar=yes,width="+tmp_popup_width+",height="+tmp_popup_height+",left="+tmp_popup_x+",top="+tmp_popup_y+"");
+new_window.focus();
+}
+
+function isLatinChar(chr)
+{
+if(((chr >= 65) && (chr <= 90)) || ((chr >= 97) && (chr <= 122))) return true;
+else return false;
+}
+
+function isArabicChar(chr)
+{
+if((chr >= 1536) && (chr <= 1791)) return true;
+else return false;
+}
+
+function isSpace(chr)
+{
+if(chr == 32) return true;
+else return false;
+}
+
+function isSentenceMarker(chr)
+{
+if((chr == 46) || (chr == 63) || (chr == 33) || (chr == 40) || (chr == 41)) return true;
+else return false;
+}
+
+function isRightBracket(chr)
+{
+if(chr == 41) return true;
+else return false;
+}
+
+function isLeftBracket(chr)
+{
+if(chr == 40) return true;
+else return false;
+}
+
+function switch_order(msg)
+{
+var strTmp = "";
+var strRes = "";
+var chrI;
+var isWordArabic = false;
+var addSpace = false;
+var addPoint = false;
+for(var i=0; i<msg.length; i++)
+{
+chrI = msg.charCodeAt(i);
+if(isArabicChar(chrI)) 
+{
+if(isWordArabic == true)
+{
+if(addSpace)
+{
+  strTmp += " ";
+  addSpace = false;
+}
+strTmp += msg.charAt(i);
+}
+else
+{
+if(addSpace)
+{
+  strTmp = " " + strTmp;
+  addSpace = false;
+}
+strRes = strTmp + strRes;
+strTmp = msg.charAt(i);
+}
+isWordArabic = true;
+}
+else
+{
+if(isSpace(chrI))
+{
+addSpace = true;
+}
+else
+{
+if((isLatinChar(chrI)) && (isWordArabic == true))
+{
+  if(addSpace)
+  {
+	strTmp = " " + strTmp;
+	addSpace = false;
+  }
+  strRes = strTmp + strRes;
+  strTmp = msg.charAt(i);
+  isWordArabic = false;
+}
+else
+{
+  if(addSpace)
+  {
+	strTmp += " ";
+	addSpace = false;
+  }
+  if((i == (msg.length - 1)) && (isSentenceMarker(chrI)))
+  {
+	if(isRightBracket(chrI))
+	{
+	  strTmp = '(' + strTmp;
+	}
+	else
+	{
+	  if(isLeftBracket(chrI))
+	  {
+		strTmp = ')' + strTmp;
+	  }
+	  else
+	  {
+		strTmp = msg.charAt(i) + strTmp;
+	  }
+	}
+  }
+  else
+  {
+	if(msg.charAt(i) == '\n')
+	{
+	  addSpace = true;
+	}
+	else
+	{
+	  strTmp += msg.charAt(i);
+	}
+  }
+}
+}
+}
+}
+if(addSpace)
+{
+strTmp += " ";
+addSpace = false;
+}
+strRes = strTmp + strRes + " ";
+
+return strRes;
+}
+
+function alert_msg(msg)
+{
+
+alert(msg);
+}
+
+function confirm_msg(msg)
+{
+
+return confirm(msg);
+}
+
+function decode_utf8( txt )
+{
+var ret;
+
+try
+{
+ret = decodeURIComponent( escape( txt ) );
+}
+catch(err)
+{
+//for added safety
+try
+{
+ret = unescape( escape( txt ) );
+}
+catch(err2)
+{
+ret = txt;
+}
+}
+return ret;
+}
+
+
+function fixLongTextsForTagWithClass(tagName, elemClass)
+{
+// only firefox doesn't support text-overflow:ellipsis so this is solution
+if (browserDetectBrowser == "Firefox")
+{
+var classes;
+var elemArray = document.getElementsByTagName(tagName);
+
+for (var i = 0; i < elemArray.length; i++)
+{
+classes = elemArray[i].className.split(" ");
+
+for (var j = 0; j < classes.length; j++)
+{
+if (classes[j] == elemClass)
+{
+  addOverflowEllipsis(elemArray[i]);
+  break;
+}
+}
+}
+}
+}
+
+function addOverflowEllipsis(elem)
+{
+// only firefox doesn't support text-overflow:ellipsis so this is solution
+if (browserDetectBrowser == "Firefox")
+{
+
+var elemWidth = elem.clientWidth;
+var elemText;
+
+
+
+while (elemWidth < elem.scrollWidth)
+{      
+elemText = elem.innerHTML;
+elem.innerHTML = elemText.substr(0, elemText.length - 2) + "&hellip;";
+}
+}
+}
+
+
+
+
+// returns the version of Internet Explorer or a -1 indicating the use of another browser
+function getInternetExplorerVersion()
+{
+var retVal = -1;
+if (navigator.appName == "Microsoft Internet Explorer")
+{
+var userAgent = navigator.userAgent;
+var regularExp = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+if (regularExp.exec(userAgent) != null)
+{
+retVal = parseFloat(RegExp.$1);
+}
+}
+return retVal;
+}
+
+// if dropdown's width is less than max width of its options
+// then in IE8 options are cut
+function fixDropDownForIE8()
+{
+var IEversion = getInternetExplorerVersion();
+if (IEversion == 8.0)
+{
+var selects = document.getElementsByTagName("select");
+for (var i = 0; i < selects.length; i++)
+{
+if (
+   (selects[i].clientWidth < selects[i].scrollWidth)
+   &&
+   (!selects[i].attributes.size)
+ )
+{
+var f_onchange = selects[i].onchange;
+var defaultWidth = selects[i].style.width;
+selects[i].onblur = function()
+					{
+					  this.style.width = defaultWidth;
+					  this.parentNode.style.width = defaultWidth;
+					};
+selects[i].onmousedown = function()
+						 {
+						   this.style.width = "auto";
+						   this.parentNode.style.width = this.style.width;
+						 };
+selects[i].onchange = function()
+					  {
+						if (typeof(f_onchange) == typeof(Function))
+						{
+						  f_onchange();
+						}
+						this.style.width = defaultWidth;
+						this.parentNode.style.width = defaultWidth;
+					  };
+}
+}
+}
+}
+
+
+// in some cases strings in UTF-8 are cut in the middle of UTF-8 2-bytes char
+// which is cause that question marks are shown instead of real chars
+function correctTooLongUtf8String()
+{
+var editfields = document.getElementsByTagName("input");
+for (var i = 0; i < editfields.length; i++)
+{
+if ((editfields[i].type == "text") && (typeof editfields[i].maxLength != "undefined"))
+{
+while (countUTF8Bytes(editfields[i].value) > editfields[i].maxLength)
+{
+// remove last char
+editfields[i].value = editfields[i].value.substring(0, editfields[i].value.length - 1);
+}
+}
+}
+}
+
+function checkIfValidKeyToCallBrowse(event)
+{
+var allowedKeyCodes = new Array("13", "32"); // enter, spacebar
+var receivedKeyCode = event.keyCode;
+for(var i=0; i<allowedKeyCodes.length; i++)
+{
+if(allowedKeyCodes[i] == receivedKeyCode)
+{
+
+return true;
+}
+}
+return false;
+}
+
+function clickBrowse(inputFileId)
+{
+document.getElementById(inputFileId).click();
+}
+
+function handleKeyPressBrowseButton(inputFileId, event)
+{
+if(!checkIfValidKeyToCallBrowse(event))
+{
+return false;
+}
+clickBrowse(inputFileId);
+}
+
+function checkIfValidKeyToCallNext(event)
+{
+var allowedKeyCodes = new Array("13"); // enter
+var receivedKeyCode = event.keyCode;
+for(var i=0; i<allowedKeyCodes.length; i++)
+{
+if(allowedKeyCodes[i] == receivedKeyCode)
+{
+return true;
+}
+}
+return false;
+}
+/* file navtools.js */
+var mainTitle="";
+var pageTitle="";
+var mainTitleSeparator="|";
+var navLastID1=0;
+var navLastID2=0;
+var navLastID3=0;
+var navLastID4=0;
+var navLastID5=0;
+var navVisibleCount1=0;
+var navVisibleCount2=0;
+var navVisibleCount3=0;
+var navVisibleCount4=0;
+var navVisibleCount5=0;
+var currentURL=document.location.href;
+var currNav=new Array();
+
+function doLogout()
+{
+if(typeof(help_window)!='undefined')help_window.close();
+top.location.href='logout.stm';
+}
+function checkMenuLevels(L1, L2, L3, L4, L5)
+{
+if ((arguments.length>0) && (typeof(nav[L1])=='undefined'))
+{
+alert_msg('Menu L1 is missing');
+}
+if ((arguments.length>1) &&(typeof(nav[L1][L2])=='undefined'))
+{
+alert_msg('Menu L2 is missing');
+}
+if ((arguments.length>2) &&(typeof(nav[L1][L2][L3])=='undefined'))
+{
+alert_msg('Menu L3 is missing');
+}
+if ((arguments.length>3) &&(typeof(nav[L1][L2][L3][L4])=='undefined'))
+{
+alert_msg('Menu L4 is missing');
+}
+if ((arguments.length>4) &&(typeof(nav[L1][L2][L3][L4][L5])=='undefined'))
+{
+alert_msg('Menu L5 is missing');
+}
+}
+
+function addNavigationItem(navLevel,navLink,navCaption,navVisible)
+{
+switch (navLevel)
+{
+case 1:
+navID1=navLastID1+1;
+nav[navID1]=new Array();
+nav[navID1]['link']=navLink;
+nav[navID1]['caption']=navCaption;
+nav[navID1]['visible']=navVisible;
+if(navVisible==1)navVisibleCount1++;
+nav['visible_count']=navVisibleCount1;
+nav['count']=navID1;
+navLastID1=navID1;
+navLastID2=0;
+navLastID3=0;
+navLastID4=0;
+navLastID5=0;
+navVisibleCount2=0;
+navVisibleCount3=0;
+navVisibleCount4=0;
+navVisibleCount5=0;
+break;
+
+case 2:
+navID1=navLastID1;
+navID2=navLastID2+1;
+checkMenuLevels(navID1);
+nav[navID1][navID2]=new Array();
+nav[navID1][navID2]['link']=navLink;
+nav[navID1][navID2]['caption']=navCaption;
+nav[navID1][navID2]['visible']=navVisible;
+if(navVisible==1)navVisibleCount2++;
+nav[navID1]['visible_count']=navVisibleCount2;
+nav[navID1]['count']=navID2;
+navLastID1=navID1;
+navLastID2=navID2;
+navLastID3=0;
+navLastID4=0;
+navLastID5=0;
+navVisibleCount3=0;
+navVisibleCount4=0;
+navVisibleCount5=0;
+break;
+
+case 3:
+navID1=navLastID1;
+navID2=navLastID2;
+navID3=navLastID3+1;
+checkMenuLevels(navID1, navID2);
+nav[navID1][navID2][navID3]=new Array();
+nav[navID1][navID2][navID3]['link']=navLink;
+nav[navID1][navID2][navID3]['caption']=navCaption;
+nav[navID1][navID2][navID3]['visible']=navVisible;
+if(navVisible==1)navVisibleCount3++;
+nav[navID1][navID2]['visible_count']=navVisibleCount3;
+nav[navID1][navID2]['count']=navID3;
+navLastID1=navID1;
+navLastID2=navID2;
+navLastID3=navID3;
+navLastID4=0;
+navLastID5=0;
+navVisibleCount4=0;
+navVisibleCount5=0;
+break;
+
+case 4:
+navID1=navLastID1;
+navID2=navLastID2;
+navID3=navLastID3;
+navID4=navLastID4+1;
+checkMenuLevels(navID1, navID2, navID3);
+nav[navID1][navID2][navID3][navID4]=new Array();
+nav[navID1][navID2][navID3][navID4]['link']=navLink;
+nav[navID1][navID2][navID3][navID4]['caption']=navCaption;
+nav[navID1][navID2][navID3][navID4]['visible']=navVisible;
+if(navVisible==1)navVisibleCount4++;
+nav[navID1][navID2][navID3]['visible_count']=navVisibleCount4;
+nav[navID1][navID2][navID3]['count']=navID4;
+navLastID1=navID1;
+navLastID2=navID2;
+navLastID3=navID3;
+navLastID4=navID4;
+navLastID5=0;
+navVisibleCount5=0;
+break;
+
+case 5:
+navID1=navLastID1;
+navID2=navLastID2;
+navID3=navLastID3;
+navID4=navLastID4;
+navID5=navLastID5+1;
+checkMenuLevels(navID1, navID2, navID3, navID4);
+nav[navID1][navID2][navID3][navID4][navID5]=new Array();
+nav[navID1][navID2][navID3][navID4][navID5]['link']=navLink;
+nav[navID1][navID2][navID3][navID4][navID5]['caption']=navCaption;
+nav[navID1][navID2][navID3][navID4][navID5]['visible']=navVisible;
+if(navVisible==1)navVisibleCount5++;
+nav[navID1][navID2][navID3][navID4]['visible_count']=navVisibleCount5;
+nav[navID1][navID2][navID3][navID4]['count']=navID5;
+navLastID1=navID1;
+navLastID2=navID2;
+navLastID3=navID3;
+navLastID4=navID4;
+navLastID5=navID5;
+break;
+} 
+}
+
+
+function getCurrentNavigationID2(navBranch,level)
+{
+if(typeof(navBranch)!='undefined')
+{
+for(currNav[level]=1;currNav[level]<=navBranch['count'];currNav[level]++)
+{
+if(typeof(navBranch[currNav[level]]['count'])!='undefined')
+{
+if(getCurrentNavigationID2(navBranch[currNav[level]],level+1))
+{
+  return true;
+}
+}
+if(instr(currentURL,navBranch[currNav[level]]['link']))
+{
+return true;
+}
+}
+}
+currNav[level]=0;
+return false;
+}
+
+function getPageTitle(nav,level)
+{
+if(typeof(currNav[level])!='undefined')
+{
+if(currNav[level]!=0)
+{
+pageTitle=nav[currNav[level]]['caption'];
+getPageTitle(nav[currNav[level]],level+1);
+}
+}
+}
+
+function getCurrentNavigationID(newMainTitle)
+{
+mainTitle=newMainTitle;
+pageTitle='Configuration';
+getCurrentNavigationID2(nav,1);
+getPageTitle(nav,1);
+return;
+}
+
+function writeNavigation()
+{
+if(typeof(currNav[1])!='undefined')
+{
+if((currNav[1]>0)&&(nav[currNav[1]]['visible']==1))
+{
+navigationTabs='<table border="0" cellspacing="0" cellpadding="0">';navigationTabs+='<tr>';for(var i=1;i<=nav['count'];i++){if(nav[i]['visible']==1){navigationTabs+='<td style="padding:0;"><a'+((i==currNav[1])?' class="active'+(i-1)+'"':'')+' href="'+nav[i]['link']+'">'+nav[i]['caption']+'<\/a><\/td>';}}navigationTabs+='<\/tr>';navigationTabs+='<\/table>';document.write(navigationTabs);
+}
+}
+}
+
+function writeNavigationA(navBranch,level)
+{
+if(typeof(navBranch)=='undefined') return;
+for(var navNodeNo=1;navNodeNo<=navBranch['count'];navNodeNo++)
+{
+document.write(level+":"+navBranch[navNodeNo]['caption']+"|"+navBranch[navNodeNo]['visible']+"<br>");writeNavigationA(navBranch[navNodeNo],level+1);
+}
+}
+
+function writeSubNavigation2(navBranch,level)
+{
+var subsel;
+if(typeof(navBranch)!='undefined')
+{
+if((navBranch['count']>0)&&(navBranch['visible_count']>0))
+{
+document.write('<ul>');if(typeof(currNav[level+1])!='undefined'){subsel=currNav[level+1];}else{subsel=0;}nextsubsel=0;if(typeof(currNav[level+2])!='undefined'){if(typeof(navBranch[currNav[level+1]][currNav[level+2]])!='undefined'){if(navBranch[currNav[level+1]][currNav[level+2]]['visible']==1){nextsubsel=currNav[level+2];}}}for(var navNodeNo=1;navNodeNo<=navBranch['count'];navNodeNo++){document.write('<li>');if(navBranch[navNodeNo]['visible']==1){document.write('<div'+(((subsel==navNodeNo)&&(nextsubsel==0))?' class="activeSub" style="width: '+(220-level*12)+'px;"':'')+'>');document.write('<div><a href="'+navBranch[navNodeNo]['link']+'">'+navBranch[navNodeNo]['caption']+'<\/a><\/div><\/div>');}if(subsel==navNodeNo){writeSubNavigation2(navBranch[navNodeNo],level+1);}document.write('<\/li>');}document.write('<\/ul>');
+}
+}
+}
+
+function writeSubNavigation()
+{
+writeSubNavigation2(nav[currNav[1]],1);document.title=pageTitle+' '+mainTitleSeparator+' '+mainTitle;
+}
+/* file navnodes.js */
+nav = new Array();
+
+
+/*************
+Merkur
+*************/
+
+/* Begining of the PSTN-VoIP Variant */
+
+addNavigationItem (1, 'nowhere.xxx', '', 0);
+addNavigationItem (2, 'login.html', 'Вход в систему', 1);
+addNavigationItem (1, 'security_advice.html', 'Совет по безопасности', 0);
+addNavigationItem (1, 'home.html', 'Главная', 1);
+
+// Settings
+addNavigationItem (1, 'settings_lan.html', 'Настройки', 1);
+
+
+// Network
+addNavigationItem (2, 'settings_lan.html', 'Сеть', 1);
+//
+// IP Configuration
+addNavigationItem (3, 'settings_lan.html', 'Конфигурация IP', 1);
+//
+
+//Security
+addNavigationItem (3, 'settings_telephony_security.html', 'Безопасность', 1);
+
+
+
+//
+// Telephony
+addNavigationItem (2, 'settings_telephony_voip_multi.html', 'Телефония', 1);
+//
+// Connections 
+
+addNavigationItem (3, 'settings_telephony_voip_multi.html', 'Соединения', 1);
+addNavigationItem (4, 'settings_telephony_voip.html', 'Соединения', 0);
+addNavigationItem (4, 'settings_telephony_pstn.html', 'Соединения', 0);
+addNavigationItem (4, 'settings_telephony_shc.html', 'Соединения', 0);
+
+//
+//Audio
+addNavigationItem (3, 'settings_telephony_audio.html', 'Аудио', 1);
+//
+// Number Assignment
+addNavigationItem (3, 'settings_telephony_assignment.html', 'Назначение номера', 1);
+//
+
+//Call Divert
+
+addNavigationItem (3, 'settings_telephony_callforwarding.html', 'Переадресация', 1);
+
+//
+// Dialling Plans
+addNavigationItem (3, 'settings_telephony_dialplan.html', 'Планы набора номера', 1);
+//
+// Network Mailboxes
+addNavigationItem (3, 'settings_telephony_network_mailboxes.html', 'Почтовые ящики сети', 1);
+//
+//Advanced VoIP-Settings
+addNavigationItem (3, 'settings_telephony_advanced.html', 'Дополн. настройки VoIP', 1);
+
+
+//
+// Messaging
+
+addNavigationItem (2, 'settings_messaging_email.html', 'Обмен сообщениями', 1)
+
+
+
+
+//
+// E-mail
+
+addNavigationItem (3, 'settings_messaging_email.html', 'E-mail', 1)
+addNavigationItem (4, 'settings_messaging_email_editor.html', 'E-mail', 0);
+
+//
+// MWI Light
+addNavigationItem (3, 'settings_mwi_light.html', 'Световая индикация MWI', 1)
+
+
+// Info Services
+addNavigationItem (2, 'settings_infoservice.html', 'Справочные службы', 1);
+
+
+//
+// Directories
+addNavigationItem (2, 'settings_services_online_directory.html', 'Телефонные справочники', 1);
+//
+// Online Directory
+addNavigationItem (3, 'settings_services_online_directory.html', 'Телефонный справочник', 1);
+
+//Additional Provider
+addNavigationItem (4, 'settings_online_directory_additional_provider.html', 'Телефонный справочник', 0);
+//
+
+// "Directory Transfer"
+addNavigationItem (3, 'settings_phonebook_transfer.html', 'Перенес. тел. справочника', 1);
+
+
+// Management
+addNavigationItem (2, 'settings_management_date_n_time.html', 'Управление', 1);
+//
+// Date & Time
+addNavigationItem (3, 'settings_management_date_n_time.html', 'Дата и время', 1);
+//
+// Local Settings
+addNavigationItem (3, 'settings_management_local_settings.html', 'Локальные параметры', 1);
+//
+// Miscellaneous
+addNavigationItem (3, 'settings_management_miscellaneous.html', 'Прочее', 1);
+//
+// Reboot & Reset
+addNavigationItem (3, 'settings_management_reboot_and_reset.html', 'Перезагруз. и сброс парам.', 1);
+//
+// Save & Restore
+addNavigationItem (3, 'settings_management_save_and_restore.html', 'Сохранить и восстановить', 1);
+//
+// Firmware Update
+addNavigationItem (3, 'settings_management_firmware_update.html', 'Обнов. микропрограммы', 1);
+
+
+// Status
+addNavigationItem (1, 'status_device.html', 'Состояние', 1);
+//
+// Status
+addNavigationItem (2, 'status_device.html', 'Состояние', 1);
+//
+// Device
+addNavigationItem (3, 'status_device.html', 'Устройство', 1);
+//
+// (Status) Connections
+addNavigationItem (3, 'status_connections.html', 'Соединения', 1);
+
+//
+getCurrentNavigationID('C610A IP');
+
+/* End of PSTN-VoIP Variant */
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+
+/********************
+End of Merkur
+********************/
+
+
+
+/* file help.js */
+function open_gigaset_help_window() {
+var tmp_popup_identifier = 'gigaset_help';
+var tmp_popup_width = 500;
+var tmp_popup_height = 300;
+
+if(window.innerWidth)
+{
+//FF
+var tmp_popup_x = (window.screenX + window.outerWidth - tmp_popup_width - 20); 
+}
+else
+{
+//Everything else 
+var tmp_popup_x = (screen.width - tmp_popup_width - 50); 
+}
+
+if (window.screenY)
+{
+//FF, Safari, Opera
+if(window.innerHeight)
+{
+//FF
+var tmp_popup_y = window.screenY + window.outerHeight - window.innerHeight - 20 ; 
+}
+else
+{
+//Safari, Opera
+var tmp_popup_y = window.screenY + 150; 
+}
+}
+else
+{
+//IE, Chrome
+var tmp_popup_y = window.screenTop +50; 
+};
+var help_window = window.open("help.html", tmp_popup_identifier, "dependent=yes,directory=no,location=no,menubar=no,resizable=yes,scrollbars=yes,status=no,toolbar=no,width="+tmp_popup_width+",height="+tmp_popup_height+",left="+tmp_popup_x+",top="+tmp_popup_y+"");
+help_window.focus();
+}
+
+/* file blocks.js */
+function writeBlockStaticAreaTop()
+{      
+var argv = writeBlockStaticAreaTop.arguments;
+var argc = writeBlockStaticAreaTop.arguments.length;
+var withTabs = (argc > 0) ? argv[0] : true;
+var withLogout = (argc > 1) ? argv[1] : true;
+
+//  +++++++++++++++++++++++++  
+//  BEGINN STATIC AREA TOP  
+
+//  Gigaset logo & product name  
+document.write('<div id="Gigalogo"><table border="0" cellspacing="0" cellpadding="0" width=100% ><tr>');
+switch (labeling)
+{
+case 1:
+document.write('<td id="logotd" width="1"><img src="images/dip-phone-450.gif" alt="product" border="0" ><\/td>');
+break;
+case 2:
+document.write('<td id="logotd" width="1"><img src="images/tesco.gif" alt="TESCO" border="0" ><\/td>');
+document.write('<td id="productnametxt" style="padding-bottom: 8px;">C610A IP<\/td>');
+break;
+case 3:
+document.write('<td id="logotd" width="1"><img id="bannername" src="images/t-home-banner.gif" alt="T-HOME" border="0" ><\/td>');
+break;
+case 4:
+document.write('<td id="logotd" width="1"><img src="images/stc.gif" alt="Saudi Telecom" border="0"><\/td>');
+
+
+document.write('<td id="productnametxt" >C610A IP<\/td>');
+
+break;
+case 5:
+document.write('<td id="logotd" width="1"><img id="bannername" src="flexible_provider_logo.gif" alt="provider_logo" border="0" ><\/td>');
+document.write('<td id="productnametxt" style="vertical-align:middle;" align="left">C610A IP<\/td>');
+break;
+case 6:
+document.write('<td id="logotd" width="1"><img src="vox/images/supafone.gif" alt="Supafone" border="0" align=left><\/td>');
+break;
+case 7:
+document.write('<td id="logotd" width="1"><img src="images/gigaset_p.jpg" alt="Gigaset" border="0" align=left><\/td>');
+document.write('<td id="productnametxt" align="left" >C610A IP<\/td>');
+break;
+default:
+document.write('<td id="logotd" width="1"><img src="../../Devices/C610/gigaset.png" alt="Gigaset" border="0" align=left><\/td>');
+
+
+document.write('<td id="productnametxt" align="left" >C610A IP<\/td>');
+
+}
+// ESz right up corner - SIEMENS logo  
+switch (labeling)
+{
+case 1:
+document.write('<td id="logotdup" style="vertical-align:middle;" align=right><img src="images/targa.gif" alt="Targa" border="0" ><\/td>');
+break;
+case 3:
+break;
+case 4:
+break;
+case 7:
+break;
+default:
+//document.write('<td id="logotdup" style="vertical-align:middle;" align=right><img src="images/siemens.gif" alt="Siemens" height="15" border="0" ><\/td>');
+break;
+}
+
+
+document.write('<\/tr><\/table><\/div>');
+
+//navigationtab
+if (withTabs)
+{
+document.write('<div id="div_tabs">');
+writeNavigation();    
+if (labeling == 3)
+{
+document.write('<div id="sinus_produkt_name"><img src="images/produktname.gif" alt="Product" border="0" ><\/div>');
+}
+document.write('<\/div>');
+}
+
+//  logout  
+document.write('<div id="div_home_logout">');  
+if (withLogout)
+{
+document.write('<a id="logouttoptext" href="" title="Завершить сеанс конфигурации">Выйти из системы<\/a>');
+}
+else
+{
+document.write('&nbsp;');
+}
+document.write('<\/div>');
+
+//  top area of grey  
+
+
+document.write('<div id="greyTop"><img src="../../Devices/C610/spacer.gif" alt="" width="1" height="5" border="0" ><\/div>');
+
+
+//   middle area of grey  
+document.write('<div id="greyMiddle">');
+
+//  END STATIC AREA TOP  
+//  +++++++++++++++++++++++++  
+}
+
+function writeBlockSubmenu()
+{
+//  the menue on the left side  
+document.write('<div id="div_menue">');
+writeSubNavigation();
+document.write('<\/div>');
+//  END of menue  
+}
+
+function writeBlockHelp()
+{
+var argv = writeBlockHelp.arguments;
+var argc = writeBlockHelp.arguments.length;
+var writehelp = (argc > 0) ? argv[0] : true;
+
+document.write('<div id="div_help">');
+if (writehelp && 1)
+{
+switch (labeling)
+{
+case 7:
+document.write('<a href="" onclick="javascript:open_gigaset_help_window(); return false;" title=""><img src="images/help_p.gif" alt="" width="20" height="30" border="0" ><\/a>');
+break;
+
+default:
+document.write('<a href="" onclick="javascript:open_gigaset_help_window(); return false;" title=""><img src="images/help.gif" alt="" width="20" height="30" border="0" ><\/a>');
+break;
+}
+}
+else
+{
+document.write('&nbsp;');
+}
+document.write('<\/div>');
+}
+
+function writeBlockStaticAreaBottom()
+{
+//  +++++++++++++++++++++++++  
+//  BEGINN STATIC AREA BOTTOM  
+
+document.write('<\/div>');
+//   END middle area of grey  
+
+//  bottom area of grey  
+document.write('<div id="greyBottom"><img src="../../Devices/C610/spacer.gif" alt="" width="1" height="7" border="0" ><\/div>');
+
+switch (labeling)
+{
+case 6:
+document.write('<div id="Siemenslogo" style="padding-right: 30px;"><img src="vox/images/vox.gif" alt="vox" border="0" ><\/div>');
+break;
+default:
+;
+}
+
+//  END STATIC AREA BOTTOM  
+//  +++++++++++++++++++++++++  
+}
+
+
+function writeBlockStaticAreaBottomLicense()
+{
+//  +++++++++++++++++++++++++  
+//  BEGINN STATIC AREA BOTTOM LICENSE  
+
+//  license text  
+switch (labeling)
+{
+case 7:
+document.write('<div style="vertical-align: top; text-align: left;font-size: 12px;">&copy; Gigaset Communications GmbH 2012. All rights reserved.<\/div>');
+break;
+case 1:
+case 3:
+case 4:
+default:
+document.write('<div style="vertical-align: top; text-align: left;font-size: 12px;" id="bottomcopytext" >GIGASET. INSPIRING CONVERSATION<br />&copy; Gigaset Communications GmbH 2012. All rights reserved.<\/div>');
+break;
+}
+
+//  END STATIC AREA BOTTOM LICENSE  
+//  +++++++++++++++++++++++++  
+}
+
+//-->
+</script>
+
+
+
+<link rel="stylesheet" type="text/css" media="screen" href="../../Devices/C610/main.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../../Devices/C610/siemens.css">
+<link rel="shortcut icon" href="">
+</head>
+<body onload="flashBorder();">
+
+<!--  CONTAINER -->
+<div id="container">
+
+<script language="JavaScript" type="text/javascript">
+writeBlockStaticAreaTop();
+writeBlockSubmenu();
+</script>
+<!-- <div id="Gigalogo"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td id="logotd" width="1"><img src="../../Devices/C610/gigaset.png" alt="Gigaset" border="0" align="left"></td><td id="productnametxt" align="left">C610A IP</td></tr></tbody></table></div>
+ -->
+ <div id="div_tabs"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="padding:0;"><a class="active2" href="">Главная</a></td>
+ <td  id="lsn5_11" style="padding:0;"><a  href="./lsn5_8.html">Настройки</a></td>
+ <td style="padding:0;"><a href="">Состояние</a></td></tr></tbody></table></div>
+ <div id="div_home_logout">
+ 
+<!--  <a id="logouttoptext" href="" title="Завершить сеанс конфигурации">Выйти из системы</a> -->
+ </div>
+ <div id="greyTop"><img src="../../Devices/C610/spacer.gif" alt="" width="1" height="5" border="0"></div>
+
+
+
+
+
+
+
+
+
+
+
+<div id="greyMiddle"><div id="div_menue"></div>
+
+      <!-- content -->
+      <div id="content_home">
+      <div id="minheight340"></div>
+        
+        
+        <h1 class="first"><a href="">Настройки</a></h1>
+        
+        <p>
+          Изменяя Настройки, можно полностью адаптировать все функции и возможности устройства под Ваши потребности. Вы можете настроить профили VoIP, чтобы сохранять свои настройки. За более детальной информацией о каждой настройке обращайтесь к инструкции пользователя и функции "Помощь".
+        </p>
+        <h1><a href="">Состояние</a></h1>
+        <p>
+          В разделе "Состояние" можно просмотреть важную информацию об используемом устройстве и сети.
+        </p>
+      <div id="endminheight"></div>
+      </div>
+      <!-- END of content -->
+
+    <script language="JavaScript" type="text/javascript">
+      writeBlockHelp(false);
+      writeBlockStaticAreaBottom();
+    </script><div id="div_help">&nbsp;</div></div>
+
+
+
+
+
+
+
+
+
+<div id="greyBottom"><img src="../../Devices/C610/spacer.gif" alt="" width="1" height="7" border="0"></div>
+
+</div>
+<!-- END CONTAINER -->
+
+
+
+
+</body></html>

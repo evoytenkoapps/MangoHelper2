@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0039)http://192.168.33.119/settings_lan.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Конфигурация IP | C610A IP</title>
+  
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type="text/css" media="screen" href="../../Devices/C610/main.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="../../Devices/C610/siemens.css">
+  <link rel="shortcut icon" href="../../Devices/C610/favicon.ico">
+</head>
+
+<script language="JavaScript" type="text/javascript">
+var flash;
+function flashBorder(elmId, stopFlash)
+{
+var elm = document.getElementById("lsn5_11");
+if (stopFlash == "true")
+{
+elm.style.border = "";
+clearInterval(flash);
+}
+else
+{
+var borderPattern = false;
+flash = setInterval(setBorder, 700);
+
+function setBorder()
+{
+if (borderPattern)
+{
+borderPattern = false;
+elm.style.border = "solid transparent";
+elm.style.borderWidth = "4px";
+}
+else
+{
+borderPattern = true;
+elm.style.border = " solid Red";
+elm.style.borderWidth = "4px";
+}
+}
+}
+}
+</script>
+
+
+<body onload="flashBorder();">
+
+  <!--  CONTAINER -->
+  <div id="container">
+
+   <!--  <script language="JavaScript" type="text/javascript">
+      writeBlockStaticAreaTop();
+      writeBlockSubmenu();
+    </script> -->
+	
+	
+	
+	<div id="Gigalogo"><table border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td id="logotd" width="1"><img src="../../Devices/C610/gigaset.png" alt="Gigaset" border="0" align="left"></td><td id="productnametxt" align="left">C610A IP</td></tr></tbody></table></div><div id="div_tabs"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="padding:0;"><a href="">Главная</a></td><td style="padding:0;"><a class="active3" href="">Настройки</a></td><td style="padding:0;"><a href="">Состояние</a></td></tr></tbody></table></div><div id="div_home_logout"><a id="logouttoptext" href="" title="Завершить сеанс конфигурации">Выйти из системы</a></div><div id="greyTop"><img src="../../Devices/C610/spacer.gif" alt="" width="1" height="5" border="0"></div><div id="greyMiddle"><div id="div_menue"><ul><li><div><div><a href="">Сеть</a></div></div></li><li><div><div><a href="">Телефония</a></div></div><ul><li><div class="activeSub" style="width: 196px;"><div><a href="">Соединения</a></div></div></li><li><div><div><a href="">Аудио</a></div></div></li><li><div><div><a href="">Назначение номера</a></div></div></li><li><div><div><a href="">Переадресация</a></div></div></li><li><div><div><a href="">Планы набора номера</a></div></div></li><li><div><div><a href="">Почтовые ящики сети</a></div></div></li><li><div><div><a href="">Дополн. настройки VoIP</a></div></div></li></ul></li><li><div><div><a href="">Обмен сообщениями</a></div></div></li><li><div><div><a href="">Справочные службы</a></div></div></li><li><div><div><a href="">Телефонные справочники</a></div></div></li><li><div><div><a href="">Управление</a></div></div></li></ul></div>
+
+
+<!-- ********************************************************************************************************************************************************* -->
+      <!-- content -->
+      <div id="content">
+      <div id="minheight340"></div>
+      <form name="gigaset" id="form" action="" method="post">
+      	<input type="hidden" value="0" name="account_id">
+        <input type="hidden" value="0" name="action_type">
+        <input type="hidden" value="0" id="execute_profile_download" name="execute_profile_download">
+        <div id="contentColumnNoButtons">
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tbody><tr>
+              <td class="label"><h2 class="first">Обзор соединений</h2></td>
+              <td colspan="5">&nbsp;</td>
+            </tr>
+
+            <!-- header -->
+            <tr>
+              <td class="label" align="left">&nbsp;</td>                           
+              <td class="rightSide">
+                <table border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+                  <tbody><tr>
+                    <td style="width: 105px;"><strong>Имя</strong></td>
+                    <td style="width: 101px;"><strong>Провайдер</strong></td>
+                    <td style="width: 93px;"><strong>Состояние</strong></td>
+                    <td style="width: 46px;"><strong>Активная</strong></td>
+                    <td style="width: 115px;"><strong>&nbsp;</strong></td>
+                  </tr>
+                </tbody></table> 
+              </td>
+            </tr>
+            <!-- end of header -->
+            
+            <!-- PSTN -->
+            
+            <tr>
+              <td class="label" align="left">&nbsp;</td>             
+              <td class="rightSide" style="padding-top: 0px; padding-bottom: 0px;">
+                <table border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+                  <tbody><tr>
+                    <td style="width: 105px; vertical-align: middle;"><div class="cellAbber connection_name">Ст.линия</div></td>
+                    <td style="width: 101px; vertical-align: middle;">&nbsp;</td> 
+                    <td style="width: 93px;  vertical-align: middle;">
+                    
+                    Отсоединено
+                                        
+                    </td>
+                    <td style="width: 46px;  vertical-align: middle;">&nbsp;</td>
+                    <td style="width: 115px; vertical-align: middle;"><a href="" class="buttonLink100" onclick="javascript:edit_account_pstn(this); return false;">Правка</a></td>
+                  </tr>
+                </tbody></table>
+              </td>
+            </tr>
+            
+            <!-- end of PSTN -->
+
+            <!-- SHC -->
+            
+            <tr>
+              <td class="label" align="left">&nbsp;</td>            
+              
+              <td class="rightSide" style="padding-top: 0px; padding-bottom: 0px;">
+                <table border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+              
+                  <tbody><tr>
+                    <td style="width: 105px; vertical-align: middle;"><div class="cellAbber connection_name">Gigaset.net</div></td>
+                    <td style="width: 101px; vertical-align: middle;">Gigaset Communications</td>
+                    <td style="width: 93px;  vertical-align: middle;">
+                    
+                    Отключено
+                                        
+                    </td>
+                    <td style="width: 46px;  vertical-align: middle;"><input type="checkbox" class="checkBoxes" onclick="javascript:toggle_account(6); return false;"></td>
+                    <td style="width: 115px; vertical-align: middle;"><a href="" class="buttonLink100" onclick="javascript:edit_account_shc(this); return false;">Правка</a></td>
+                  </tr>
+                </tbody></table>
+              </td>
+            </tr>
+                 
+            <!-- end of SHC -->           
+
+            <!-- VoIP -->
+            
+            <tr>
+<td class="label" align="left" style="vertical-align: middle;">1.</td>
+<td class="rightSide" style="padding-top: 0px; padding-bottom: 0px;"><table border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+<tbody><tr>
+<td style="width: 105px; vertical-align: middle;"><div " class="cellAbber connection_name">IP1</div></td>
+<td style="width: 101px; vertical-align: middle;">Другой провайдер</td>
+<td style="width: 93px;  vertical-align: middle;">Не настроено</td>
+<td style="width: 46px;  vertical-align: middle;"><input type="checkbox" class="checkBoxes"></td>
+<td id="lsn5_11" style="width: 115px; vertical-align: middle;"><a href="./lsn5_10.html" class="buttonLink100">Правка</a></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td class="label" align="left" style="vertical-align: middle;">2.</td>
+<td class="rightSide" style="padding-top: 0px; padding-bottom: 0px;"><table border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+<tbody><tr>
+<td style="width: 105px; vertical-align: middle;"><div class="cellAbber connection_name">IP2</div></td>
+<td style="width: 101px; vertical-align: middle;">Другой провайдер</td>
+<td style="width: 93px;  vertical-align: middle;">Не настроено</td>
+<td style="width: 46px;  vertical-align: middle;"><input type="checkbox" class="checkBoxes" onclick="javascript: toggle_account(1); return false;"></td>
+<td style="width: 115px; vertical-align: middle;"><a href="" class="buttonLink100" onclick="javascript: edit_account(1, this); return false;">Правка</a></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td class="label" align="left" style="vertical-align: middle;">3.</td>
+<td class="rightSide" style="padding-top: 0px; padding-bottom: 0px;"><table border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+<tbody><tr>
+<td style="width: 105px; vertical-align: middle;"><div class="cellAbber connection_name">IP3</div></td>
+<td style="width: 101px; vertical-align: middle;">Другой провайдер</td>
+<td style="width: 93px;  vertical-align: middle;">Не настроено</td>
+<td style="width: 46px;  vertical-align: middle;"><input type="checkbox" class="checkBoxes" onclick="javascript: toggle_account(2); return false;"></td>
+<td style="width: 115px; vertical-align: middle;"><a href="" class="buttonLink100" onclick="javascript: edit_account(2, this); return false;">Правка</a></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td class="label" align="left" style="vertical-align: middle;">4.</td>
+<td class="rightSide" style="padding-top: 0px; padding-bottom: 0px;"><table border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+<tbody><tr>
+<td style="width: 105px; vertical-align: middle;"><div class="cellAbber connection_name">IP4</div></td>
+<td style="width: 101px; vertical-align: middle;">Другой провайдер</td>
+<td style="width: 93px;  vertical-align: middle;">Не настроено</td>
+<td style="width: 46px;  vertical-align: middle;"><input type="checkbox" class="checkBoxes" onclick="javascript: toggle_account(3); return false;"></td>
+<td style="width: 115px; vertical-align: middle;"><a href="" class="buttonLink100" onclick="javascript: edit_account(3, this); return false;">Правка</a></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td class="label" align="left" style="vertical-align: middle;">5.</td>
+<td class="rightSide" style="padding-top: 0px; padding-bottom: 0px;"><table border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+<tbody><tr>
+<td style="width: 105px; vertical-align: middle;"><div class="cellAbber connection_name">IP5</div></td>
+<td style="width: 101px; vertical-align: middle;">Другой провайдер</td>
+<td style="width: 93px;  vertical-align: middle;">Не настроено</td>
+<td style="width: 46px;  vertical-align: middle;"><input type="checkbox" class="checkBoxes" onclick="javascript: toggle_account(4); return false;"></td>
+<td style="width: 115px; vertical-align: middle;"><a href="" class="buttonLink100" onclick="javascript: edit_account(4, this); return false;">Правка</a></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr>
+<td class="label" align="left" style="vertical-align: middle;">6.</td>
+<td class="rightSide" style="padding-top: 0px; padding-bottom: 0px;"><table border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+<tbody><tr>
+<td style="width: 105px; vertical-align: middle;"><div class="cellAbber connection_name">IP6</div></td>
+<td style="width: 101px; vertical-align: middle;">Другой провайдер</td>
+<td style="width: 93px;  vertical-align: middle;">Не настроено</td>
+<td style="width: 46px;  vertical-align: middle;"><input type="checkbox" class="checkBoxes" onclick="javascript: toggle_account(5); return false;"></td>
+<td style="width: 115px; vertical-align: middle;"><a href="" class="buttonLink100" onclick="javascript: edit_account(5, this); return false;">Правка</a></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+
+            
+            <!-- end of VoIP -->
+
+            <!-- Automatic check for profile update -->
+            <tr>
+              <td class="label"><h2 class="first">Пров. или проф. мини-АТС</h2></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="label"><h2 class="first">&nbsp;</h2></td>
+              <td class="rightSide">Проф. содер. все настр. для пров. или тел. сист. (мини-АТС).</td>
+            </tr>
+            <tr>
+              <td class="label">Авт. пров. обновл. проф.:</td>
+              <td class="rightSide">
+                <input type="radio" name="automatic_profile_update" value="1" class="radioButton" checked="checked">Да
+                &nbsp;&nbsp;&nbsp;<input type="radio" name="automatic_profile_update" value="0" class="radioButton">Нет
+              </td>
+            </tr>
+            <tr>
+              <td class="label">&nbsp;</td>
+              <td class="rightSide"><a href="" onclick="javascript:start_profile_download(); return false;" class="buttonLink215">Обновить профиль</a></td>
+            </tr>
+            <!-- Automatic check for profile update END -->
+
+            <tr>
+              <td>&nbsp;</td>
+              <td class="separatorButton">
+                <table border="0" cellspacing="0" cellpadding="0">
+                  <tbody><tr>
+                    <td><a href="" onclick="javascript:submit_gigaset_form(); return false;" class="buttonLink100">Настроить</a></td>
+                    <td><a href="" onclick="javascript:cancel_gigaset_form(); return false;" class="buttonLink100">Отмена</a></td>
+                  </tr>
+                </tbody></table>
+              </td>
+            </tr>
+            
+            <!-- fixes the width of the first column -->
+            <tr>
+              <td style="padding:0;"><img src="../../Devices/C610/spacer.gif" alt="" width="200" height="1" border="0"></td>
+              <td style="padding:0;"><img src="../../Devices/C610/spacer.gif" alt="" width="476" height="1" border="0"></td>
+            </tr>
+
+          </tbody></table>         
+        </div>
+      </form>
+      <div id="endminheight"></div>
+      </div>
+      <!-- END of content -->            
+   <!--  <script language="JavaScript" type="text/javascript">
+      writeBlockHelp();
+      writeBlockStaticAreaBottom();
+      fixLongTextsForTagWithClass("div", "cellAbber");
+    </script> -->
+	
+	<div id="div_help"><a href="" onclick="javascript:open_gigaset_help_window(); return false;" title=""><img src="../../Devices/C610/help.gif" alt="" width="20" height="30" border="0"></a></div></div><div id="greyBottom"><img src="../../Devices/C610/spacer.gif" alt="" width="1" height="7" border="0"></div>
+
+  </div>
+  <!-- END CONTAINER -->
+  
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+html>

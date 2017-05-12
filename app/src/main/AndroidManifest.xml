@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="evoytenkoapps.mangohelper.ru"
+    android:versionName="@string/version"
+    >
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_mango"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.DesignDemo"
+
+
+    >
+
+        <activity android:name="evoytenkoapps.mangohelper.ru.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name="evoytenkoapps.mangohelper.ru.WebActivity"
+            android:parentActivityName="evoytenkoapps.mangohelper.ru.MainActivity"
+            android:theme="@style/Webview.Theme"
+        >
+        </activity>
+
+
+    </application>
+
+</manifest>
